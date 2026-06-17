@@ -1,0 +1,19 @@
+# Orchestration + BO algorithm stack (local dev machine).
+# CFD meshing/solving runs on the compute server via these same clients.
+numpy
+scipy
+pandas
+matplotlib
+torch
+gpytorch
+botorch
+pyyaml
+tqdm
+h5py
+pytest
+# Ansys PyFluent client. 0.20.0 VALIDATED against local Fluent 2024R2 (v242):
+# launches headless, reports FluentVersion.v242. Newer cores (0.39) ship with a
+# broken/mismatched gRPC API stub, so stay on 0.20.0 unless re-validated.
+ansys-fluent-core==0.20.0
+# PDF text extraction (digitizing NASA report tables).
+pymupdf

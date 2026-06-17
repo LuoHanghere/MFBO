@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# CFD artifacts (large binaries — archive on server, not in git)
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+*.msh
+*.msh.h5
+*.cdat
+*.trn
+*.scdoc
+*.pmdb
+runs/
+results/
+fluent-*/
+
+# Data / scratch
+*.h5
+*.sqlite
+*.csv
+!configs/**/*.csv
+
+# Local cached source reports / scratch extractions (kept locally, not committed)
+.cache_*
+*.pdf
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,160 @@
+# =============================================================================
+# C3X film-cooled vane — baseline definition & mesh-tier settings
+# Source of geometry/conditions: NASA CR-168015 (no-film) + CR-182133 (film).
+# Values marked TBD must be filled from the digitized reports before meshing.
+# This file is the single source of truth that the parametric model consumes:
+#   baseline design vector == x_baseline (one point in the optimization space).
+# =============================================================================
+
+case:
+  name: C3X_filmcooled_baseline
+  reference_reports:
+    geometry_no_film: NASA-CR-168015
+    geometry_film: NASA-CR-182133
+
+# --- Flow conditions (CONFIRMED from CR-182133 Fig. 16 / Table VI) -----------
+# 5-digit run code [Ma2][Re2][Tc/Tg][Pc_le/Pt][Pc_ds/Pt]:
+#   pos1 exit Mach Ma2           : {0.75, 0.90}
+#   pos2 exit Reynolds Re2 (1e-6): {1.5, 2.0}   (based on true chord)
+#   pos3 coolant/gas temp ratio  : {no-coolant ... 2.5 max}
+#   pos4 showerhead supply Pc_le/Pt : {1.00, 1.02, 1.05, 1.10}
+#   pos5 downstream supply Pc_ds/Pt : {1.00 ... 1.70}  (SS & PS)
+conditions:
+  inlet_turbulence_intensity_pct: 6.5    # LDA, per CR-168015 (all runs)
+  working_fluid: air-ideal-gas
+  # Baseline validation case = run code 44155 (Garg-validated, max showerhead
+  # blowing). Aero conditions CONFIRMED from Garg & Ameri 1997 Table 1.
+  baseline_run_code: 44155
+  inlet_total_pressure_kPa: 280.95
+  inlet_total_temperature_K: 705
+  inlet_mach: 0.19
+  inlet_reynolds: 6.0e5
+  exit_mach: 0.90
+  exit_reynolds: 2.0e6                  # based on true chord
+  # Coolant fed via resolved plenums (Pc/Pt drives flow). Per-region blowing
+  # ratios for 44155 from Garg Table 1: showerhead ~0.41 (44135=min, 44155=max);
+  # downstream SS/PS in ~0.4-0.7 range. Tune plenum Pc/Pt to match these.
+  alt_run_codes:                        # same Ma2/Re2 -> blowing/temp sweep (Paper 2)
+    '44135': min showerhead blowing
+    '44355': warmest coolant (higher Tc/Tg)
+
+# --- Geometry (confirmed from NASA CR-174827 Table III / IV; CR-182133) ------
+geometry:
+  true_chord_mm: 144.93         # 5.706 in
+  axial_chord_mm: 78.16         # 3.077 in
+  pitch_mm: 117.73              # vane spacing, 4.635 in
+  span_mm: 76.20                # vane height, 3.000 in
+  throat_mm: 32.92              # 1.296 in
+  setting_angle_deg: 59.89
+  air_exit_angle_deg: 72.38
+  suction_surface_arc_mm: 177.82
+  pressure_surface_arc_mm: 137.23
+  le_radius_mm: 11.68           # RLE = 1.168 cm (approx, confirm)
+  airfoil_coordinates: configs/c3x_coordinates.csv   # 39-pt Table II (to extract)
+  span_model: periodic_single_pitch   # LOCKED: periodic single pitch + periodic BC
+  passage_domain:
+    upstream_axial_chords: 1.0
+    downstream_axial_chords: 1.0
+    downstream_periodic_angle: air_exit_angle_deg
+    outlet_plane: constant_x
+    rationale: "Extend downstream periodic boundaries along nominal exit flow angle. Keep 1.0 Cax as the current stable baseline; test 1.5/2.0 Cax only as domain-length sensitivity."
+  # Showerhead: CONFIRMED from CR-174827 Table IV (fixed, not optimized).
+  showerhead:
+    fixed: true
+    n_rows: 5                   # center row at stagnation, staggered
+    hole_diameter_mm: 0.99      # 0.039 in
+    hole_length_mm: 3.35        # L/D ~ 3.4
+    p_over_D: 4.0
+    s_over_D: 7.5
+    slant_angle_deg: 45         # spanwise
+    skew_angle_deg: 90          # normal in chordwise direction
+  # Body rows: CONFIRMED from CR-182133 downstream geometry table (primary source).
+  # These are the OPTIMIZED rows; baseline values below = starting design point.
+  body_rows:
+    n_rows: 4                   # 2 pressure-side + 2 suction-side
+    plenum: resolved            # LOCKED: resolve plenum + in-hole flow
+    hole_diameter_mm: 0.99      # 0.039 in (same as showerhead)
+    hole_length_mm: 3.35        # 0.132 in, L/D ~ 3.4
+    p_over_D: 4.0               # spanwise pitch-to-diameter
+    s_over_D: 3.0               # row spacing-to-diameter
+    spanwise: normal            # holes normal to surface in spanwise dir (compound beta = 0)
+    pressure_side:
+      s_over_s0: [0.197, 0.225]
+      injection_angle_deg: 20   # streamwise inclination to surface (CR-182133)
+    suction_side:
+      s_over_s0: [0.254, 0.276]
+      injection_angle_deg: 35   # streamwise inclination to surface (CR-182133)
+
+# --- Parametrization (research plan §3.1) -----------------------------------
+# DECISION (round 1): optimize a 3-row subset = both suction-side rows (a
+# strongly-coupled pair on the higher-heat-load surface -> best exercises the
+# Sellers-superposition prior + row-interaction story) + the upstream
+# pressure-side row. The 2nd pressure-side row (s/s0=0.225) is HELD FIXED at
+# baseline. 4-row / higher-D is the round-2 extension. Override subset here.
+design_variables:
+  rows:
+    - {id: SS1, surface: suction,  fixed: false}
+    - {id: SS2, surface: suction,  fixed: false}
+    - {id: PS1, surface: pressure, fixed: false}
+    - {id: PS2, surface: pressure, fixed: true}    # held at baseline (round 1)
+  # Round 1: 3 vars x 3 free rows = 9D. Baselines = confirmed CR-182133 layout.
+  variables:
+    arc_position_s_over_s0:
+      active_round: 1
+      ordering_constraint: "within surface: s(SS1) < s(SS2)"
+      bounds_rule: "baseline +/- 0.03 in s/s0 (prevent within-surface crossing)"
+      baseline: {SS1: 0.254, SS2: 0.276, PS1: 0.197, PS2: 0.225}
+    spacing_p_over_D:
+      active_round: 1
+      bounds: [3.0, 8.0]
+      baseline: {SS1: 4.0, SS2: 4.0, PS1: 4.0, PS2: 4.0}
+    injection_angle_alpha_deg:
+      active_round: 1
+      bounds: [15.0, 50.0]            # widened to include PS baseline (20 deg)
+      baseline: {SS1: 35, SS2: 35, PS1: 20, PS2: 20}
+  round2_extra:
+    hole_diameter_D_mm:      {active_round: 2, bounds: [0.8, 1.5], baseline: 0.99}
+    compound_angle_beta_deg: {active_round: 2, bounds: [0.0, 45.0], baseline: 0.0}
+  dimensionality: {round1_3rows: 9, round2_all4: 20}
+
+# --- Objective / constraints (research plan §3.2-3.3) ------------------------
+objective:
+  maximize: area_averaged_adiabatic_effectiveness   # eta_bar over protected area
+constraints:
+  coolant_mass_flow: { type: hard,  rule: "mdot_c <= mdot_c_baseline" }
+  total_pressure_loss: { type: soft, rule: "zeta <= zeta_baseline * (1 + 0.02)" }
+
+# --- Mesh tiers (per spanwise-periodic single-pitch sector) ------------------
+# Numbers are targets; freeze after GCI study (§5.3) at smoke-test stage.
+mesh:
+  L1_coarse:
+    role: multifidelity_explore
+    target_cells_M: [2, 4]
+    wall_treatment: wall_functions
+    y_plus_target: 30
+    prism_layers: 5
+    cells_across_hole_D: [12, 16]
+    turbulence: SST
+  L2_fine:
+    role: validation_and_key_decisions
+    target_cells_M: [12, 20]
+    wall_treatment: low_Re_resolved
+    y_plus_target: 1
+    prism_layers: 20
+    cells_across_hole_D: [24, 32]
+    turbulence: SST + gamma-Re_theta transition
+  gci_triplet_cells_M: [5, 11, 22]   # linear refinement ratio ~1.3
+  working_grid_after_gci: ~11-12     # if eta_bar/HTC change < 1-2% vs 22M
+
+# --- Solver / convergence (research plan §5.2) -------------------------------
+solver:
+  code: fluent-2024R2                  # validated: PyFluent 0.20.0 -> FluentVersion.v242
+  awp_root_242: 'D:\Ansys\ANSYS Inc\v242'   # real install (has fluent\); NOT D:\Ansys\v242
+  license: 1055@localhost
+  scdm_root: 'D:\Ansys\ANSYS Inc\v242\scdm'   # real SpaceClaim (D:\Ansys\v242\scdm is an empty add-in shell)
+  spaceclaim_exe: 'D:\Ansys\ANSYS Inc\v242\scdm\SpaceClaim.exe'
+  python_env: 'E:\Work\BOfm\.venv'     # project-local env (avoids non-ASCII user path)
+  run_as_admin: true                   # launch Fluent elevated per user requirement
+  warm_start: interpolate_nearest_converged_field   # see plan §5.2 discussion
+  convergence_criterion: residuals + eta_bar moving-average plateau
+  divergence_recovery: reduce_CFL_retry_once

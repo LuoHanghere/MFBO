@@ -1,0 +1,23 @@
+name: bofm
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - pip:
+      - torch
+      - gpytorch
+      - botorch
+      - pyyaml
+      - tqdm
+      - h5py
+      - pytest
+      - pymupdf
+      # 0.20.0 validated against local Fluent 2024R2 (v242). Newer cores (0.39)
+      # have a broken gRPC API stub. Create env IN-PROJECT to avoid non-ASCII
+      # user path:  conda env create --prefix .venv -f environment.yml
+      - ansys-fluent-core==0.20.0
