@@ -6,6 +6,9 @@ from dataclasses import dataclass
 import numpy as np
 
 
+_trapezoid = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
+
+
 @dataclass
 class PriorParameters:
     c0: float = 0.68
@@ -78,4 +81,6 @@ class FilmCoolingPrior:
             )
             eta[s < row] = 0.0
             total = 1.0 - (1.0 - total) * (1.0 - np.clip(eta, 0.0, 0.98))
-        return float(np.trapz(total, s) / max(1.0 - min(row_positions), 1e-9))
+        return float(
+            _trapezoid(total, s) / max(1.0 - min(row_positions), 1e-9)
+        )
