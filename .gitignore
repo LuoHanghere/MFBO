@@ -41,6 +41,8 @@ runs_workflow_files/
 runs/**
 !runs/**/
 !runs/**/*.json
+# Canonical SpaceClaim input required to reproduce parameterized geometry
+!runs/workbench/periodic_v2/template/c3x_kumar_fixed_le_template.scdoc
 results/
 
 # Large or machine-generated tabular exports

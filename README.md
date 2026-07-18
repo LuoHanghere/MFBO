@@ -71,8 +71,8 @@ and let Codex read the root [AGENTS.md](AGENTS.md) first.
 - Windows and PowerShell
 - Python 3.11 environment from `environment.yml` or `requirements.txt`
 - ANSYS/Fluent 2024 R2 for production CFD
-- A local fixed-leading-edge SCDOC template (large CAD binaries are not stored
-  in Git)
+- The canonical fixed-leading-edge SCDOC template included under
+  `runs/workbench/periodic_v2/template/`
 
 ```powershell
 conda env create --prefix .venv -f environment.yml
@@ -81,9 +81,9 @@ conda env create --prefix .venv -f environment.yml
 
 ## Data Policy
 
-Fluent case/data/mesh files, CAD binaries, Workbench projects, transcripts,
-SQLite ledgers, and large CSV exports remain local. Small JSON manifests and
-result summaries under `runs/` are retained in Git for provenance. Recreating
-CFD cases requires the external SCDOC template and an ANSYS installation.
+Fluent case/data/mesh files, derived CAD files, Workbench projects,
+transcripts, SQLite ledgers, and large CSV exports remain local. Small JSON
+manifests and result summaries under `runs/`, plus the single canonical SCDOC
+input template, are retained in Git. Recreating CFD cases requires ANSYS.
 
 No public-use license has been selected yet.

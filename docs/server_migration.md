@@ -29,7 +29,8 @@ Linux example:
 ```bash
 export BOFM_ANSYS_ROOT=/ansys_inc/v242
 export ANSYSLMD_LICENSE_FILE=1055@license-server
-export BOFM_C3X_TEMPLATE=/srv/bofm-assets/c3x_kumar_fixed_le_template.scdoc
+# Optional: override the canonical template included in the repository.
+# export BOFM_C3X_TEMPLATE=/srv/bofm-assets/c3x_kumar_fixed_le_template.scdoc
 ```
 
 Windows example:
@@ -38,7 +39,8 @@ Windows example:
 $env:BOFM_ANSYS_ROOT = "D:\Ansys\ANSYS Inc\v242"
 $env:ANSYSLMD_LICENSE_FILE = "1055@license-server"
 $env:BOFM_SPACECLAIM_EXE = "D:\Ansys\ANSYS Inc\v242\scdm\SpaceClaim.exe"
-$env:BOFM_C3X_TEMPLATE = "D:\bofm-assets\c3x_kumar_fixed_le_template.scdoc"
+# Optional override; the default template is included in the repository.
+# $env:BOFM_C3X_TEMPLATE = "D:\bofm-assets\c3x_kumar_fixed_le_template.scdoc"
 ```
 
 Verify before releasing CFD:
@@ -51,18 +53,19 @@ Use `--require-cad` only on the Windows CAD node.
 
 ## 3. Transfer External Artifacts
 
-Git intentionally excludes large and proprietary solver artifacts. Transfer
-these separately with `rsync`, `scp`, or managed research storage:
+The canonical fixed-leading-edge template
+`runs/workbench/periodic_v2/template/c3x_kumar_fixed_le_template.scdoc` is
+included in Git. Transfer the remaining state separately with `rsync`, `scp`,
+or managed research storage:
 
-1. Required for new geometry: the fixed-leading-edge template
-   `c3x_kumar_fixed_le_template.scdoc`.
-2. Required to resume optimization exactly: the standard-MFBO SQLite ledger
+1. Required to resume optimization exactly: the standard-MFBO SQLite ledger
    `runs/optimization/nasa_standard_mfbo_8d/c3x_nasa_standard_mfbo_8d.sqlite3`.
-3. Recommended for restart/review: completed trial directories containing
+2. Recommended for restart/review: completed trial directories containing
    `.cas.h5`, `.dat.h5`, meshes, transcripts, and postprocessing CSV files.
 
-Do not place these files in Git. Preserve the same paths under `runs/`, or set
-the environment overrides for the template and compact geometry inputs.
+Do not place these solver and ledger files in Git. Preserve the same paths
+under `runs/`; use `BOFM_C3X_TEMPLATE` only when intentionally replacing the
+versioned canonical template.
 
 Example data transfer from the current workstation:
 
@@ -94,5 +97,5 @@ currently validated capability.
 3. `python -m pytest -q` reports the expected passing test count.
 4. The transferred SQLite ledger reports 10 L2 and 3 L3 completed trials at the
    2026-07-18 snapshot.
-5. The external SCDOC template checksum matches the workstation copy.
+5. The versioned canonical SCDOC template exists and opens in SpaceClaim.
 6. Run one dry/read-only policy inspection before releasing the next L2 trial.

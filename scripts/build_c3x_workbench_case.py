@@ -34,7 +34,11 @@ def main() -> int:
         "--template",
         default=os.environ.get(
             "BOFM_C3X_TEMPLATE",
-            str(ROOT / "runs" / "fluid" / "c3x_kumar_fixed_le_template.scdoc"),
+            str(
+                ROOT
+                / "runs/workbench/periodic_v2/template/"
+                "c3x_kumar_fixed_le_template.scdoc"
+            ),
         ),
     )
     parser.add_argument(

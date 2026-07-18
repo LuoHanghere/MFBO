@@ -75,7 +75,7 @@ def main() -> int:
     print(f"ANSYS root configured: {'YES' if ansys_root else 'NO'}")
     print(f"license configured: {'YES' if license_server else 'NO'}")
     print(
-        "external C3X template: "
+        "canonical C3X template: "
         f"{'OK' if existing_path(template) else 'MISSING'} ({template})"
     )
     if is_windows:

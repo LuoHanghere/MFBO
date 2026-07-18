@@ -45,7 +45,7 @@ On Linux, use `.venv/bin/python` instead.
   --bo-iterations 1
 ```
 
-Do not run a large batch before verifying the ANSYS license, external SCDOC
+Do not run a large batch before verifying the ANSYS license, canonical SCDOC
 template, CPU allocation, and available storage.
 
 ## Platform Boundary
@@ -58,7 +58,9 @@ boundary is removed and tested.
 
 ## Repository Rules
 
-- Never commit `.cas/.dat/.msh/.h5/.scdoc/.sqlite/.trn` files.
+- Never commit `.cas/.dat/.msh/.h5/.sqlite/.trn` files or derived CAD outputs.
+- The only versioned SCDOC is the canonical input template at
+  `runs/workbench/periodic_v2/template/c3x_kumar_fixed_le_template.scdoc`.
 - Keep small JSON provenance records.
 - Do not delete or overwrite local `runs/` restart data without explicit user
   approval.

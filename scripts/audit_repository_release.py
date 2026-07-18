@@ -22,6 +22,12 @@ FORBIDDEN_SUFFIXES = (
     ".sqlite",
     ".sqlite3",
 )
+ALLOWED_BINARY_PATHS = {
+    Path(
+        "runs/workbench/periodic_v2/template/"
+        "c3x_kumar_fixed_le_template.scdoc"
+    )
+}
 MAX_FILE_BYTES = 10 * 1024 * 1024
 SECRET_PATTERNS = (
     re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
@@ -59,7 +65,10 @@ def main() -> int:
         size = path.stat().st_size
         total_bytes += size
         lowered = path.name.lower()
-        if lowered.endswith(FORBIDDEN_SUFFIXES):
+        if (
+            lowered.endswith(FORBIDDEN_SUFFIXES)
+            and path not in ALLOWED_BINARY_PATHS
+        ):
             failures.append(f"forbidden solver artifact: {path}")
         if size > MAX_FILE_BYTES:
             failures.append(f"file exceeds 10 MiB: {path} ({size} bytes)")
