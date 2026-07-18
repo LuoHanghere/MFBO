@@ -1,0 +1,62 @@
+{
+  "iteration": 1,
+  "pi_ledger_trial_id": 6,
+  "standard_ledger_trial_id": 5,
+  "status": "completed",
+  "proposal": {
+    "source": "lhs",
+    "fidelity": "L2",
+    "mesh_tier": "coarse",
+    "design": {
+      "SS1_s": 0.25132425880518633,
+      "SS2_s": 0.2762834779036399,
+      "PS1_s": 0.2062801001888814,
+      "PS2_s": 0.24314866489931847,
+      "suction_angle_deg": 39.900525514380554,
+      "pressure_angle_deg": 29.032437763574954
+    }
+  },
+  "mesh": {
+    "cells": 1842584,
+    "minimum_orthogonal_quality": 0.04146286848462744
+  },
+  "result": {
+    "protected_eta_bar": 0.6686129064442368,
+    "whole_vane_eta_bar": 0.5665245188445803,
+    "coolant_mass_ratio": 0.9999992122682914,
+    "loss_ratio_diagnostic": 1.1963256243376306,
+    "continuity_residual": 0.0037784,
+    "y_plus_p95": 8.507634162902832,
+    "y_plus_max": 12.31525993347168,
+    "accepted": true
+  },
+  "comparison": {
+    "coarse_baseline": 0.682210488894674,
+    "change_from_baseline": -0.013597582450437184,
+    "change_from_baseline_percent": -1.9931652579056935,
+    "current_best_L2": 0.6920976477798865,
+    "change_from_best": -0.023484741335649706,
+    "change_from_best_percent": -3.3932699252748777,
+    "incumbent_improved": false
+  },
+  "accounting": {
+    "nominal_L3_equivalent_cost": 0.2,
+    "pi_cost_before": 2.401,
+    "pi_cost_after": 2.601,
+    "standard_cost_before": 2.4,
+    "standard_cost_after": 2.6,
+    "wall_minutes": 81.53
+  },
+  "next_common_proposal": {
+    "fidelity": "L2",
+    "source": "lhs",
+    "design": {
+      "SS1_s": 0.255329204084681,
+      "SS2_s": 0.27684090022535307,
+      "PS1_s": 0.2126529374003558,
+      "PS2_s": 0.23776962698842385,
+      "suction_angle_deg": 38.452797728663626,
+      "pressure_angle_deg": 25.055338365780166
+    }
+  }
+}

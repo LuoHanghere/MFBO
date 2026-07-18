@@ -1,0 +1,85 @@
+{
+  "valid": true,
+  "simulation_case": "nasa_44344_validation",
+  "objective": {
+    "eta_bar": 0.3197723432476615,
+    "protected_eta_bar": 0.352124744846985,
+    "protected_area_m2": 0.0012246685001813084
+  },
+  "constraints": {
+    "coolant_mass_flow_ratio": 1.000000000000002,
+    "coolant_actual_kg_s": 0.005320275600000011,
+    "mass_imbalance": -1.4242712909115019e-05,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 98443.7509808761,
+      "inlet_total_pressure_mean_Pa": 285131.197327275,
+      "outlet_total_pressure_mean_Pa": 186687.4463463989,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 2.298297882080078,
+    "y_plus_max": 3.3329250812530518
+  },
+  "references": {
+    "Tg_ref_K": 701.0,
+    "Tc_ref": {
+      "method": "coolant target mass-flow weighted",
+      "value_K": 593.6263151083753,
+      "components": [
+        {
+          "region": "suction",
+          "total_temperature_K": 595.85,
+          "weight_kg_s": 0.0026114173
+        },
+        {
+          "region": "showerhead",
+          "total_temperature_K": 602.86,
+          "weight_kg_s": 0.0012433465
+        },
+        {
+          "region": "pressure",
+          "total_temperature_K": 581.83,
+          "weight_kg_s": 0.0014655118
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "selected_wall_surfaces": [
+      "vane_wall"
+    ],
+    "all_wall_surfaces": [
+      "film_hole_wall",
+      "plenum_wall",
+      "vane_wall"
+    ],
+    "available_scalar_fields": [
+      "wall-temperature",
+      "temperature",
+      "y-plus"
+    ],
+    "mass_flow_report_available": true,
+    "convergence": {
+      "available": true,
+      "path": "fluent-20260714-121738-322408.trn",
+      "warnings": {
+        "artificial_wall": 0,
+        "reversed_flow": 0,
+        "divergence": 0,
+        "floating_point": 0
+      },
+      "residual_row_count": 101,
+      "last_residual_row": {
+        "iteration": 500,
+        "continuity": 0.0014164,
+        "x_velocity": 7.9272e-06,
+        "y_velocity": 2.0659e-05,
+        "z_velocity": 3.4655e-06,
+        "energy": 2.2464e-05,
+        "k": 0.0010298,
+        "omega": 0.00022231
+      }
+    },
+    "export_log": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\post_iter500\\export_workbench_film_results.log"
+  }
+}

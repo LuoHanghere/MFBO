@@ -1,0 +1,200 @@
+{
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo_8d.yaml",
+  "seed": 20260717,
+  "strategy": "interleaved span-count strata with 7D Latin-hypercube pools",
+  "per_span_count": 3,
+  "span_counts": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "diagnostics": {
+    "4": {
+      "pool_size": 256,
+      "feasible_seen_before_completion": 3
+    },
+    "5": {
+      "pool_size": 256,
+      "feasible_seen_before_completion": 3
+    },
+    "6": {
+      "pool_size": 256,
+      "feasible_seen_before_completion": 3
+    },
+    "7": {
+      "pool_size": 256,
+      "feasible_seen_before_completion": 3
+    }
+  },
+  "designs": [
+    {
+      "candidate_id": "N4-S1",
+      "design": {
+        "SS1_s": 0.24620539634350652,
+        "SS2_s": 0.2703502742861238,
+        "PS1_s": 0.21679966708671333,
+        "PS2_s": 0.23530846720552775,
+        "suction_angle_deg": 44.444587361899494,
+        "pressure_angle_deg": 22.33539432747098,
+        "diameter_mm": 0.8925388220760736,
+        "span_count": 4
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N5-S1",
+      "design": {
+        "SS1_s": 0.24582269332109422,
+        "SS2_s": 0.2609603708037052,
+        "PS1_s": 0.20367876502015955,
+        "PS2_s": 0.2370455153797785,
+        "suction_angle_deg": 32.247661510166395,
+        "pressure_angle_deg": 23.44462505559308,
+        "diameter_mm": 0.9624165317496627,
+        "span_count": 5
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N6-S1",
+      "design": {
+        "SS1_s": 0.24208432887779963,
+        "SS2_s": 0.2752168911571387,
+        "PS1_s": 0.22027148683076925,
+        "PS2_s": 0.22870099111887127,
+        "suction_angle_deg": 41.32028763083687,
+        "pressure_angle_deg": 23.706640183523074,
+        "diameter_mm": 1.0008695955207707,
+        "span_count": 6
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N7-S1",
+      "design": {
+        "SS1_s": 0.23943719057061552,
+        "SS2_s": 0.2732321569125405,
+        "PS1_s": 0.21497507399160465,
+        "PS2_s": 0.23059783677884707,
+        "suction_angle_deg": 38.90807133657293,
+        "pressure_angle_deg": 20.75532741792903,
+        "diameter_mm": 1.016863599403518,
+        "span_count": 7
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N4-S2",
+      "design": {
+        "SS1_s": 0.24865517642660773,
+        "SS2_s": 0.2672537583383595,
+        "PS1_s": 0.21049042848574118,
+        "PS2_s": 0.22549390837180983,
+        "suction_angle_deg": 37.64396629564346,
+        "pressure_angle_deg": 22.95325821196097,
+        "diameter_mm": 0.8686603921501006,
+        "span_count": 4
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N5-S2",
+      "design": {
+        "SS1_s": 0.25305032667928895,
+        "SS2_s": 0.26983926779296763,
+        "PS1_s": 0.21703645420468648,
+        "PS2_s": 0.24171240518328418,
+        "suction_angle_deg": 40.32986064402421,
+        "pressure_angle_deg": 21.037548089853036,
+        "diameter_mm": 1.0816464898970615,
+        "span_count": 5
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N6-S2",
+      "design": {
+        "SS1_s": 0.25598543883837976,
+        "SS2_s": 0.25976276317080904,
+        "PS1_s": 0.21828331655567523,
+        "PS2_s": 0.23179724678305708,
+        "suction_angle_deg": 36.27699170866639,
+        "pressure_angle_deg": 24.24670445139001,
+        "diameter_mm": 1.0443312196594294,
+        "span_count": 6
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N7-S2",
+      "design": {
+        "SS1_s": 0.23953297910253576,
+        "SS2_s": 0.2629229666017807,
+        "PS1_s": 0.21276722050701222,
+        "PS2_s": 0.24993034824047944,
+        "suction_angle_deg": 36.46555842894841,
+        "pressure_angle_deg": 19.56361479341487,
+        "diameter_mm": 0.9418745219796492,
+        "span_count": 7
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N4-S3",
+      "design": {
+        "SS1_s": 0.2552683307669949,
+        "SS2_s": 0.2736372967416709,
+        "PS1_s": 0.21638539895919803,
+        "PS2_s": 0.23027340363198068,
+        "suction_angle_deg": 34.60148082770433,
+        "pressure_angle_deg": 24.868552329497305,
+        "diameter_mm": 0.9879273429067831,
+        "span_count": 4
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N5-S3",
+      "design": {
+        "SS1_s": 0.2506685217485146,
+        "SS2_s": 0.25615002380124097,
+        "PS1_s": 0.224605719941299,
+        "PS2_s": 0.2423812638841679,
+        "suction_angle_deg": 32.425452857008835,
+        "pressure_angle_deg": 24.751479123885332,
+        "diameter_mm": 0.9240693491321068,
+        "span_count": 5
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N6-S3",
+      "design": {
+        "SS1_s": 0.24882174790624215,
+        "SS2_s": 0.26985351775048433,
+        "PS1_s": 0.22589130437394214,
+        "PS2_s": 0.23610339886810286,
+        "suction_angle_deg": 35.55676574796047,
+        "pressure_angle_deg": 22.461949601228188,
+        "diameter_mm": 0.9873114795355602,
+        "span_count": 6
+      },
+      "geometry_gate_ok": true
+    },
+    {
+      "candidate_id": "N7-S3",
+      "design": {
+        "SS1_s": 0.23924979468876634,
+        "SS2_s": 0.26332436048789454,
+        "PS1_s": 0.20178882675413926,
+        "PS2_s": 0.23661510000313277,
+        "suction_angle_deg": 33.092142038799324,
+        "pressure_angle_deg": 26.9511092499897,
+        "diameter_mm": 0.9346784391666164,
+        "span_count": 7
+      },
+      "geometry_gate_ok": true
+    }
+  ]
+}

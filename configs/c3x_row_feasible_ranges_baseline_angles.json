@@ -1,0 +1,83 @@
+{
+  "status": "ok",
+  "method": "one-row-at-a-time conditional scan; all other variables held at baseline",
+  "design": "E:\\Work\\BOfm\\configs\\c3x_downstream_design_baseline.json",
+  "cavities": "E:\\Work\\BOfm\\configs\\c3x_fixed_downstream_plenums.json",
+  "scan": {
+    "s_min": 0.1,
+    "s_max": 0.4,
+    "step": 0.001,
+    "additional_cavity_margin_D": 0.25
+  },
+  "fixed_angles_deg": {
+    "suction": 35.0,
+    "pressure": 30.0
+  },
+  "rows": {
+    "SS1": {
+      "surface": "suction",
+      "baseline_s_over_s0": 0.241022565,
+      "feasible_intervals": [
+        [
+          0.239,
+          0.262
+        ]
+      ],
+      "baseline_interval": [
+        0.239,
+        0.262
+      ],
+      "feasible_sample_count": 24,
+      "rejected_sample_count": 277
+    },
+    "SS2": {
+      "surface": "suction",
+      "baseline_s_over_s0": 0.262977435,
+      "feasible_intervals": [
+        [
+          0.242,
+          0.292
+        ]
+      ],
+      "baseline_interval": [
+        0.242,
+        0.292
+      ],
+      "feasible_sample_count": 51,
+      "rejected_sample_count": 250
+    },
+    "PS1": {
+      "surface": "pressure",
+      "baseline_s_over_s0": 0.210838936,
+      "feasible_intervals": [
+        [
+          0.192,
+          0.239
+        ]
+      ],
+      "baseline_interval": [
+        0.192,
+        0.239
+      ],
+      "feasible_sample_count": 48,
+      "rejected_sample_count": 253
+    },
+    "PS2": {
+      "surface": "pressure",
+      "baseline_s_over_s0": 0.239161064,
+      "feasible_intervals": [
+        [
+          0.211,
+          0.271
+        ]
+      ],
+      "baseline_interval": [
+        0.211,
+        0.271
+      ],
+      "feasible_sample_count": 61,
+      "rejected_sample_count": 240
+    }
+  },
+  "warning": "These are conditional ranges, not independent guaranteed bounds. Paired rows share an injection-axis frame; every BO candidate must still pass validate_workbench_layout.py with the current cavities."
+}

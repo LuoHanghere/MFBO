@@ -22,18 +22,15 @@ case:
 conditions:
   inlet_turbulence_intensity_pct: 6.5    # LDA, per CR-168015 (all runs)
   working_fluid: air-ideal-gas
-  # Baseline validation case = run code 44155 (Garg-validated, max showerhead
-  # blowing). Aero conditions CONFIRMED from Garg & Ameri 1997 Table 1.
-  baseline_run_code: 44155
-  inlet_total_pressure_kPa: 280.95
-  inlet_total_temperature_K: 705
-  inlet_mach: 0.19
-  inlet_reynolds: 6.0e5
-  exit_mach: 0.90
-  exit_reynolds: 2.0e6                  # based on true chord
-  # Coolant fed via resolved plenums (Pc/Pt drives flow). Per-region blowing
-  # ratios for 44155 from Garg Table 1: showerhead ~0.41 (44135=min, 44155=max);
-  # downstream SS/PS in ~0.4-0.7 range. Tune plenum Pc/Pt to match these.
+  # Baseline validation = NASA run 44344. Kumar's 285130 Pa / 701 K validation
+  # point and the three plenum ratios exactly match this row in Table VI.
+  baseline_run_code: 44344
+  inlet_total_pressure_kPa: 285.13
+  inlet_total_temperature_K: 701
+  inlet_mach: 0.17
+  inlet_reynolds: 5.4e5
+  exit_mach: 0.89
+  exit_reynolds: 2.03e6                 # based on true chord
   alt_run_codes:                        # same Ma2/Re2 -> blowing/temp sweep (Paper 2)
     '44135': min showerhead blowing
     '44355': warmest coolant (higher Tc/Tg)
@@ -47,17 +44,28 @@ geometry:
   throat_mm: 32.92              # 1.296 in
   setting_angle_deg: 59.89
   air_exit_angle_deg: 72.38
-  suction_surface_arc_mm: 177.82
-  pressure_surface_arc_mm: 137.23
+  suction_surface_arc_mm: 180.37
+  pressure_surface_arc_mm: 139.82
   le_radius_mm: 11.68           # RLE = 1.168 cm (approx, confirm)
   airfoil_coordinates: configs/c3x_coordinates.csv   # 39-pt Table II (to extract)
   span_model: periodic_single_pitch   # LOCKED: periodic single pitch + periodic BC
   passage_domain:
-    upstream_axial_chords: 1.0
+    upstream_axial_chords: 1.5   # was 1.0; inlet block is a clean rectangle
+                                 # (horizontal periodics + vertical inlet face),
+                                 # so lengthening only helps inflow uniformity.
     downstream_axial_chords: 1.0
-    downstream_periodic_angle: air_exit_angle_deg
+    # Signed angle in cascade CRS (x=axial, y=tangential). NASA air_exit_angle_deg
+    # is a positive magnitude; here flow exits below the axial axis -> negative.
+    downstream_periodic_angle_deg: -72.38
     outlet_plane: constant_x
-    rationale: "Extend downstream periodic boundaries along nominal exit flow angle. Keep 1.0 Cax as the current stable baseline; test 1.5/2.0 Cax only as domain-length sensitivity."
+    # Translational-periodic constraint: the outlet caps two periodic edges whose
+    # endpoints differ by exactly (0, pitch), so the outlet face is necessarily a
+    # vertical constant-x plane and CANNOT be made normal to the -72 deg exit flow
+    # without dropping strict periodicity (mixing-plane / GGI). The -72 deg edge is
+    # steep (tan72~3.1): each extra 1 Cax of outlet drops the domain ~245 mm in y,
+    # so lengthening the outlet makes the domain a thin skewed tube -> this is why
+    # the 1.5 Cax outlet trial showed severe reversed flow. Keep outlet at 1.0 Cax.
+    rationale: "Inlet 1.5 Cax for uniform inflow. Outlet stays 1.0 Cax: constant-x face is forced by strict periodicity; steep -72 deg edge makes longer outlets unstable (README). Kumar-style normal outlet would need mixing-plane / non-periodic exit."
   # Showerhead: CONFIRMED from CR-174827 Table IV (fixed, not optimized).
   showerhead:
     fixed: true
@@ -78,6 +86,7 @@ geometry:
     p_over_D: 4.0               # spanwise pitch-to-diameter
     s_over_D: 3.0               # row spacing-to-diameter
     spanwise: normal            # holes normal to surface in spanwise dir (compound beta = 0)
+    injection_sense: forward    # forward now; reverse reserved for sensitivity/round 2
     pressure_side:
       s_over_s0: [0.197, 0.225]
       injection_angle_deg: 20   # streamwise inclination to surface (CR-182133)
@@ -115,6 +124,7 @@ design_variables:
   round2_extra:
     hole_diameter_D_mm:      {active_round: 2, bounds: [0.8, 1.5], baseline: 0.99}
     compound_angle_beta_deg: {active_round: 2, bounds: [0.0, 45.0], baseline: 0.0}
+    injection_sense:         {active_round: 2, choices: [forward, reverse], baseline: forward}
   dimensionality: {round1_3rows: 9, round2_all4: 20}
 
 # --- Objective / constraints (research plan §3.2-3.3) ------------------------
@@ -158,3 +168,36 @@ solver:
   warm_start: interpolate_nearest_converged_field   # see plan §5.2 discussion
   convergence_criterion: residuals + eta_bar moving-average plateau
   divergence_recovery: reduce_CFL_retry_once
+
+# --- Heat-transfer validation (paired specified-Tw FC/NFC -> NASA SNR) --------
+# Decision 2026-07-15: validation uses paired ISOTHERMAL fluid-only calculations
+# and SNR = 1 - St_FC/St_NFC = 1 - q_FC/q_NFC for common Tg and Tw. The BO loop
+# remains ADIABATIC (eta objective). No CHT / no solid zone.
+validation:
+  wall_thermal: adiabatic        # 'adiabatic' (BO loop) | 'isothermal' (validation run)
+  # First-pass uniform approximation from run 44344 Table VI: Tw/Tg=0.79.
+  # Table VIII contains local Tw/Tg and should replace this uniform value in the
+  # publication-grade prescribed-temperature profile.
+  wall_temperature_K: 553.79
+  heat_transfer:
+    metric: stanton_number_reduction
+    definition: 1 - St_FC/St_NFC
+    paired_cases: [nasa_44344_snr_fc, nasa_44344_snr_nfc]
+    reference_temperature_K: 701.0
+    reference_density_kg_m3: null
+    reference_velocity_m_s: null
+    cp_J_per_kgK: 1006.43
+  experimental_data:
+    nasa_cr182133_run44344_snr_csv: configs/validation/nasa_cr182133_fig30_run44344_snr.csv
+    digitization_quality: approximate_manual_trend_only
+
+# --- Coolant plenum inlet conditions (film solver setup) ---------------------
+# Per-region pressure-inlet conditions for the resolved coolant plenums. Pc is
+# set as Pc/Pt * inlet_total_pressure; Tc is the plenum total temperature.
+# bofm/cfd/film.py maps coolant_inlet_<plenum_id> zones to these regions.
+# NASA CR-182133 Table VI-B, run 44344. Kumar reproduces the same values but
+# swaps the verbal order of LE and PS; NASA's table headings control here.
+coolant:
+  showerhead: {pc_over_pt: 1.048, coolant_temperature_K: 602.86}
+  suction:    {pc_over_pt: 1.051, coolant_temperature_K: 595.85}
+  pressure:   {pc_over_pt: 1.050, coolant_temperature_K: 581.83}

@@ -47,7 +47,10 @@ def build_passage(surfaces: dict[str, Surface], *, pitch_mm: float,
     pre_up = pre + pitch
     le1, te1 = le + pitch, te + pitch
 
-    # exit-angle sign: follow the camber turning (suction bulges +y here)
+    # exit_angle_deg: signed angle from +x (axial) toward +y (tangential).
+    # NASA Table III reports air_exit_angle as a positive magnitude (72.38 deg);
+    # in this CRS the mean exit flow turns toward -y (suction TE tangent ~ -76 deg),
+    # so callers pass a negative value (e.g. -72.38).
     t = np.tan(np.radians(exit_angle_deg))
     ti = np.tan(np.radians(inlet_angle_deg))
 

@@ -1,0 +1,310 @@
+{
+  "name": "nasa44344_coarse_mdot_iter1800",
+  "route": "workbench",
+  "simulation_case": "nasa_44344_validation",
+  "mesh_tier": "coarse",
+  "created_at": "2026-07-15T21:37:27",
+  "status": {
+    "topology_ok": true,
+    "post_valid": true
+  },
+  "inputs": {
+    "design": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_design.json",
+      "exists": true,
+      "bytes": 1289,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "layout": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_layout.json",
+      "exists": true,
+      "bytes": 49421,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "topology": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_geometry_gate.json",
+      "exists": true,
+      "bytes": 1718,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "mesh_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse.msh.h5",
+      "exists": true,
+      "bytes": 207881739,
+      "mtime": "2026-07-13T22:31:08"
+    },
+    "mesh_meta": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse_mesh_meta.json",
+      "exists": true,
+      "bytes": 3544,
+      "mtime": "2026-07-13T22:31:09"
+    },
+    "setup_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse_setup.cas.h5",
+      "exists": true,
+      "bytes": 208172129,
+      "mtime": "2026-07-13T22:41:41"
+    }
+  },
+  "outputs": {
+    "run_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse_mdot_iter1800.cas.h5",
+      "exists": true,
+      "bytes": 208501481,
+      "mtime": "2026-07-15T21:07:30"
+    },
+    "run_data": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse_mdot_iter1800.dat.h5",
+      "exists": true,
+      "bytes": 136937045,
+      "mtime": "2026-07-15T21:07:42"
+    },
+    "post_dir": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\post_mdot_iter1800",
+      "exists": true,
+      "bytes": 12288,
+      "mtime": "2026-07-15T21:09:19"
+    },
+    "log": {
+      "path": "E:\\Work\\BOfm\\fluent-20260715-205133-297360.trn",
+      "exists": true,
+      "bytes": 53054,
+      "mtime": "2026-07-15T21:07:42"
+    }
+  },
+  "geometry_summary": {
+    "diameter_mm": 0.99,
+    "periodic_span_mm": 14.85,
+    "row_count": 4
+  },
+  "mesh_summary": {
+    "status": "ok",
+    "route": "native_cad_to_fluent_meshing",
+    "cad": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2.scdoc",
+    "tier": "coarse",
+    "cores": 8,
+    "surface_controls_m": {
+      "MinSize": 5.9999999999999995e-05,
+      "MaxSize": 0.002,
+      "GrowthRate": 1.18
+    },
+    "boundary_layer": {
+      "AddChild": "yes",
+      "BLControlName": "smooth-transition_1",
+      "OffsetMethodType": "smooth-transition",
+      "NumberOfLayers": 15,
+      "FirstHeight": 5e-06,
+      "Rate": 1.18,
+      "FaceScope": "only-walls",
+      "BLRegionList": [
+        "fluid-regions"
+      ],
+      "LocalPrismPreferences": {
+        "IgnoreBoundaryLayers": "no",
+        "Continuous": "Continuous",
+        "ShowLocalPrismPreferences": true
+      }
+    },
+    "volume_fill": "polyhedra",
+    "mesh": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\c3x_nasa44344_periodic_v2_coarse.msh.h5",
+    "steps": [
+      "imported native CAD",
+      "generated surface mesh",
+      "described fluid-only geometry",
+      "updated boundaries and regions",
+      "created and generated boundary layers",
+      "generated volume mesh",
+      "normalized native-CAD boundary zones",
+      "wrote mesh"
+    ],
+    "fluent_version": "FluentVersion.v242",
+    "zones_after_import": [
+      "origin-qian",
+      "origin-ss",
+      "origin-ps",
+      "origin-film_hole_wall",
+      "origin-zone-7",
+      "origin-zone-4",
+      "origin-zone-3",
+      "origin-vane_wall:-7:fixed_fluid_domain",
+      "origin-span_high:-4:fixed_fluid_domain",
+      "origin-span_low:-3:fixed_fluid_domain",
+      "origin-periodic_high:-7:fixed_fluid_domain",
+      "origin-periodic_high:-6:fixed_fluid_domain",
+      "origin-periodic_low:-7:fixed_fluid_domain",
+      "origin-periodic_low:-5:fixed_fluid_domain",
+      "origin-outlet:-2:fixed_fluid_domain",
+      "origin-inlet:-1:fixed_fluid_domain"
+    ],
+    "zone_normalization": {
+      "inlet": [
+        "inlet--1-fixed_fluid_domain"
+      ],
+      "outlet": [
+        "outlet--2-fixed_fluid_domain"
+      ],
+      "periodic_low": [
+        "periodic_low--5-fixed_fluid_domain",
+        "periodic_low--7-fixed_fluid_domain"
+      ],
+      "periodic_high": [
+        "periodic_high--6-fixed_fluid_domain",
+        "periodic_high--7-fixed_fluid_domain"
+      ],
+      "span_low": [
+        "span_low--3-fixed_fluid_domain",
+        "zone-3"
+      ],
+      "span_high": [
+        "span_high--4-fixed_fluid_domain",
+        "zone-4"
+      ],
+      "vane_wall": [
+        "vane_wall--7-fixed_fluid_domain"
+      ],
+      "film_hole_wall": [
+        "film_hole_wall"
+      ],
+      "qian": [
+        "qian"
+      ],
+      "ss": [
+        "ss"
+      ],
+      "ps": [
+        "ps"
+      ],
+      "plenum_wall": [
+        "zone-7"
+      ]
+    },
+    "mesh_exists": true,
+    "mesh_bytes": 207881739,
+    "cell_count": 1956019,
+    "face_count": 8535678,
+    "orthogonal_quality_limits": [
+      1956019,
+      0.03746045587751856,
+      0.9999999948222807,
+      0.8471152123305261,
+      0.0,
+      0
+    ],
+    "final_zone_names": [
+      "inlet",
+      "outlet",
+      "ps",
+      "ss",
+      "qian",
+      "periodic_high",
+      "periodic_low",
+      "vane_wall",
+      "span_low",
+      "span_high",
+      "plenum_wall",
+      "film_hole_wall",
+      "interior--fixed_fluid_domain"
+    ],
+    "expected_zone_face_counts": {
+      "inlet": 2452,
+      "outlet": 2389,
+      "periodic_low": 11226,
+      "periodic_high": 11220,
+      "span_low": 14521,
+      "span_high": 14814,
+      "vane_wall": 26831,
+      "film_hole_wall": 20180,
+      "qian": 702,
+      "ss": 1112,
+      "ps": 1098
+    },
+    "elapsed_seconds": 125.01966550014913
+  },
+  "topology_summary": {
+    "ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "marker_count": 20,
+    "cavity_checked_markers": 20,
+    "cavity_failed_markers": 0
+  },
+  "result_summary": {
+    "valid": true,
+    "eta_bar": 0.5740716501975982,
+    "protected_eta_bar": 0.6822104888946708,
+    "coolant_mass_flow_ratio": 1.0000004285390653,
+    "mass_imbalance": -1.2844102457727335e-06,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 21268.476887595083,
+      "inlet_total_pressure_mean_Pa": 285129.9467119182,
+      "outlet_total_pressure_mean_Pa": 263861.46982432314,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 8.382636070251465,
+    "y_plus_max": 11.684555053710938,
+    "mass_flow_report_available": true,
+    "last_residual_row": {
+      "iteration": 1800,
+      "continuity": 0.0020177,
+      "x_velocity": 3.4888e-07,
+      "y_velocity": 1.6116e-06,
+      "z_velocity": 8.8783e-08,
+      "energy": 2.6202e-06,
+      "k": 0.0010326,
+      "omega": 0.00014051
+    },
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 0,
+      "divergence": 0,
+      "floating_point": 0,
+      "temperature_limited": 0
+    },
+    "nasa_surface_pressure": {
+      "reference": "NASA CR-182133 Table VII, Ma2=0.90 column",
+      "normalization": "CFD static pressure / inlet total pressure (285130 Pa)",
+      "span_averaging": "face-area weighted within +/-0.5% surface distance",
+      "point_count": 29,
+      "mae": 0.02240753529481375,
+      "rmse": 0.03519026978390397,
+      "max_abs_error": 0.11589488103748041,
+      "sides": {
+        "pressure": {
+          "point_count": 12,
+          "mae": 0.005452180582106429,
+          "rmse": 0.007412993817984325,
+          "max_abs_error": 0.01918460865413163
+        },
+        "suction": {
+          "point_count": 17,
+          "mae": 0.034376020974371854,
+          "rmse": 0.04553787551446709,
+          "max_abs_error": 0.11589488103748041
+        }
+      }
+    }
+  },
+  "convergence_summary": {
+    "available": true,
+    "path": "fluent-20260715-205133-297360.trn",
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 0,
+      "divergence": 0,
+      "floating_point": 0,
+      "temperature_limited": 0
+    },
+    "residual_row_count": 401,
+    "last_residual_row": {
+      "iteration": 1800,
+      "continuity": 0.0020177,
+      "x_velocity": 3.4888e-07,
+      "y_velocity": 1.6116e-06,
+      "z_velocity": 8.8783e-08,
+      "energy": 2.6202e-06,
+      "k": 0.0010326,
+      "omega": 0.00014051
+    }
+  }
+}

@@ -15,8 +15,9 @@ from bofm.geometry.profile import densify_profile
 
 root = Path(__file__).resolve().parents[1]
 config = yaml.safe_load(open(root / "configs" / "c3x_baseline.yaml", encoding="utf-8"))
-profile = P.load_profile(root / "configs" / "c3x_coordinates.csv")
-surfaces = P.build_surfaces(profile)  # raw profile drives all validation below
+source_profile = P.load_profile(root / "configs" / "c3x_coordinates.csv")
+profile = P.clean_profile(source_profile)
+surfaces = P.build_surfaces(profile)  # cleaned profile drives all validation below
 
 print("computed suction arc : %.2f mm  (ref %.2f)" % (surfaces["suction"].arc_mm, P.REF_SUCTION_ARC_MM))
 print("computed pressure arc: %.2f mm  (ref %.2f)" % (surfaces["pressure"].arc_mm, P.REF_PRESSURE_ARC_MM))
@@ -52,8 +53,12 @@ print("\nwrote:", out_json, "(profile_xy_mm: %d densified pts)" % len(dense_prof
 
 # plot
 fig, ax = plt.subplots(figsize=(6, 7))
+sx, sy = source_profile[:, 0], source_profile[:, 1]
+ax.plot(np.append(sx, sx[0]), np.append(sy, sy[0]), "-", color="0.75", lw=0.8,
+        label="source profile")
 px, py = profile[:, 0], profile[:, 1]
-ax.plot(np.append(px, px[0]), np.append(py, py[0]), "-", color="0.6", lw=1)
+ax.plot(np.append(px, px[0]), np.append(py, py[0]), "-", color="0.45", lw=1,
+        label="cleaned profile")
 for surf, col in (("suction", "tab:blue"), ("pressure", "tab:green")):
     s = surfaces[surf]
     ax.plot(s.xy[:, 0], s.xy[:, 1], col, lw=2, alpha=0.5, label=f"{surf} ({s.arc_mm:.0f} mm)")

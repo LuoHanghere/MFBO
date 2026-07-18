@@ -61,6 +61,27 @@ def load_profile(csv_path: str | Path) -> np.ndarray:
     return df[["x_mm", "y_mm"]].to_numpy()
 
 
+def clean_profile(profile: np.ndarray) -> np.ndarray:
+    """Return profile points with the known C3X upper-TE kink point removed.
+
+    The digitized C3X table has one point immediately before the trailing edge
+    on the suction side that is almost vertically above the TE. Keeping it makes
+    the interpolated upper trailing edge nearly vertical and visibly kinked.
+    Drop only that very specific pattern: previous point has nearly the same x
+    as the TE, while the y jump to the TE is large.
+    """
+    xy = np.asarray(profile, dtype=float).copy()
+    if xy.shape[0] < 4:
+        return xy
+    _, te = find_le_te(xy)
+    prev_i = (te - 1) % xy.shape[0]
+    dx = abs(float(xy[prev_i, 0] - xy[te, 0]))
+    dy = abs(float(xy[prev_i, 1] - xy[te, 1]))
+    if dx < 0.25 and dy > 2.0:
+        xy = np.delete(xy, prev_i, axis=0)
+    return xy
+
+
 def find_le_te(profile: np.ndarray) -> tuple[int, int]:
     """Leading edge = min axial x (nose); trailing edge = max axial x."""
     return int(np.argmin(profile[:, 0])), int(np.argmax(profile[:, 0]))

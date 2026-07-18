@@ -1,0 +1,393 @@
+{
+  "units": "mm",
+  "span_mm": 7.92,
+  "source": "showerhead Table IV + body place_holes -> real cavities",
+  "holes": [
+    {
+      "id": "LE1_0",
+      "surface": "leading_edge",
+      "row": 1,
+      "nasa_hole": null,
+      "arc_s_mm": -14.85,
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0,
+      "surface_point_mm": [
+        7.468128329544388,
+        100.32633240269675,
+        2.376
+      ],
+      "reaches_plenum": true,
+      "z_range_mm": [
+        2.165989285987805,
+        6.897947865683449
+      ],
+      "crosses_slice": false,
+      "cylinder_mm": {
+        "start_mm": [
+          7.345782364916794,
+          100.15563979905131,
+          2.165989285987805
+        ],
+        "end_mm": [
+          10.102479992148636,
+          104.00168324549983,
+          6.897947865683449
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          7.748108690036862,
+          99.8672675949215,
+          2.165989285987805
+        ],
+        "axis_unit": [
+          0.41193927484073295,
+          0.5747225711972188,
+          0.7071067811864413
+        ]
+      },
+      "kind": "showerhead"
+    },
+    {
+      "id": "LE2_0",
+      "surface": "leading_edge",
+      "row": 2,
+      "nasa_hole": null,
+      "arc_s_mm": -7.425,
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0,
+      "surface_point_mm": [
+        1.965190730831909,
+        105.23357054329189,
+        4.356
+      ],
+      "reaches_plenum": true,
+      "z_range_mm": [
+        4.145989285987805,
+        6.685916844007344
+      ],
+      "crosses_slice": false,
+      "cylinder_mm": {
+        "start_mm": [
+          1.7881555588923816,
+          105.12059688310397,
+          4.145989285987805
+        ],
+        "end_mm": [
+          3.9292678067266644,
+          106.48693152079751,
+          6.685916844007344
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          2.0544370296067296,
+          104.70332098114758,
+          4.145989285987805
+        ],
+        "axis_unit": [
+          0.596078019998838,
+          0.3803826942356698,
+          0.7071067811863502
+        ]
+      },
+      "kind": "showerhead"
+    },
+    {
+      "id": "LE3_0",
+      "surface": "leading_edge",
+      "row": 3,
+      "nasa_hole": null,
+      "arc_s_mm": 0.0,
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0,
+      "surface_point_mm": [
+        0.046,
+        112.278,
+        2.376
+      ],
+      "reaches_plenum": true,
+      "z_range_mm": [
+        2.165989285987805,
+        4.210942097177256
+      ],
+      "crosses_slice": false,
+      "cylinder_mm": {
+        "start_mm": [
+          -0.16342493896746468,
+          112.29367465911545,
+          2.165989285987805
+        ],
+        "end_mm": [
+          1.875823961685424,
+          112.14104464510241,
+          4.210942097177256
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          -0.20037046481185025,
+          111.80005534413742,
+          2.165989285987805
+        ],
+        "axis_unit": [
+          0.7051344746383896,
+          -0.05277663001837535,
+          0.707106781186303
+        ]
+      },
+      "kind": "showerhead"
+    },
+    {
+      "id": "LE4_0",
+      "surface": "leading_edge",
+      "row": 4,
+      "nasa_hole": null,
+      "arc_s_mm": 7.425,
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0,
+      "surface_point_mm": [
+        2.386033172679732,
+        119.2584613634129,
+        4.356
+      ],
+      "reaches_plenum": true,
+      "z_range_mm": [
+        4.145989285987805,
+        6.473784809651592
+      ],
+      "crosses_slice": false,
+      "cylinder_mm": {
+        "start_mm": [
+          2.1997335226473447,
+          119.35539918058309,
+          4.145989285987805
+        ],
+        "end_mm": [
+          4.264711461726872,
+          118.28092344279094,
+          6.473784809651592
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          1.9712488963992247,
+          118.916286694348,
+          4.145989285987805
+        ],
+        "axis_unit": [
+          0.6272715489310352,
+          -0.32638995680221916,
+          0.7071067811863339
+        ]
+      },
+      "kind": "showerhead"
+    },
+    {
+      "id": "LE5_0",
+      "surface": "leading_edge",
+      "row": 5,
+      "nasa_hole": null,
+      "arc_s_mm": 14.85,
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0,
+      "surface_point_mm": [
+        6.43755238615684,
+        125.46517170301027,
+        2.376
+      ],
+      "reaches_plenum": true,
+      "z_range_mm": [
+        2.165989285987805,
+        10.504192449731235
+      ],
+      "crosses_slice": true,
+      "cylinder_mm": {
+        "start_mm": [
+          6.275416019102113,
+          125.59864941080527,
+          2.165989285987805
+        ],
+        "end_mm": [
+          12.712830296237966,
+          120.2990900494632,
+          10.504192449731235
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          5.960806044705316,
+          125.21649032873427,
+          2.165989285987805
+        ],
+        "axis_unit": [
+          0.5459136937874617,
+          -0.44941989156605455,
+          0.707106781186488
+        ]
+      },
+      "kind": "showerhead"
+    },
+    {
+      "id": "SS1",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "kind": "body",
+      "diameter_mm": 0.99,
+      "s_over_s0": 0.254,
+      "injection_deg": 35.0,
+      "surface_point_mm": [
+        32.49644152527691,
+        123.82039569460417,
+        3.96
+      ],
+      "reaches_plenum": true,
+      "aimed_at_centroid": false,
+      "cylinder_mm": {
+        "start_mm": [
+          32.54433023149171,
+          124.11350944695481,
+          3.96
+        ],
+        "end_mm": [
+          31.62654398309215,
+          118.49598931772975,
+          3.96
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          32.0558073109078,
+          124.19332395731274,
+          3.96
+        ],
+        "axis_unit": [
+          -0.16124143506665498,
+          -0.9869149910794214,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "SS2",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "kind": "body",
+      "diameter_mm": 0.99,
+      "s_over_s0": 0.276,
+      "injection_deg": 35.0,
+      "surface_point_mm": [
+        34.894198195524005,
+        120.73518291922619,
+        3.96
+      ],
+      "reaches_plenum": true,
+      "aimed_at_centroid": false,
+      "cylinder_mm": {
+        "start_mm": [
+          35.05160936818646,
+          120.98703748583365,
+          3.96
+        ],
+        "end_mm": [
+          32.61783123732449,
+          117.09304364791633,
+          3.96
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          34.63185175717445,
+          121.24938944027082,
+          3.96
+        ],
+        "axis_unit": [
+          -0.5300039483583275,
+          -0.8479951737622968,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS1",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "kind": "body",
+      "diameter_mm": 0.99,
+      "s_over_s0": 0.197,
+      "injection_deg": 20.0,
+      "surface_point_mm": [
+        17.727842923828607,
+        91.9877292404173,
+        3.96
+      ],
+      "reaches_plenum": true,
+      "aimed_at_centroid": false,
+      "cylinder_mm": {
+        "start_mm": [
+          17.435488723814004,
+          92.04005534990215,
+          3.96
+        ],
+        "end_mm": [
+          23.333759318048052,
+          90.98437168649063,
+          3.96
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          17.34827854133934,
+          91.55279834987829,
+          3.96
+        ],
+        "axis_unit": [
+          0.9843575758065858,
+          -0.17618218681764647,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS2",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "kind": "body",
+      "diameter_mm": 0.99,
+      "s_over_s0": 0.225,
+      "injection_deg": 20.0,
+      "surface_point_mm": [
+        20.65411186445962,
+        89.27466091465229,
+        3.96
+      ],
+      "reaches_plenum": true,
+      "aimed_at_centroid": false,
+      "cylinder_mm": {
+        "start_mm": [
+          20.358374961532352,
+          89.24729881957553,
+          3.96
+        ],
+        "end_mm": [
+          24.831271149913757,
+          89.66113899157808,
+          3.96
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          20.40397845332689,
+          88.75440398136392,
+          3.96
+        ],
+        "axis_unit": [
+          0.9957471479030297,
+          0.09212826625166054,
+          0.0
+        ]
+      }
+    }
+  ]
+}

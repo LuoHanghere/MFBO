@@ -1,0 +1,60 @@
+{
+  "status": "ok",
+  "tier": "smoke",
+  "purpose": "Pipeline and boundary-name verification only",
+  "source_sat": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a.sat",
+  "passage_json": "E:\\Work\\BOfm\\configs\\c3x_kumar_paper_external_flow.json",
+  "periodic_span_mm": 14.85,
+  "hole_diameter_mm": 0.99,
+  "requested": {
+    "purpose": "Pipeline and boundary-name verification only",
+    "expected_cells_M": [
+      0.3,
+      1.0
+    ],
+    "cells_across_hole_D": 8,
+    "surface": {
+      "MinSize": 0.12,
+      "MaxSize": 4.0,
+      "GrowthRate": 1.2
+    },
+    "prism_layers": 8,
+    "first_layer_mm": 0.02,
+    "prism_growth": 1.2,
+    "y_plus_design": 10,
+    "volume_fill": "poly-hexcore"
+  },
+  "derived": {
+    "nominal_cells_across_hole": 8.25,
+    "prism_total_thickness_mm": 0.32998169599999994
+  },
+  "host": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "logical_processors": 32,
+    "fluent_cores": 4
+  },
+  "actual": {
+    "cell_count": 523718,
+    "cell_count_M": 0.523718,
+    "face_count": 2816505,
+    "boundary_group_zone_counts": {
+      "inlet": 1,
+      "outlet": 1,
+      "span_low": 4,
+      "span_high": 4,
+      "periodic_low": 2,
+      "periodic_high": 2,
+      "vane_wall": 1016,
+      "film_hole_wall": 30,
+      "coolant_inlet_LE": 1,
+      "coolant_inlet_SS": 1,
+      "coolant_inlet_PS": 1
+    }
+  },
+  "elapsed_seconds": 98.39420699991751,
+  "outputs": {
+    "mesh": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a_smoke.msh.h5",
+    "case": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a_smoke.cas.h5",
+    "log": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a_smoke_mesh.log"
+  }
+}

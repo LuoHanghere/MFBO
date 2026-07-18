@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo.yaml",
+  "experiment": "C3X NASA standard MFBO",
+  "trial_id": 6,
+  "fidelity": "L2",
+  "mesh_tier": "coarse",
+  "source": "lhs",
+  "design": {
+    "SS1_s": 0.255329204084681,
+    "SS2_s": 0.27684090022535307,
+    "PS1_s": 0.2126529374003558,
+    "PS2_s": 0.23776962698842385,
+    "suction_angle_deg": 38.452797728663626,
+    "pressure_angle_deg": 25.055338365780166
+  },
+  "predicted": {},
+  "relative_cost": 0.2,
+  "cost_before": 2.6,
+  "run_dir": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0006_L2",
+  "error": "stage nasa_cfd_pipeline failed with exit code 4294967295; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0006_L2\\nasa_cfd_pipeline.log",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Work\\BOfm\\scripts\\run_one_optimization_iteration.py\", line 75, in main\n    result = evaluator.evaluate(\n             ^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Work\\BOfm\\bofm\\optimization\\evaluator.py\", line 201, in evaluate\n    raise RuntimeError(\nRuntimeError: stage nasa_cfd_pipeline failed with exit code 4294967295; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0006_L2\\nasa_cfd_pipeline.log\n"
+}

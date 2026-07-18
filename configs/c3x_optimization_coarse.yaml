@@ -1,0 +1,53 @@
+name: C3X coarse screening optimization
+
+objective:
+  name: protected_eta_bar
+  label: Protected-area eta_bar
+  maximize: true
+
+# First campaign: isolate row-position and angle effects. Diameter and span
+# count remain fixed at 0.99 mm and 5 so the geometry and coolant-area changes
+# do not obscure validation of the optimizer itself.
+variables:
+  - {name: SS1_s, label: SS1 arc position, unit: s/s0, bounds: [0.226, 0.256], baseline: 0.241022565}
+  - {name: SS2_s, label: SS2 arc position, unit: s/s0, bounds: [0.248, 0.278], baseline: 0.262977435}
+  - {name: PS1_s, label: PS1 arc position, unit: s/s0, bounds: [0.196, 0.226], baseline: 0.210838936}
+  - {name: PS2_s, label: PS2 arc position, unit: s/s0, bounds: [0.224, 0.254], baseline: 0.239161064}
+  - {name: suction_angle_deg, label: Suction injection angle, unit: deg, bounds: [25.0, 45.0], baseline: 35.0}
+  - {name: pressure_angle_deg, label: Pressure injection angle, unit: deg, bounds: [20.0, 40.0], baseline: 30.0}
+
+fidelities:
+  - {name: coarse, level: 1.0, relative_cost: 1.0, mesh_tier: coarse}
+
+constraints:
+  - {name: coolant_mass_ratio, label: Coolant mass flow / coarse baseline, upper: 1.02}
+  - {name: loss_ratio, label: Total pressure loss / coarse baseline, upper: 1.02}
+
+physics_prior:
+  c0: 0.68
+  c1: 0.22
+  c2: 0.82
+  blowing_ratio: 1.0
+  angle_sigma_deg: 18.0
+  suction_weight: 0.56
+  periodic_span_mm: 14.85
+  suction_arc_mm: 177.82
+  pressure_arc_mm: 137.23
+
+optimizer:
+  initial_designs: 5
+  candidate_pool: 512
+  seed: 20260712
+  equivalent_high_fidelity_budget: 6.0
+  geometry_gate: c3x_downstream
+
+storage:
+  database: runs/optimization/coarse/c3x_coarse.sqlite3
+  run_root: runs/optimization/coarse/trials
+
+evaluator:
+  type: command
+  stages:
+    - name: coarse_pipeline
+      timeout_seconds: 86400
+      command: '"{python}" scripts/run_coarse_optimization_trial.py --design-json "{design_json}" --run-dir "{run_dir}" --result-json "{result_json}" --mesh-cores 8 --solve-cores 8 --iters 500 --startup-iters 150'

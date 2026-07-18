@@ -1,0 +1,380 @@
+{
+  "source": "NASA CR-182133 Fig. 8 U/V anchors mapped onto user-edited UV-frame SCDOC",
+  "units": "mm",
+  "source_scdoc": "runs/fluid/c3x_uvframe_external_flow.scdoc",
+  "span_mm": 7.425,
+  "model_origin": {
+    "description": "blade/external geometry is shifted so blade minimum V and U are zero; film anchors are not shifted",
+    "v_report_origin_mm": 7.5740838350631225,
+    "u_report_origin_mm": -2.1777068111968063
+  },
+  "cavity_source": "configs/c3x_uvframe_cavities.json",
+  "leading_edge_holes": [
+    {
+      "id": "LE_13",
+      "nasa_hole": 13,
+      "surface": "leading_edge",
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "p_over_D_row_spacing": 4.0,
+      "s_over_D_span_pitch": 7.5,
+      "slant_angle_deg_metadata": 45.0,
+      "skew_angle_deg_metadata": 90.0,
+      "cad_axis_note": "UV-frame first pass uses constant-z cylinder from projected wall point into LE_plenum; slant/skew retained as metadata.",
+      "raw_uv_anchor_xy_mm": [
+        5.41,
+        4.98
+      ],
+      "surface_projected_xy_mm": [
+        5.642807109315251,
+        5.099879518221046
+      ],
+      "raw_to_surface_distance_mm": 0.2618592160620538,
+      "z_center_mm": 3.7125,
+      "axis_xy_to_plenum": [
+        0.9993040940697991,
+        0.03730050368745403
+      ],
+      "reaches_plenum_xy": true,
+      "passage_overlap_d": 2.5,
+      "cylinder_mm": {
+        "start_mm": [
+          3.1695294764924986,
+          5.007560771594598,
+          3.7125
+        ],
+        "end_mm": [
+          9.427671365604617,
+          5.241155175937278,
+          3.7125
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          3.187993225817788,
+          4.512905245030047,
+          3.7125
+        ],
+        "axis_unit": [
+          0.9993040940697993,
+          0.03730050368745394,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "LE_14",
+      "nasa_hole": 14,
+      "surface": "leading_edge",
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "p_over_D_row_spacing": 4.0,
+      "s_over_D_span_pitch": 7.5,
+      "slant_angle_deg_metadata": 45.0,
+      "skew_angle_deg_metadata": 90.0,
+      "cad_axis_note": "UV-frame first pass uses constant-z cylinder from projected wall point into LE_plenum; slant/skew retained as metadata.",
+      "raw_uv_anchor_xy_mm": [
+        8.28,
+        2.11
+      ],
+      "surface_projected_xy_mm": [
+        8.425916164936877,
+        2.227706811196806
+      ],
+      "raw_to_surface_distance_mm": 0.18747378641294576,
+      "z_center_mm": 3.7125,
+      "axis_xy_to_plenum": [
+        0.8571549404225453,
+        0.5150586453106315
+      ],
+      "reaches_plenum_xy": true,
+      "passage_overlap_d": 2.5,
+      "cylinder_mm": {
+        "start_mm": [
+          6.3044576873910785,
+          0.952936664052993,
+          3.7125
+        ],
+        "end_mm": [
+          11.32952852561825,
+          3.9724679721865703,
+          3.7125
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          6.559411716819842,
+          0.5286449685438331,
+          3.7125
+        ],
+        "axis_unit": [
+          0.8571549404225451,
+          0.5150586453106315,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "LE_15",
+      "nasa_hole": 15,
+      "surface": "leading_edge",
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "p_over_D_row_spacing": 4.0,
+      "s_over_D_span_pitch": 7.5,
+      "slant_angle_deg_metadata": 45.0,
+      "skew_angle_deg_metadata": 90.0,
+      "cad_axis_note": "UV-frame first pass uses constant-z cylinder from projected wall point into LE_plenum; slant/skew retained as metadata.",
+      "raw_uv_anchor_xy_mm": [
+        11.959999999999999,
+        0.41000000000000003
+      ],
+      "surface_projected_xy_mm": [
+        12.022733343407195,
+        0.4664576470752064
+      ],
+      "raw_to_surface_distance_mm": 0.08439750167104301,
+      "z_center_mm": 3.7125,
+      "axis_xy_to_plenum": [
+        0.32297406074539103,
+        0.9464078170036596
+      ],
+      "reaches_plenum_xy": true,
+      "passage_overlap_d": 2.5,
+      "cylinder_mm": {
+        "start_mm": [
+          11.223372543062352,
+          -1.8759017000088511,
+          3.7125
+        ],
+        "end_mm": [
+          13.03606445899586,
+          3.4358121729241886,
+          3.7125
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          11.691844412479163,
+          -2.03577386007782,
+          3.7125
+        ],
+        "axis_unit": [
+          0.3229740607453911,
+          0.9464078170036595,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "LE_16",
+      "nasa_hole": 16,
+      "surface": "leading_edge",
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "p_over_D_row_spacing": 4.0,
+      "s_over_D_span_pitch": 7.5,
+      "slant_angle_deg_metadata": 45.0,
+      "skew_angle_deg_metadata": 90.0,
+      "cad_axis_note": "UV-frame first pass uses constant-z cylinder from projected wall point into LE_plenum; slant/skew retained as metadata.",
+      "raw_uv_anchor_xy_mm": [
+        16.0,
+        0.05
+      ],
+      "surface_projected_xy_mm": [
+        15.921582938999569,
+        0.016075385658396613
+      ],
+      "raw_to_surface_distance_mm": 0.08544070993485418,
+      "z_center_mm": 3.7125,
+      "axis_xy_to_plenum": [
+        -0.38040389047826095,
+        0.924820458310154
+      ],
+      "reaches_plenum_xy": true,
+      "passage_overlap_d": 2.5,
+      "cylinder_mm": {
+        "start_mm": [
+          16.863082567933265,
+          -2.272855248659235,
+          3.7125
+        ],
+        "end_mm": [
+          14.671005149052286,
+          3.0564226423530285,
+          3.7125
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          17.32086869479679,
+          -2.084555322872496,
+          3.7125
+        ],
+        "axis_unit": [
+          -0.38040389047826095,
+          0.924820458310154,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "LE_17",
+      "nasa_hole": 17,
+      "surface": "leading_edge",
+      "plenum": "LE_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "p_over_D_row_spacing": 4.0,
+      "s_over_D_span_pitch": 7.5,
+      "slant_angle_deg_metadata": 45.0,
+      "skew_angle_deg_metadata": 90.0,
+      "cad_axis_note": "UV-frame first pass uses constant-z cylinder from projected wall point into LE_plenum; slant/skew retained as metadata.",
+      "raw_uv_anchor_xy_mm": [
+        19.94,
+        1.09
+      ],
+      "surface_projected_xy_mm": [
+        19.78904384830537,
+        0.8980410504096643
+      ],
+      "raw_to_surface_distance_mm": 0.24420482808961422,
+      "z_center_mm": 3.7125,
+      "axis_xy_to_plenum": [
+        -0.8037233629802429,
+        0.5950031561258551
+      ],
+      "reaches_plenum_xy": true,
+      "passage_overlap_d": 2.5,
+      "cylinder_mm": {
+        "start_mm": [
+          21.77825917168147,
+          -0.574591761001827,
+          3.7125
+        ],
+        "end_mm": [
+          16.905686283613747,
+          3.0326148730111697,
+          3.7125
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          22.07278573396377,
+          -0.17674869632660672,
+          3.7125
+        ],
+        "axis_unit": [
+          -0.8037233629802429,
+          0.5950031561258552,
+          0.0
+        ]
+      }
+    }
+  ],
+  "downstream_body_rows": [
+    {
+      "row_id": "PS1",
+      "nasa_hole": 18,
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "status": "parameterized_not_drilled_in_current_scdoc",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "baseline_p_over_D": 4.0,
+      "baseline_alpha_deg": 20.0,
+      "raw_uv_anchor_xy_mm": [
+        35.05,
+        5.590000000000001
+      ],
+      "surface_projected_xy_mm": [
+        34.749652062941124,
+        5.919326882338949
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -27.742090903719852,
+      "raw_to_surface_distance_mm": 0.4457186093564108,
+      "axis_xy_to_plenum_initial": [
+        0.28676715518143747,
+        0.9580003124786263
+      ]
+    },
+    {
+      "row_id": "PS2",
+      "nasa_hole": 19,
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "status": "parameterized_not_drilled_in_current_scdoc",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "baseline_p_over_D": 4.0,
+      "baseline_alpha_deg": 20.0,
+      "raw_uv_anchor_xy_mm": [
+        38.91,
+        6.43
+      ],
+      "surface_projected_xy_mm": [
+        38.809018567385806,
+        6.951347719047017
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -31.930759903290593,
+      "raw_to_surface_distance_mm": 0.5310373752273391,
+      "axis_xy_to_plenum_initial": [
+        -0.4295866603568187,
+        0.9030256370909274
+      ]
+    },
+    {
+      "row_id": "SS1",
+      "nasa_hole": 12,
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "status": "parameterized_not_drilled_in_current_scdoc",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "baseline_p_over_D": 4.0,
+      "baseline_alpha_deg": 35.0,
+      "raw_uv_anchor_xy_mm": [
+        16.31,
+        35.56
+      ],
+      "surface_projected_xy_mm": [
+        16.641838186254645,
+        35.75986480637361
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 45.35307666830247,
+      "raw_to_surface_distance_mm": 0.38737904264884376,
+      "axis_xy_to_plenum_initial": [
+        0.6061019826176202,
+        -0.7953869414737648
+      ]
+    },
+    {
+      "row_id": "SS2",
+      "nasa_hole": 11,
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "status": "parameterized_not_drilled_in_current_scdoc",
+      "diameter_mm": 0.99,
+      "hole_length_mm": 3.35,
+      "baseline_p_over_D": 4.0,
+      "baseline_alpha_deg": 35.0,
+      "raw_uv_anchor_xy_mm": [
+        20.240000000000002,
+        35.92
+      ],
+      "surface_projected_xy_mm": [
+        20.35822537594712,
+        36.06208664652257
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 49.082818853164724,
+      "raw_to_surface_distance_mm": 0.1848400785486413,
+      "axis_xy_to_plenum_initial": [
+        0.140987133053263,
+        -0.9900114283751583
+      ]
+    }
+  ]
+}

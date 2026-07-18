@@ -1,0 +1,26 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\paper\\kumar_case1_periodic_v2_paper_mesh.msh.h5",
+  "cores": 8,
+  "precision": "single",
+  "cell_count": 3571905,
+  "face_count": 15151143,
+  "cell_quality": {
+    "Orthogonal Quality": [
+      3571905,
+      0.01204109161770472,
+      0.9999999694770456,
+      0.8126494787736678,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      3571905,
+      1.831396134743812e-08,
+      0.9879589083822953,
+      0.1852121581733172,
+      0.0,
+      0
+    ]
+  },
+  "status": "ok"
+}

@@ -1,0 +1,21 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse.msh.h5",
+  "exists": true,
+  "fluent_version": "FluentVersion.v242",
+  "cell_count": 1858027,
+  "face_count": 8105235,
+  "boundary_zone_counts": {
+    "inlet": 2451,
+    "outlet": 2404,
+    "qian": 698,
+    "ss": 1107,
+    "ps": 1038,
+    "vane_wall": 25977,
+    "film_hole_wall": 16165,
+    "periodic_low": 11225,
+    "periodic_high": 11226,
+    "span_low": 14466,
+    "span_high": 14733
+  },
+  "status": "ok"
+}

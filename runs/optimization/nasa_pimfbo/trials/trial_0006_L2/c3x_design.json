@@ -1,0 +1,56 @@
+{
+  "name": "c3x_nasa44344_film_validation",
+  "geometry": {
+    "periodic_span_mm": 14.85,
+    "diameter_mm": 0.99,
+    "physical_hole_length_mm": 3.35,
+    "passage_overlap_D": 3.0,
+    "inner_overlap_D": 3.0,
+    "inner_overlap_D_by_surface": {
+      "suction": 3.0,
+      "pressure": 4.5
+    },
+    "span_count": 5,
+    "span_phase_fraction": 0.5
+  },
+  "surface_settings": {
+    "suction": {
+      "injection_angle_deg": 39.900525514380554,
+      "orientation": "forward"
+    },
+    "pressure": {
+      "injection_angle_deg": 29.032437763574954,
+      "orientation": "forward"
+    }
+  },
+  "rows": {
+    "SS1": {
+      "surface": "suction",
+      "source_nasa_hole": 12,
+      "s_over_s0": 0.25132425880518633
+    },
+    "SS2": {
+      "surface": "suction",
+      "source_nasa_hole": 11,
+      "s_over_s0": 0.2762834779036399
+    },
+    "PS1": {
+      "surface": "pressure",
+      "source_nasa_hole": 18,
+      "s_over_s0": 0.2062801001888814
+    },
+    "PS2": {
+      "surface": "pressure",
+      "source_nasa_hole": 19,
+      "s_over_s0": 0.24314866489931847
+    }
+  },
+  "constraints": {
+    "row_order": [
+      "SS1 < SS2",
+      "PS1 < PS2"
+    ],
+    "same_surface_rows_parallel": true,
+    "span_periodicity": "span_count must be an integer; pitch=periodic_span/span_count"
+  }
+}

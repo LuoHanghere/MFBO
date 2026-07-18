@@ -1,0 +1,111 @@
+{
+  "wall_thermal_mode": "isothermal",
+  "prescribed_wall_temperature_K": 553.79,
+  "available_fields": [
+    "heat-flux",
+    "stanton-number",
+    "heat-transfer-coef",
+    "heat-transfer-coef-wall-adj",
+    "wall-adjacent-temperature"
+  ],
+  "fields": {
+    "heat-flux": {
+      "field": "heat-flux",
+      "surfaces": [
+        {
+          "surface": "vane_wall",
+          "count": 54434,
+          "min": -564939.25,
+          "mean": -57225.56999423655,
+          "p95": -27245.935546875,
+          "max": 27869.865234375
+        }
+      ],
+      "count": 54434,
+      "min": -564939.25,
+      "mean": -57225.56999423655,
+      "p95": -27245.935546875,
+      "max": 27869.865234375
+    },
+    "stanton-number": {
+      "field": "stanton-number",
+      "surfaces": [
+        {
+          "surface": "vane_wall",
+          "count": 54434,
+          "min": -1.7250630855560303,
+          "mean": -0.1747404202086056,
+          "p95": -0.0831964835524559,
+          "max": 0.08510167896747589
+        }
+      ],
+      "count": 54434,
+      "min": -1.7250630855560303,
+      "mean": -0.1747404202086056,
+      "p95": -0.0831964835524559,
+      "max": 0.08510167896747589
+    },
+    "heat-transfer-coef": {
+      "field": "heat-transfer-coef",
+      "surfaces": [
+        {
+          "surface": "vane_wall",
+          "count": 54434,
+          "min": -2126.790283203125,
+          "mean": -215.433405516191,
+          "p95": -102.57100677490234,
+          "max": 104.91987609863281
+        }
+      ],
+      "count": 54434,
+      "min": -2126.790283203125,
+      "mean": -215.433405516191,
+      "p95": -102.57100677490234,
+      "max": 104.91987609863281
+    },
+    "heat-transfer-coef-wall-adj": {
+      "field": "heat-transfer-coef-wall-adj",
+      "surfaces": [
+        {
+          "surface": "vane_wall",
+          "count": 54434,
+          "min": 1923.2598876953125,
+          "mean": 9747.635968677108,
+          "p95": 31457.775390625,
+          "max": 206695.390625
+        }
+      ],
+      "count": 54434,
+      "min": 1923.2598876953125,
+      "mean": 9747.635968677108,
+      "p95": 31457.775390625,
+      "max": 206695.390625
+    },
+    "wall-adjacent-temperature": {
+      "field": "wall-adjacent-temperature",
+      "surfaces": [
+        {
+          "surface": "vane_wall",
+          "count": 54434,
+          "min": 547.680908203125,
+          "mean": 564.5548326393007,
+          "p95": 575.5126342773438,
+          "max": 613.5106201171875
+        }
+      ],
+      "count": 54434,
+      "min": 547.680908203125,
+      "mean": 564.5548326393007,
+      "p95": 575.5126342773438,
+      "max": 613.5106201171875
+    }
+  },
+  "face_files": {
+    "heat-flux": "heat_transfer_heat_flux_surface_faces.csv",
+    "stanton-number": "heat_transfer_stanton_number_surface_faces.csv",
+    "heat-transfer-coef": "heat_transfer_heat_transfer_coef_surface_faces.csv",
+    "heat-transfer-coef-wall-adj": "heat_transfer_heat_transfer_coef_wall_adj_surface_faces.csv",
+    "wall-adjacent-temperature": "heat_transfer_wall_adjacent_temperature_surface_faces.csv"
+  },
+  "note": "For paired FC/NFC runs with identical Tg and Tw, SNR = 1 - q_FC/q_NFC. This avoids dependence on Fluent reference-value normalization."
+}

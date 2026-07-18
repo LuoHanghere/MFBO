@@ -1,0 +1,72 @@
+# Workbench Route B — Discovery → Fluent Meshing → Fluent Solution (GUI).
+# Geometry is built by SpaceClaim journals (parametric downstream on fixed LE).
+# Named face selections must match the labels Fluent Meshing expects (UseBodyLabels).
+
+route: workbench
+status: active
+local_mesh_policy: discovery_workbench_gui_only   # NO sat, NO pyfluent mesh, NO split
+archived_route_a: headless SpaceClaim + PyFluent meshing (blocked on this machine)
+
+geometry:
+  periodic_span_mm: 14.85
+  body_name: fixed_fluid_domain
+  template_scdoc: runs/fluid/c3x_kumar_fixed_le_template.scdoc
+  passage_json: configs/c3x_kumar_paper_external_flow.json
+  boundary_targets_json: configs/c3x_boundary_targets.json
+  downstream_plenums_json: configs/c3x_fixed_downstream_plenums.json
+  min_cavity_margin_D: 0.25
+  design_baseline_json: configs/c3x_downstream_design_baseline.json
+
+# Face named selections exported to Discovery / Fluent Meshing (from 1.wbpj journal).
+face_zones:
+  mainstream:
+    inlet: {fluent_type: pressure-inlet}
+    outlet: {fluent_type: pressure-outlet}
+  periodic:
+    periodic_low: {fluent_type: periodic}
+    periodic_high: {fluent_type: periodic}
+  span:
+    span_low: {fluent_type: wall}
+    span_high: {fluent_type: wall}
+  walls:
+    vane_wall: {fluent_type: wall}
+    film_hole_wall: {fluent_type: wall}
+  coolant:
+    qian: {fluent_type: pressure-inlet, region: showerhead, alias: coolant_inlet_LE}
+    ss: {fluent_type: pressure-inlet, region: suction, alias: coolant_inlet_SS}
+    ps: {fluent_type: pressure-inlet, region: pressure, alias: coolant_inlet_PS}
+
+# Fluent Meshing watertight workflow (matches 1_files/.../FLTG.wft baseline).
+meshing:
+  transport: discovery_dsco          # SCDOC -> Discovery -> Fluent Meshing (GUI)
+  forbidden_locally: [sat_import, pyfluent_watertight, split_merged_boundary]
+  length_unit: m
+  use_body_labels: true
+  geometry_setup: "The geometry consists of only fluid regions with no voids"
+  prism_layers: 4
+  volume_fill: polyhedra               # locked for Route A production
+  update_boundaries:
+    # Re-type only the four inlets; periodic/span/wall types come from labels.
+    relabel:
+      - {zone: qian, from: velocity-inlet, to: pressure-inlet}
+      - {zone: ss, from: wall, to: pressure-inlet}
+      - {zone: ps, from: wall, to: pressure-inlet}
+
+# Solver BC reference — NASA CR-182133 run 44344 (gauge pressure, zero op pressure).
+# Use scripts/print_workbench_bc.py to print values for Fluent GUI entry.
+simulation_case: nasa_44344_validation
+baseline_yaml: configs/c3x_baseline.yaml
+cases_yaml: configs/c3x_simulation_cases.yaml
+
+solver:
+  models:
+    viscous: sst-k-omega
+    energy: on
+    ideal_gas: on
+  coupling: SIMPLEC
+  discretization: second_order
+
+workbench:
+  template_project: 1.wbpj
+  mesh_workflow_snapshot: configs/c3x_workbench_mesh_workflow.wft
+  session_journal: 1_files/session_files/journal1.wbjn

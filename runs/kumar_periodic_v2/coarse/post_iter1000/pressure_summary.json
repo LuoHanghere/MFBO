@@ -1,0 +1,99 @@
+{
+  "surfaces": [
+    "inlet",
+    "outlet"
+  ],
+  "available_fields": [
+    "pressure",
+    "absolute-pressure",
+    "total-pressure"
+  ],
+  "fields": {
+    "pressure": {
+      "field": "pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2834,
+          "min": 280121.84375,
+          "mean": 280141.1392907551,
+          "p95": 280164.0625,
+          "max": 280164.4375
+        },
+        {
+          "surface": "outlet",
+          "count": 2818,
+          "min": 170319.671875,
+          "mean": 170418.43788258516,
+          "p95": 170541.015625,
+          "max": 170572.5
+        }
+      ],
+      "count": 5652,
+      "min": 170319.671875,
+      "mean": 225435.09318880484,
+      "p95": 280163.09375,
+      "max": 280164.4375
+    },
+    "absolute-pressure": {
+      "field": "absolute-pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2834,
+          "min": 280121.84375,
+          "mean": 280141.1392907551,
+          "p95": 280164.0625,
+          "max": 280164.4375
+        },
+        {
+          "surface": "outlet",
+          "count": 2818,
+          "min": 170319.671875,
+          "mean": 170418.43788258516,
+          "p95": 170541.015625,
+          "max": 170572.5
+        }
+      ],
+      "count": 5652,
+      "min": 170319.671875,
+      "mean": 225435.09318880484,
+      "p95": 280163.09375,
+      "max": 280164.4375
+    },
+    "total-pressure": {
+      "field": "total-pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2834,
+          "min": 285129.375,
+          "mean": 285129.9543710303,
+          "p95": 285130.15625,
+          "max": 285130.625
+        },
+        {
+          "surface": "outlet",
+          "count": 2818,
+          "min": 260440.390625,
+          "mean": 277370.42731990776,
+          "p95": 286108.375,
+          "max": 286355.375
+        }
+      ],
+      "count": 5652,
+      "min": 260440.390625,
+      "mean": 281261.17389861995,
+      "p95": 286033.4375,
+      "max": 286355.375
+    }
+  },
+  "note": "Use these summaries for diagnostics; finalize pressure-loss definition before publication.",
+  "pressure_loss_diagnostic": {
+    "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+    "delta_total_pressure_Pa": 7759.527051122568,
+    "inlet_total_pressure_mean_Pa": 285129.9543710303,
+    "outlet_total_pressure_mean_Pa": 277370.42731990776,
+    "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+  }
+}

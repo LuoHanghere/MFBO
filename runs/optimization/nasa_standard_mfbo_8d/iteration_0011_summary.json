@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo_8d.yaml",
+  "experiment": "C3X NASA standard MFBO 8D",
+  "trial_id": 11,
+  "fidelity": "L2",
+  "mesh_tier": "coarse",
+  "source": "stratified_startup",
+  "design": {
+    "SS1_s": 0.24582269332109422,
+    "SS2_s": 0.2609603708037052,
+    "PS1_s": 0.20367876502015955,
+    "PS2_s": 0.2370455153797785,
+    "suction_angle_deg": 32.247661510166395,
+    "pressure_angle_deg": 23.44462505559308,
+    "diameter_mm": 0.9624165317496627,
+    "span_count": 5
+  },
+  "predicted": {},
+  "relative_cost": 0.2,
+  "cost_before": 4.4,
+  "run_dir": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0011_L2",
+  "objective": 0.6782376717880854,
+  "constraints": {
+    "coolant_mass_ratio": 0.999999868711382,
+    "loss_ratio": 1.1854816679995845
+  },
+  "metrics": {
+    "whole_vane_eta_bar": 0.574040699457874,
+    "protected_area_m2": 0.0012243578249039983,
+    "coolant_actual_kg_s": 0.005320277181454003,
+    "delta_total_pressure_Pa": 25213.38945651683,
+    "mass_imbalance_kg_s": 2.5219051168203725e-06,
+    "continuity_residual": 0.0043986,
+    "y_plus_p95": 8.45521354675293,
+    "y_plus_max": 11.365882873535156,
+    "converged_for_screening": true
+  },
+  "cost_after": 4.6,
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0011_L2\\result.json"
+}

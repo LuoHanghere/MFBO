@@ -1,0 +1,47 @@
+{
+  "definition": "eta = (Tg_ref - Taw) / (Tg_ref - Tc_ref)",
+  "averaging": "face-area weighted using the magnitude of Fluent face-area vectors",
+  "Tg_ref_K": 701.0,
+  "Tc_ref_K": 593.6263151083753,
+  "face_count": 24247,
+  "area_m2": 0.0015819109316011178,
+  "Taw_area_weighted_K": 645.4598975200746,
+  "eta_bar": 0.5172599090362302,
+  "surfaces": [
+    {
+      "surface": "vane_wall",
+      "face_count": 24247,
+      "area_m2": 0.0015819109316011178,
+      "Taw_area_weighted_K": 645.4598975200746,
+      "eta_area_weighted": 0.5172599090362302
+    }
+  ],
+  "sides": [
+    {
+      "side": "pressure",
+      "face_count": 12295,
+      "area_m2": 0.0007029443289972662,
+      "Taw_area_weighted_K": 665.7217797356737,
+      "eta_area_weighted": 0.32855555157607547
+    },
+    {
+      "side": "suction",
+      "face_count": 11952,
+      "area_m2": 0.0008789666026038619,
+      "Taw_area_weighted_K": 629.2556695595632,
+      "eta_area_weighted": 0.6681742413222634
+    }
+  ],
+  "lateral_profiles": {
+    "pressure_X_over_Cax_0p31": {
+      "rows": 61,
+      "path": "eta_lateral_ps_xcax_0p31.csv",
+      "tolerance": 0.01
+    },
+    "suction_X_over_Cax_0p48": {
+      "rows": 61,
+      "path": "eta_lateral_ss_xcax_0p48.csv",
+      "tolerance": 0.01
+    }
+  }
+}

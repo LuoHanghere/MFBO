@@ -1,0 +1,71 @@
+{
+  "thresholds": {
+    "max_hard_limit_fraction": 2e-05,
+    "max_wall_outlier_area_fraction": 0.001,
+    "max_eta_change": 0.0001,
+    "max_mass_imbalance_fraction": 0.0005,
+    "kumar_rmse": 0.2,
+    "kumar_shape_correlation": 0.5
+  },
+  "cell_temperature": {
+    "count": 3571905,
+    "min_K": 1.0,
+    "max_K": 2931.01708984375,
+    "hot_4999_count": 0,
+    "cold_1_count": 51,
+    "hard_limit_fraction": 1.4278095302086702e-05
+  },
+  "wall_impact": {
+    "whole": {
+      "face_count": 29433,
+      "area_m2": 0.0015817936429207992,
+      "eta_raw": 0.38883184142593374,
+      "eta_clipped_0_1": 0.3888243696223332,
+      "eta_absolute_change": 7.471803600556104e-06,
+      "below_coolant_area_fraction": 0.0002527353906914419,
+      "above_mainstream_area_fraction": 0.00020590991323137366,
+      "outlier_area_fraction": 0.0004586453039228154
+    },
+    "protected": {
+      "face_count": 19146,
+      "area_m2": 0.001225826476354075,
+      "eta_raw": 0.45792849570115246,
+      "eta_clipped_0_1": 0.4579163051726158,
+      "eta_absolute_change": 1.21905285366819e-05,
+      "below_coolant_area_fraction": 0.00032612710040809547,
+      "above_mainstream_area_fraction": 0.0,
+      "outlier_area_fraction": 0.00032612710040809547
+    }
+  },
+  "mass_imbalance_fraction_of_outlet": 0.00018975115195263284,
+  "pressure_limit_message_count": 85,
+  "last_residual": {
+    "iteration": 500,
+    "continuity": 0.0019478,
+    "x_velocity": 5.6758e-06,
+    "y_velocity": 1.7349e-05,
+    "z_velocity": 3.1107e-06,
+    "energy": 3.935e-07,
+    "k": 0.00015576,
+    "omega": 0.0042185
+  },
+  "kumar_alignment": {
+    "pressure": {
+      "rmse": 0.24392354438132427,
+      "shape_correlation": 0.23631619963877865,
+      "pass": false
+    },
+    "suction": {
+      "rmse": 0.16578896421533618,
+      "shape_correlation": 0.7621012077051943,
+      "pass": true
+    }
+  },
+  "decisions": {
+    "eta_screening_usable": true,
+    "pressure_loss_usable": false,
+    "experiment_aligned": false,
+    "paper_validation_usable": false
+  },
+  "interpretation": "A result may be usable for wall eta while remaining unusable for pressure loss or experimental validation. Never transfer one acceptance decision to another metric."
+}

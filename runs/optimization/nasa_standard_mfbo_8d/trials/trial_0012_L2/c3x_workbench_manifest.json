@@ -1,0 +1,38 @@
+{
+  "route": "workbench",
+  "body_name": "fixed_fluid_domain",
+  "face_zones": [
+    "inlet",
+    "outlet",
+    "periodic_low",
+    "periodic_high",
+    "span_low",
+    "span_high",
+    "vane_wall",
+    "film_hole_wall",
+    "qian",
+    "ss",
+    "ps"
+  ],
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0012_L2\\c3x_design.json",
+  "layout_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0012_L2\\c3x_layout.json",
+  "boundary_targets_json": "E:\\Work\\BOfm\\runs\\workbench\\periodic_v2\\geometry_freeze\\c3x_boundary_targets.json",
+  "cavities_json": "E:\\Work\\BOfm\\configs\\c3x_fixed_downstream_plenums.json",
+  "geometry_gate_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0012_L2\\c3x_geometry_gate.json",
+  "geometry_gate_ok": true,
+  "min_cavity_margin_d": 0.25,
+  "scdoc": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0012_L2\\c3x.scdoc",
+  "spaceclaim_ok": true,
+  "next_steps": [
+    "Open *.scdoc in Workbench Discovery (NOT SAT \u2014 labels are lost in SAT)",
+    "Transfer geometry to Fluent Meshing; UseBodyLabels=Yes, LengthUnit=m",
+    "Update Boundaries: qian/ss/ps -> pressure-inlet; pair periodic_low/high",
+    "Switch to Solution; write FLTG-2.cas.h5",
+    "Run run_workbench_film_setup.py then run_workbench_film_iterate.py (no split)",
+    "BC values: scripts/print_workbench_bc.py"
+  ],
+  "do_not_use": [
+    "build_c3x_parametric_mesh.py / .sat import",
+    "split_merged_boundary / sep_face_zone_angle"
+  ]
+}

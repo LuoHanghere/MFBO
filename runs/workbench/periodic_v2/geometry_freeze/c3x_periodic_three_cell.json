@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "geometry_json": "E:\\Work\\BOfm\\configs\\c3x_kumar_paper_external_flow.json",
+  "units": "mm",
+  "physical_pitch_mm": 117.73,
+  "periodic_translation_xy_mm": [
+    0.0,
+    117.73
+  ],
+  "inlet_endpoint_dx_mm": 0.0,
+  "outlet_endpoint_dx_mm": 0.0,
+  "periodic_pair_max_mismatch_mm": 2.842170943040401e-14,
+  "adjacent_blade_gap_mm": 33.8144197497358,
+  "adjacent_blade_gap_lower_mm": 33.8144197497358,
+  "adjacent_blade_gap_upper_mm": 33.814419749735805,
+  "blade_to_periodic_wall_min_gap_mm": 14.32835081608296,
+  "checks": {
+    "translation_is_physical_pitch_y": true,
+    "inlet_parallel_to_y": true,
+    "outlet_parallel_to_y": true,
+    "periodic_walls_match": true,
+    "adjacent_blades_have_positive_gap": true
+  },
+  "frozen_geometry_json": "E:\\Work\\BOfm\\runs\\workbench\\periodic_v2\\geometry_freeze\\c3x_periodic_three_cell_geometry.json"
+}

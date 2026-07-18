@@ -1,0 +1,36 @@
+{
+  "definition": "CFD profile compared at CFD bin centers to linearly interpolated digitized reference",
+  "acceptance_is_not_automatic": true,
+  "sides": {
+    "pressure": {
+      "sample_count": 61,
+      "overlap_Z_over_D": [
+        -7.464745051304219,
+        7.467260757310949
+      ],
+      "eta_mae": 0.2369483286000254,
+      "eta_rmse": 0.249247785586905,
+      "eta_max_abs_error": 0.4263720510388897,
+      "eta_mean_cfd": 0.2931308636045834,
+      "eta_mean_reference": 0.45402395552703917,
+      "eta_mean_bias": -0.1608930919224557,
+      "shape_correlation": 0.29956596087933074,
+      "reference_digitization_eta_uncertainty": 0.015
+    },
+    "suction": {
+      "sample_count": 61,
+      "overlap_Z_over_D": [
+        -7.462780576876655,
+        7.468169503424335
+      ],
+      "eta_mae": 0.16830162344581154,
+      "eta_rmse": 0.19333428665111102,
+      "eta_max_abs_error": 0.32508259843006915,
+      "eta_mean_cfd": 0.4921681111003359,
+      "eta_mean_reference": 0.3238664876545243,
+      "eta_mean_bias": 0.16830162344581154,
+      "shape_correlation": 0.7444192425022573,
+      "reference_digitization_eta_uncertainty": 0.015
+    }
+  }
+}

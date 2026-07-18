@@ -1,0 +1,22 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\runs\\optimization\\pipeline_smoke\\LHS_0001\\L3_paper_mesh\\fluent_solve.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0,
+    "temperature_limited": 0
+  },
+  "residual_row_count": 2501,
+  "last_residual_row": {
+    "iteration": 2500,
+    "continuity": 0.0011984,
+    "x_velocity": 1.2534e-06,
+    "y_velocity": 6.3173e-06,
+    "z_velocity": 1.2513e-07,
+    "energy": 2.241e-06,
+    "k": 7.0872e-05,
+    "omega": 6.2328e-05
+  }
+}

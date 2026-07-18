@@ -1,0 +1,430 @@
+{
+  "source": "parameterized SS/PS body rows on UV-frame LE-merged C3X base",
+  "units": "mm",
+  "base_scdoc": "runs/fluid/c3x_uvframe_external_flow_lemerged.scdoc",
+  "span_mm": 7.4250000000000185,
+  "diameter_mm": 0.99,
+  "passage_overlap_d": 2.5,
+  "plenum_overlap_d": 1.25,
+  "design": {
+    "p_over_D": 4.0,
+    "rows": {
+      "SS1": {
+        "surface": "suction",
+        "s_over_s0": 0.254,
+        "alpha_deg": 35.0
+      },
+      "SS2": {
+        "surface": "suction",
+        "s_over_s0": 0.276,
+        "alpha_deg": 35.0
+      },
+      "PS1": {
+        "surface": "pressure",
+        "s_over_s0": 0.197,
+        "alpha_deg": 20.0
+      },
+      "PS2": {
+        "surface": "pressure",
+        "s_over_s0": 0.225,
+        "alpha_deg": 20.0
+      }
+    }
+  },
+  "span_positions_mm": [
+    1.7325000000000093,
+    5.69250000000001
+  ],
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "s_over_s0": 0.254,
+      "alpha_deg": 35.0,
+      "surface_xy_mm": [
+        16.419425770430742,
+        35.72937628815137
+      ],
+      "surface_arc_mm": 45.128584279888045,
+      "surface_arc_total_mm": 177.67159165310252,
+      "axis_xy": [
+        0.8894603605015238,
+        -0.45701232707280376
+      ],
+      "axis_hits_plenum": true,
+      "streamwise_tangent_positive": true
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "s_over_s0": 0.276,
+      "alpha_deg": 35.0,
+      "surface_xy_mm": [
+        20.312814800073685,
+        36.05997692778453
+      ],
+      "surface_arc_mm": 49.0373592962563,
+      "surface_arc_total_mm": 177.67159165310252,
+      "axis_xy": [
+        0.8448883716992932,
+        -0.5349426505405203
+      ],
+      "axis_hits_plenum": true,
+      "streamwise_tangent_positive": true
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "s_over_s0": 0.197,
+      "alpha_deg": 20.0,
+      "surface_xy_mm": [
+        35.07299093396386,
+        6.00607457175318
+      ],
+      "surface_arc_mm": 28.076864240670336,
+      "surface_arc_total_mm": 142.5221535059408,
+      "axis_xy": [
+        -0.9962221344086964,
+        0.08684157365099529
+      ],
+      "axis_hits_plenum": true,
+      "streamwise_tangent_positive": false
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "s_over_s0": 0.225,
+      "alpha_deg": 20.0,
+      "surface_xy_mm": [
+        38.94212177962766,
+        6.982607291278754
+      ],
+      "surface_arc_mm": 32.06748453883668,
+      "surface_arc_total_mm": 142.5221535059408,
+      "axis_xy": [
+        -0.9929996096116924,
+        0.1181176333619435
+      ],
+      "axis_hits_plenum": true,
+      "streamwise_tangent_positive": false
+    }
+  ],
+  "downstream_holes": [
+    {
+      "id": "SS1_z01",
+      "row_id": "SS1",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 1.7325000000000093,
+      "surface_xy_mm": [
+        16.419425770430742,
+        35.72937628815137
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          14.21801137818947,
+          36.86048179765656,
+          1.7325000000000093
+        ],
+        "end_mm": [
+          22.41216494930976,
+          32.65025573449836,
+          1.7325000000000093
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          14.21801137818947,
+          36.86048179765656,
+          2.2275000000000094
+        ],
+        "axis_unit": [
+          0.8894603605015239,
+          -0.45701232707280354,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "SS1_z02",
+      "row_id": "SS1",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 5.69250000000001,
+      "surface_xy_mm": [
+        16.419425770430742,
+        35.72937628815137
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          14.21801137818947,
+          36.86048179765656,
+          5.69250000000001
+        ],
+        "end_mm": [
+          22.41216494930976,
+          32.65025573449836,
+          5.69250000000001
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          14.21801137818947,
+          36.86048179765656,
+          6.18750000000001
+        ],
+        "axis_unit": [
+          0.8894603605015239,
+          -0.45701232707280354,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "SS2_z01",
+      "row_id": "SS2",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 1.7325000000000093,
+      "surface_xy_mm": [
+        20.312814800073685,
+        36.05997692778453
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          18.221716080117936,
+          37.38395998787232,
+          1.7325000000000093
+        ],
+        "end_mm": [
+          25.202606251283342,
+          32.963996337781275,
+          1.7325000000000093
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          18.221716080117936,
+          37.38395998787232,
+          2.2275000000000094
+        ],
+        "axis_unit": [
+          0.844888371699293,
+          -0.5349426505405204,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "SS2_z02",
+      "row_id": "SS2",
+      "surface": "suction",
+      "plenum": "SS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 5.69250000000001,
+      "surface_xy_mm": [
+        20.312814800073685,
+        36.05997692778453
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          18.221716080117936,
+          37.38395998787232,
+          5.69250000000001
+        ],
+        "end_mm": [
+          25.202606251283342,
+          32.963996337781275,
+          5.69250000000001
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          18.221716080117936,
+          37.38395998787232,
+          6.18750000000001
+        ],
+        "axis_unit": [
+          0.844888371699293,
+          -0.5349426505405204,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS1_z01",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 1.7325000000000093,
+      "surface_xy_mm": [
+        35.07299093396386,
+        6.00607457175318
+      ],
+      "axis_hits_plenum": false,
+      "cylinder_mm": {
+        "start_mm": [
+          37.53864071662538,
+          5.791141676966967,
+          1.7325000000000093
+        ],
+        "end_mm": [
+          30.44055800896342,
+          6.409887889230308,
+          1.7325000000000093
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          37.53864071662538,
+          5.791141676966967,
+          2.2275000000000094
+        ],
+        "axis_unit": [
+          -0.9962221344086963,
+          0.08684157365099537,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS1_z02",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 5.69250000000001,
+      "surface_xy_mm": [
+        35.07299093396386,
+        6.00607457175318
+      ],
+      "axis_hits_plenum": false,
+      "cylinder_mm": {
+        "start_mm": [
+          37.53864071662538,
+          5.791141676966967,
+          5.69250000000001
+        ],
+        "end_mm": [
+          30.44055800896342,
+          6.409887889230308,
+          5.69250000000001
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          37.53864071662538,
+          5.791141676966967,
+          6.18750000000001
+        ],
+        "axis_unit": [
+          -0.9962221344086963,
+          0.08684157365099537,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS2_z01",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 1.7325000000000093,
+      "surface_xy_mm": [
+        38.94212177962766,
+        6.982607291278754
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          41.3997958134166,
+          6.690266148707944,
+          1.7325000000000093
+        ],
+        "end_mm": [
+          33.09583657803882,
+          7.678024857697197,
+          1.7325000000000093
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          41.3997958134166,
+          6.690266148707944,
+          2.2275000000000094
+        ],
+        "axis_unit": [
+          -0.9929996096116924,
+          0.11811763336194345,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "PS2_z02",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "plenum": "PS_plenum",
+      "diameter_mm": 0.99,
+      "hole_length_mm_metadata": 3.35,
+      "p_over_D": 4.0,
+      "span_pitch_mm": 3.96,
+      "z_center_mm": 5.69250000000001,
+      "surface_xy_mm": [
+        38.94212177962766,
+        6.982607291278754
+      ],
+      "axis_hits_plenum": true,
+      "cylinder_mm": {
+        "start_mm": [
+          41.3997958134166,
+          6.690266148707944,
+          5.69250000000001
+        ],
+        "end_mm": [
+          33.09583657803882,
+          7.678024857697197,
+          5.69250000000001
+        ],
+        "radius_mm": 0.495,
+        "radius_point_mm": [
+          41.3997958134166,
+          6.690266148707944,
+          6.18750000000001
+        ],
+        "axis_unit": [
+          -0.9929996096116924,
+          0.11811763336194345,
+          0.0
+        ]
+      }
+    }
+  ]
+}

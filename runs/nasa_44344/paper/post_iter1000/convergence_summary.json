@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\fluent-20260715-125044-314872.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 301,
+  "last_residual_row": {
+    "iteration": 1000,
+    "continuity": 0.0013128,
+    "x_velocity": 2.1741e-06,
+    "y_velocity": 8.0983e-06,
+    "z_velocity": 8.5209e-07,
+    "energy": 6.533e-06,
+    "k": 0.00025392,
+    "omega": 0.0001162
+  }
+}

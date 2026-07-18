@@ -1,0 +1,85 @@
+{
+  "valid": true,
+  "simulation_case": "kumar_case1_tr3",
+  "objective": {
+    "eta_bar": 0.38883184142593374,
+    "protected_eta_bar": 0.45792849570115246,
+    "protected_area_m2": 0.001225826476354075
+  },
+  "constraints": {
+    "coolant_mass_flow_ratio": null,
+    "coolant_actual_kg_s": 0.006827444536611438,
+    "mass_imbalance": -2.5241868570474724e-05,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 101508.13031663455,
+      "inlet_total_pressure_mean_Pa": 285129.4266968183,
+      "outlet_total_pressure_mean_Pa": 183621.29638018378,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 2.1035194396972656,
+    "y_plus_max": 2.8337414264678955
+  },
+  "references": {
+    "Tg_ref_K": 1773.0,
+    "Tc_ref": {
+      "method": "simple mean coolant temperature",
+      "value_K": 591.0,
+      "components": [
+        {
+          "region": "suction",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        },
+        {
+          "region": "showerhead",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        },
+        {
+          "region": "pressure",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "selected_wall_surfaces": [
+      "vane_wall"
+    ],
+    "all_wall_surfaces": [
+      "film_hole_wall",
+      "plenum_wall",
+      "vane_wall"
+    ],
+    "available_scalar_fields": [
+      "wall-temperature",
+      "temperature",
+      "y-plus"
+    ],
+    "mass_flow_report_available": true,
+    "convergence": {
+      "available": true,
+      "path": "E:\\Work\\BOfm\\fluent-20260713-003806-310828.trn",
+      "warnings": {
+        "artificial_wall": 0,
+        "reversed_flow": 249,
+        "divergence": 0,
+        "floating_point": 0
+      },
+      "residual_row_count": 401,
+      "last_residual_row": {
+        "iteration": 500,
+        "continuity": 0.0019478,
+        "x_velocity": 5.6758e-06,
+        "y_velocity": 1.7349e-05,
+        "z_velocity": 3.1107e-06,
+        "energy": 3.935e-07,
+        "k": 0.00015576,
+        "omega": 0.0042185
+      }
+    },
+    "export_log": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\paper\\post_smooth_iter500\\export_workbench_film_results.log"
+  }
+}

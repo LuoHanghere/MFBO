@@ -1,0 +1,232 @@
+{
+  "name": "nasa44344_paper_repaired_iter2500",
+  "route": "workbench",
+  "simulation_case": "nasa_44344_validation",
+  "mesh_tier": "paper",
+  "created_at": "2026-07-15T21:37:27",
+  "status": {
+    "topology_ok": true,
+    "post_valid": true
+  },
+  "inputs": {
+    "design": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_design.json",
+      "exists": true,
+      "bytes": 1289,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "layout": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_layout.json",
+      "exists": true,
+      "bytes": 49421,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "topology": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_geometry_gate.json",
+      "exists": true,
+      "bytes": 1718,
+      "mtime": "2026-07-13T22:20:05"
+    },
+    "mesh_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repaired.msh.h5",
+      "exists": true,
+      "bytes": 374873320,
+      "mtime": "2026-07-14T10:39:51"
+    },
+    "mesh_meta": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repair.json",
+      "exists": true,
+      "bytes": 1051,
+      "mtime": "2026-07-14T13:17:17"
+    },
+    "setup_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repaired_setup.cas.h5",
+      "exists": true,
+      "bytes": 383030866,
+      "mtime": "2026-07-14T10:46:15"
+    }
+  },
+  "outputs": {
+    "run_case": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repaired_iter2500.cas.h5",
+      "exists": true,
+      "bytes": 378972237,
+      "mtime": "2026-07-15T21:33:54"
+    },
+    "run_data": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repaired_iter2500.dat.h5",
+      "exists": true,
+      "bytes": 255509398,
+      "mtime": "2026-07-15T21:34:12"
+    },
+    "post_dir": {
+      "path": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\post_iter2500",
+      "exists": true,
+      "bytes": 12288,
+      "mtime": "2026-07-15T21:36:10"
+    },
+    "log": {
+      "path": "E:\\Work\\BOfm\\fluent-20260715-211227-290180.trn",
+      "exists": true,
+      "bytes": 53626,
+      "mtime": "2026-07-15T21:34:12"
+    }
+  },
+  "geometry_summary": {
+    "diameter_mm": 0.99,
+    "periodic_span_mm": 14.85,
+    "row_count": 4
+  },
+  "mesh_summary": {
+    "mesh_in": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper.msh.h5",
+    "mesh_out": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper_repaired.msh.h5",
+    "quality_limit": 0.03,
+    "cores": 8,
+    "precision": "double",
+    "cell_count": 3776658,
+    "before": {
+      "Orthogonal Quality": [
+        3776658,
+        0.006013967844536894,
+        0.9999999822495031,
+        0.809768161230516,
+        0.0,
+        0
+      ],
+      "Skewness": [
+        3776658,
+        1.039917363332421e-08,
+        0.9939860321504598,
+        0.1881452314040183,
+        0.0,
+        0
+      ]
+    },
+    "improve_return": true,
+    "after": {
+      "Orthogonal Quality": [
+        3776658,
+        0.02096064593432101,
+        0.9999999822495031,
+        0.8097674772967484,
+        0.0,
+        0
+      ],
+      "Skewness": [
+        3776658,
+        1.039917363332421e-08,
+        0.9790393540648371,
+        0.1881241921615788,
+        0.0,
+        0
+      ]
+    },
+    "mesh_out_exists": true,
+    "mesh_out_bytes": 374873320,
+    "status": "ok"
+  },
+  "topology_summary": {
+    "ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "marker_count": 20,
+    "cavity_checked_markers": 20,
+    "cavity_failed_markers": 0
+  },
+  "result_summary": {
+    "valid": true,
+    "eta_bar": 0.5495265197244976,
+    "protected_eta_bar": 0.6489496053020217,
+    "coolant_mass_flow_ratio": 1.000000384776174,
+    "mass_imbalance": -1.223525032127866e-07,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 83495.63310854707,
+      "inlet_total_pressure_mean_Pa": 285130.08047557087,
+      "outlet_total_pressure_mean_Pa": 201634.4473670238,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 2.4067654609680176,
+    "y_plus_max": 3.4421303272247314,
+    "mass_flow_report_available": true,
+    "last_residual_row": {
+      "iteration": 2500,
+      "continuity": 0.0011935,
+      "x_velocity": 8.1478e-07,
+      "y_velocity": 3.9488e-06,
+      "z_velocity": 7.9318e-08,
+      "energy": 3.5186e-06,
+      "k": 6.8101e-05,
+      "omega": 5.1451e-05
+    },
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 0,
+      "divergence": 0,
+      "floating_point": 0,
+      "temperature_limited": 164
+    },
+    "nasa_surface_pressure": {
+      "reference": "NASA CR-182133 Table VII, Ma2=0.90 column",
+      "normalization": "CFD static pressure / inlet total pressure (285130 Pa)",
+      "span_averaging": "face-area weighted within +/-0.5% surface distance",
+      "point_count": 29,
+      "mae": 0.02233213044264204,
+      "rmse": 0.03259918244583855,
+      "max_abs_error": 0.1075773338661114,
+      "sides": {
+        "pressure": {
+          "point_count": 12,
+          "mae": 0.007235966540356002,
+          "rmse": 0.010021872018599982,
+          "max_abs_error": 0.023126938011742704
+        },
+        "suction": {
+          "point_count": 17,
+          "mae": 0.03298824613837336,
+          "rmse": 0.04173673735302989,
+          "max_abs_error": 0.1075773338661114
+        }
+      }
+    }
+  },
+  "convergence_summary": {
+    "available": true,
+    "path": "fluent-20260715-211227-290180.trn",
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 0,
+      "divergence": 0,
+      "floating_point": 0,
+      "temperature_limited": 164
+    },
+    "residual_row_count": 301,
+    "temperature_limits": {
+      "event_count": 164,
+      "by_limit": [
+        {
+          "limit_K": 1000.0,
+          "event_count": 164,
+          "max_cell_count": 1,
+          "last_cell_count": 1,
+          "last_zone_id": 321
+        }
+      ],
+      "last_event": {
+        "limit_K": 1000.0,
+        "cell_count": 1,
+        "zone_id": 321
+      }
+    },
+    "last_residual_row": {
+      "iteration": 2500,
+      "continuity": 0.0011935,
+      "x_velocity": 8.1478e-07,
+      "y_velocity": 3.9488e-06,
+      "z_velocity": 7.9318e-08,
+      "energy": 3.5186e-06,
+      "k": 6.8101e-05,
+      "omega": 5.1451e-05
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "purpose": "paired coarse/paper ranking and perturbation-direction gate",
+  "base_design": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_design.json",
+  "row_step": 0.008,
+  "angle_step_deg": 5.0,
+  "candidates": [
+    {
+      "candidate_id": "BASELINE",
+      "changed_variables": "none",
+      "deltas": {},
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 20.0
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.8515075784461414,
+      "issues": []
+    },
+    {
+      "candidate_id": "SS_ROWS_DOWN",
+      "changed_variables": "SS1_s and SS2_s",
+      "deltas": {
+        "SS1_s": 0.008,
+        "SS2_s": 0.008
+      },
+      "design": {
+        "SS1_s": 0.249022565,
+        "SS2_s": 0.270977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 20.0
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.8515075784461414,
+      "issues": []
+    },
+    {
+      "candidate_id": "SS_ANGLE_STEEP",
+      "changed_variables": "suction_angle_deg",
+      "deltas": {
+        "suction_angle_deg": 5.0
+      },
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 40.0,
+        "pressure_angle_deg": 20.0
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.8515075784461414,
+      "issues": []
+    },
+    {
+      "candidate_id": "PS_ROWS_DOWN",
+      "changed_variables": "PS1_s and PS2_s",
+      "deltas": {
+        "PS1_s": 0.008,
+        "PS2_s": 0.008
+      },
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.218838936,
+        "PS2_s": 0.247161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 20.0
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.9290901236360172,
+      "issues": []
+    },
+    {
+      "candidate_id": "PS_ANGLE_STEEP",
+      "changed_variables": "pressure_angle_deg",
+      "deltas": {
+        "pressure_angle_deg": 5.0
+      },
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 25.0
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.1239407975564848,
+      "issues": []
+    }
+  ]
+}

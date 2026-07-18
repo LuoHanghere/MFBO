@@ -1,0 +1,167 @@
+{
+  "name": "kumar_case1_periodic_v2_coarse",
+  "route": "workbench",
+  "simulation_case": "kumar_case1_tr3",
+  "mesh_tier": "coarse",
+  "created_at": "2026-07-10T23:59:05",
+  "status": {
+    "topology_ok": true,
+    "post_valid": true
+  },
+  "inputs": {
+    "design": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\periodic_v2\\baseline\\c3x_wb_periodic_v2_baseline_design.json",
+      "exists": true,
+      "bytes": 1198,
+      "mtime": "2026-07-10T22:58:24"
+    },
+    "layout": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\periodic_v2\\baseline\\c3x_wb_periodic_v2_baseline_layout.json",
+      "exists": true,
+      "bytes": 49077,
+      "mtime": "2026-07-10T22:58:24"
+    },
+    "topology": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse_topology_check.json",
+      "exists": true,
+      "bytes": 1366,
+      "mtime": "2026-07-10T23:22:04"
+    },
+    "mesh_case": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse.msh.h5",
+      "exists": true,
+      "bytes": 196887541,
+      "mtime": "2026-07-10T23:20:32"
+    },
+    "mesh_meta": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse_quality.json",
+      "exists": true,
+      "bytes": 546,
+      "mtime": "2026-07-10T23:21:32"
+    },
+    "setup_case": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse_setup.cas.h5",
+      "exists": true,
+      "bytes": 198393391,
+      "mtime": "2026-07-10T23:23:31"
+    }
+  },
+  "outputs": {
+    "run_case": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse_iter1000.cas.h5",
+      "exists": true,
+      "bytes": 198362683,
+      "mtime": "2026-07-10T23:53:27"
+    },
+    "run_data": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse_iter1000.dat.h5",
+      "exists": true,
+      "bytes": 125033003,
+      "mtime": "2026-07-10T23:53:37"
+    },
+    "post_dir": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\post_iter1000",
+      "exists": true,
+      "bytes": 8192,
+      "mtime": "2026-07-10T23:58:15"
+    },
+    "log": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\logs\\kumar_case1_periodic_v2_coarse_iterate1000.log",
+      "exists": true,
+      "bytes": 130573,
+      "mtime": "2026-07-10T23:53:37"
+    }
+  },
+  "geometry_summary": {
+    "diameter_mm": 0.99,
+    "periodic_span_mm": 14.85,
+    "row_count": 4
+  },
+  "mesh_summary": {
+    "mesh": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\coarse\\kumar_case1_periodic_v2_coarse.msh.h5",
+    "cores": 8,
+    "precision": "single",
+    "cell_count": 1858027,
+    "face_count": 8105235,
+    "cell_quality": {
+      "Orthogonal Quality": [
+        1858027,
+        0.03823692312868643,
+        0.9999999806142915,
+        0.8475132776534805,
+        0.0,
+        0
+      ],
+      "Skewness": [
+        1858027,
+        9.216484908591838e-09,
+        0.9617630768713136,
+        0.1504033637183715,
+        0.0,
+        0
+      ]
+    },
+    "status": "ok"
+  },
+  "topology_summary": {
+    "ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "marker_count": 20,
+    "cavity_checked_markers": 0,
+    "cavity_failed_markers": 0
+  },
+  "result_summary": {
+    "valid": true,
+    "eta_bar": 0.4161733849297068,
+    "coolant_mass_flow_ratio": null,
+    "mass_imbalance": 7.327180355795951e-07,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 7759.527051122568,
+      "inlet_total_pressure_mean_Pa": 285129.9543710303,
+      "outlet_total_pressure_mean_Pa": 277370.42731990776,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 6.610990047454834,
+    "y_plus_max": 8.495183944702148,
+    "mass_flow_report_available": true,
+    "last_residual_row": {
+      "iteration": 1000,
+      "continuity": 0.001011,
+      "x_velocity": 8.55e-08,
+      "y_velocity": 2.7933e-07,
+      "z_velocity": 3.0942e-08,
+      "energy": 4.5394e-07,
+      "k": 5.5631e-05,
+      "omega": 2.2465e-05
+    },
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 106,
+      "divergence": 0,
+      "floating_point": 0
+    }
+  },
+  "convergence_summary": {
+    "available": true,
+    "path": "runs\\kumar_periodic_v2\\coarse\\logs\\kumar_case1_periodic_v2_coarse_iterate1000.log",
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 106,
+      "divergence": 0,
+      "floating_point": 0
+    },
+    "residual_row_count": 1002,
+    "last_residual_row": {
+      "iteration": 1000,
+      "continuity": 0.001011,
+      "x_velocity": 8.55e-08,
+      "y_velocity": 2.7933e-07,
+      "z_velocity": 3.0942e-08,
+      "energy": 4.5394e-07,
+      "k": 5.5631e-05,
+      "omega": 2.2465e-05
+    }
+  }
+}

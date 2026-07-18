@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\paper\\logs\\kumar_case1_paper_iterate1000.log",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 132,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 388,
+  "last_residual_row": {
+    "iteration": 387,
+    "continuity": 0.00095819,
+    "x_velocity": 6.6748e-06,
+    "y_velocity": 2.0832e-05,
+    "z_velocity": 3.0574e-06,
+    "energy": 9.9159e-07,
+    "k": 0.00027493,
+    "omega": 0.00032395
+  }
+}

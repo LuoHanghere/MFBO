@@ -1,0 +1,48 @@
+geometry:
+  diameter_mm: 0.99
+  span_mm: 14.85
+  passage_json: configs/c3x_kumar_paper_external_flow.json
+
+tiers:
+  smoke:
+    purpose: Pipeline and boundary-name verification only
+    expected_cells_M: [0.3, 1.0]
+    cells_across_hole_D: 8
+    surface: {MinSize: 0.12, MaxSize: 4.0, GrowthRate: 1.20}
+    prism_layers: 8
+    first_layer_mm: 0.020
+    prism_growth: 1.20
+    y_plus_design: 10
+    volume_fill: polyhedra
+  coarse:
+    purpose: Optimization screening
+    expected_cells_M: [1.5, 3.0]
+    cells_across_hole_D: 16
+    surface: {MinSize: 0.06, MaxSize: 2.0, GrowthRate: 1.18}
+    prism_layers: 15
+    first_layer_mm: 0.005
+    prism_growth: 1.18
+    y_plus_design: 3
+    volume_fill: polyhedra
+  paper:
+    purpose: Kumar-comparable working grid
+    expected_cells_M: [3.0, 5.0]
+    cells_across_hole_D: 25
+    surface: {MinSize: 0.04, MaxSize: 1.5, GrowthRate: 1.15}
+    prism_layers: 25
+    first_layer_mm: 0.00075
+    prism_growth: 1.16
+    nominal_total_prism_thickness_mm: 0.187
+    y_plus_design: 1
+    volume_fill: polyhedra
+  fine:
+    purpose: Grid-convergence upper level; monitor RAM closely
+    expected_cells_M: [6.0, 10.0]
+    cells_across_hole_D: 33
+    surface: {MinSize: 0.03, MaxSize: 1.0, GrowthRate: 1.12}
+    prism_layers: 30
+    first_layer_mm: 0.0005
+    prism_growth: 1.16
+    nominal_total_prism_thickness_mm: 0.265
+    y_plus_design: 1
+    volume_fill: polyhedra

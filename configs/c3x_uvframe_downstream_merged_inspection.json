@@ -1,0 +1,90 @@
+{
+  "bodies": [
+    {
+      "size_mm": [
+        548.14100036716513, 
+        183.55159168197383, 
+        7.4250000000000185
+      ], 
+      "index": 0, 
+      "tree_path": "root/B0", 
+      "role_guess": "mainflow", 
+      "bbox_mm": [
+        -104.79590728233279, 
+        -128.15820737088427, 
+        -1.3877787807814457e-14, 
+        443.3450930848324, 
+        55.393384311089576, 
+        7.425000000000004
+      ], 
+      "faces": 1000, 
+      "bbox_volume_mm3": 223208.71965850377, 
+      "center_mm": [
+        169.2745929012498, 
+        -36.382411529897347, 
+        3.712499999999995
+      ], 
+      "name": "fluid"
+    }
+  ], 
+  "groups": [
+    {
+      "index": 0, 
+      "name": "inlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 1, 
+      "name": "outlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 2, 
+      "name": "periodic_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 3, 
+      "name": "periodic_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 4, 
+      "name": "span_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 5, 
+      "name": "span_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 6, 
+      "name": "vane_wall", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 7, 
+      "name": "fluid_body", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 8, 
+      "name": "coolant_inlet_SS", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 9, 
+      "name": "coolant_inlet_PS", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 10, 
+      "name": "\u7ec41", 
+      "collection": "Groups"
+    }
+  ], 
+  "source_scdoc": "E:\\Work\\BOfm\\runs\\fluid\\c3x_uvframe_downstream_baseline_merged.scdoc", 
+  "units": "mm", 
+  "body_count": 1
+}

@@ -1,0 +1,28 @@
+{
+  "source": "Periodic-v2 fixed template rebuilt from reviewed SS/PS plenums and fixed LE cavity",
+  "units": "mm",
+  "selection_rule": "Use the reviewed SS/PS targets; select the large LE plenum lateral supply face in the rebuilt fixed template.",
+  "boundaries": {
+    "coolant_inlet_LE": {
+      "body_names": ["fluid_fixed_LE", "fluid"],
+      "center_mm": [13.105410, 111.938497, 7.425],
+      "area_mm2": 252.450,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    },
+    "coolant_inlet_SS": {
+      "body_names": ["SS_plenum", "SS"],
+      "center_mm": [24.690018907376874, 123.3587033473422, 7.425],
+      "area_mm2": 160.62730932192043,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    },
+    "coolant_inlet_PS": {
+      "body_names": ["PS_plenum", "PS"],
+      "center_mm": [23.149537032309617, 95.26616097319796, 7.425],
+      "area_mm2": 189.0096426111641,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    }
+  }
+}

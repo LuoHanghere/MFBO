@@ -1,0 +1,22 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2\\fluent_solve.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0,
+    "temperature_limited": 0
+  },
+  "residual_row_count": 1801,
+  "last_residual_row": {
+    "iteration": 1800,
+    "continuity": 0.0037392,
+    "x_velocity": 8.4006e-07,
+    "y_velocity": 4.0213e-06,
+    "z_velocity": 1.9112e-07,
+    "energy": 3.3117e-06,
+    "k": 0.00095608,
+    "omega": 0.00010293
+  }
+}

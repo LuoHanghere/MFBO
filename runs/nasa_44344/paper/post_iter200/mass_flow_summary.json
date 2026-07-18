@@ -1,0 +1,81 @@
+{
+  "available": true,
+  "zones": {
+    "inlet": {
+      "mass_flow_kg_s": 0.18883987729643,
+      "raw": [
+        0.18883987729643,
+        0
+      ]
+    },
+    "outlet": {
+      "mass_flow_kg_s": -0.1941245003776112,
+      "raw": [
+        -0.1941245003776112,
+        0
+      ]
+    },
+    "qian": {
+      "mass_flow_kg_s": 0.0012433465,
+      "raw": [
+        0.0012433465,
+        0
+      ]
+    },
+    "ss": {
+      "mass_flow_kg_s": 0.002611417300000004,
+      "raw": [
+        0.002611417300000004,
+        0
+      ]
+    },
+    "ps": {
+      "mass_flow_kg_s": 0.001465511800000004,
+      "raw": [
+        0.001465511800000004,
+        0
+      ]
+    }
+  },
+  "errors": [],
+  "reference_targets": {
+    "total_target_kg_s": 0.0053202756,
+    "zones": {
+      "qian": {
+        "region": "showerhead",
+        "target_kg_s": 0.0012433465
+      },
+      "ss": {
+        "region": "suction",
+        "target_kg_s": 0.0026114173
+      },
+      "ps": {
+        "region": "pressure",
+        "target_kg_s": 0.0014655118
+      }
+    }
+  },
+  "constraints": {
+    "coolant_actual_kg_s": 0.005320275600000008,
+    "coolant_target_kg_s": 0.0053202756,
+    "coolant_mass_flow_ratio": 1.0000000000000016,
+    "mass_imbalance_kg_s": 3.565251881881902e-05,
+    "zones": {
+      "qian": {
+        "actual_kg_s": 0.0012433465,
+        "target_kg_s": 0.0012433465,
+        "actual_over_target": 1.0
+      },
+      "ss": {
+        "actual_kg_s": 0.002611417300000004,
+        "target_kg_s": 0.0026114173,
+        "actual_over_target": 1.0000000000000016
+      },
+      "ps": {
+        "actual_kg_s": 0.001465511800000004,
+        "target_kg_s": 0.0014655118,
+        "actual_over_target": 1.0000000000000029
+      }
+    }
+  }
+}

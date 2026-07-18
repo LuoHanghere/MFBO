@@ -1,0 +1,132 @@
+{
+  "bodies": [
+    {
+      "size_mm": [
+        273.34292593538248, 
+        474.95022141632774, 
+        14.85
+      ], 
+      "index": 0, 
+      "tree_path": "root/B0", 
+      "role_guess": "mainflow", 
+      "bbox_mm": [
+        -117.0219259353816, 
+        -304.70894973496593, 
+        0.0, 
+        156.32100000000088, 
+        170.24127168136184, 
+        14.85
+      ], 
+      "faces": 986, 
+      "bbox_volume_mm3": 442261.00987423083, 
+      "center_mm": [
+        19.649537032309638, 
+        -67.233839026802045, 
+        7.425
+      ], 
+      "name": "fluid_fixed_LE"
+    }, 
+    {
+      "size_mm": [
+        10.258710242328565, 
+        10.135888535618591, 
+        14.85
+      ], 
+      "index": 1, 
+      "tree_path": "root/B1", 
+      "role_guess": "SS_plenum", 
+      "bbox_mm": [
+        20.819973496495543, 
+        119.58077421649335, 
+        0.0, 
+        31.078683738824108, 
+        129.71666275211194, 
+        14.85
+      ], 
+      "faces": 6, 
+      "bbox_volume_mm3": 579.14999999999884, 
+      "center_mm": [
+        25.949328617659823, 
+        124.64871848430265, 
+        7.425
+      ], 
+      "name": "SS_plenum"
+    }, 
+    {
+      "size_mm": [
+        11.999999999999998, 
+        12.0, 
+        14.85
+      ], 
+      "index": 2, 
+      "tree_path": "root/B2", 
+      "role_guess": "PS_plenum", 
+      "bbox_mm": [
+        15.649537032309622, 
+        87.766160973197955, 
+        0.0, 
+        27.64953703230962, 
+        99.766160973197955, 
+        14.85
+      ], 
+      "faces": 6, 
+      "bbox_volume_mm3": 801.90000000000032, 
+      "center_mm": [
+        21.64953703230962, 
+        93.766160973197955, 
+        7.425
+      ], 
+      "name": "PS_plenum"
+    }
+  ], 
+  "groups": [
+    {
+      "index": 0, 
+      "name": "inlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 1, 
+      "name": "outlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 2, 
+      "name": "periodic_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 3, 
+      "name": "periodic_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 4, 
+      "name": "span_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 5, 
+      "name": "span_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 6, 
+      "name": "vane_wall", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 7, 
+      "name": "fixed_fluid_domain", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 8, 
+      "name": "downstream_plenums", 
+      "collection": "Groups"
+    }
+  ], 
+  "source_scdoc": "E:\\Work\\BOfm\\runs\\fluid\\c3x_kumar_fixed_le_template.scdoc", 
+  "units": "mm", 
+  "body_count": 3
+}

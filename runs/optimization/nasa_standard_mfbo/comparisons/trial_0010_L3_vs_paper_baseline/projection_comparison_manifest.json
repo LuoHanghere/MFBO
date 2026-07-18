@@ -1,0 +1,36 @@
+{
+  "baseline_faces": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\post_iter2500\\eta_surface_faces.csv",
+  "optimized_faces": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\post_iter2500\\eta_surface_faces.csv",
+  "baseline_objective": 0.6489496053020241,
+  "optimized_objective": 0.6658036945608767,
+  "figures": [
+    {
+      "field": "taw_k",
+      "output": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\comparisons\\trial_0010_L3_vs_paper_baseline\\temperature_projection_comparison.png",
+      "value_limits": [
+        582.4493836046034,
+        700.855220253218
+      ],
+      "delta_limits": [
+        -32.34136399932451,
+        32.34136399932451
+      ],
+      "coordinate": "surface_distance_pct versus z/periodic_span",
+      "projection": "linear face-center interpolation with nearest boundary fill"
+    },
+    {
+      "field": "eta",
+      "output": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\comparisons\\trial_0010_L3_vs_paper_baseline\\cooling_effectiveness_projection_comparison.png",
+      "value_limits": [
+        0.0,
+        1.0
+      ],
+      "delta_limits": [
+        -0.30120381946440183,
+        0.30120381946440183
+      ],
+      "coordinate": "surface_distance_pct versus z/periodic_span",
+      "projection": "linear face-center interpolation with nearest boundary fill"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "error_count": 0,
+  "warning_count": 0,
+  "marker_count": 20,
+  "cavity_checked_markers": 0,
+  "cavity_failed_markers": 0,
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "s_over_s0": 0.241022565,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000001,
+      "marker_length_max_mm": 9.290000000000001
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "s_over_s0": 0.262977435,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000004,
+      "marker_length_max_mm": 9.290000000000004
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "s_over_s0": 0.210838936,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000001,
+      "marker_length_max_mm": 9.290000000000001
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "s_over_s0": 0.239161064,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000001,
+      "marker_length_max_mm": 9.290000000000001
+    }
+  ],
+  "issues": [],
+  "notes": [
+    "This is a pre-CAD gate; it cannot replace a final Discovery/Fluent boundary-zone check.",
+    "Cavity checks are only run when --cavities provides profile_xy_mm polygons."
+  ]
+}

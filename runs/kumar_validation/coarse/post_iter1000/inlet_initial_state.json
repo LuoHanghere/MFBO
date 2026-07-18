@@ -1,0 +1,302 @@
+{
+  "surface": "inlet",
+  "available_matching_fields": [
+    "pressure",
+    "pressure-coefficient",
+    "dynamic-pressure",
+    "absolute-pressure",
+    "total-pressure",
+    "rel-total-pressure",
+    "periodic-static-pressure",
+    "velocity-magnitude",
+    "x-velocity",
+    "y-velocity",
+    "z-velocity",
+    "axial-velocity",
+    "radial-velocity",
+    "tangential-velocity",
+    "rel-velocity-magnitude",
+    "relative-x-velocity",
+    "relative-y-velocity",
+    "relative-z-velocity",
+    "rel-axial-velocity",
+    "rel-radial-velocity",
+    "rel-tangential-velocity",
+    "mesh-x-velocity",
+    "mesh-y-velocity",
+    "mesh-z-velocity",
+    "velocity-angle",
+    "relative-velocity-angle",
+    "temperature",
+    "total-temperature",
+    "rel-total-temperature",
+    "wall-temperature",
+    "wall-adjacent-temperature",
+    "reference-temperature-at-y+",
+    "dx-velocity-dx",
+    "dy-velocity-dx",
+    "dz-velocity-dx",
+    "dx-velocity-dy",
+    "dy-velocity-dy",
+    "dz-velocity-dy",
+    "dx-velocity-dz",
+    "dy-velocity-dz",
+    "dz-velocity-dz",
+    "pressure-hessian-indicator"
+  ],
+  "fields": {
+    "pressure": {
+      "count": 2834,
+      "min": 280123.9375,
+      "mean": 280143.2714692131,
+      "max": 280166.71875
+    },
+    "pressure-coefficient": {
+      "count": 2834,
+      "min": 457345.21875,
+      "mean": 457376.7856166196,
+      "max": 457415.0625
+    },
+    "dynamic-pressure": {
+      "count": 2834,
+      "min": 4931.79833984375,
+      "mean": 4955.1965121832545,
+      "max": 4974.45751953125
+    },
+    "absolute-pressure": {
+      "count": 2834,
+      "min": 280123.9375,
+      "mean": 280143.2714692131,
+      "max": 280166.71875
+    },
+    "total-pressure": {
+      "count": 2834,
+      "min": 285129.03125,
+      "mean": 285129.8901839273,
+      "max": 285130.59375
+    },
+    "rel-total-pressure": {
+      "count": 2834,
+      "min": 285129.03125,
+      "mean": 285129.8901839273,
+      "max": 285130.59375
+    },
+    "periodic-static-pressure": {
+      "count": 2834,
+      "min": 280123.8125,
+      "mean": 280143.29785638675,
+      "max": 280167.0
+    },
+    "velocity-magnitude": {
+      "count": 2834,
+      "min": 133.52099609375,
+      "mean": 133.8411291764501,
+      "max": 134.1044158935547
+    },
+    "x-velocity": {
+      "count": 2834,
+      "min": 133.52099609375,
+      "mean": 133.8411291764501,
+      "max": 134.1044158935547
+    },
+    "y-velocity": {
+      "count": 2834,
+      "min": -0.0196108128875494,
+      "mean": -0.0005787977810271737,
+      "max": 0.012461154721677303
+    },
+    "z-velocity": {
+      "count": 2834,
+      "min": -0.006808194797486067,
+      "mean": -3.7518956216806754e-05,
+      "max": 0.006667414680123329
+    },
+    "axial-velocity": {
+      "count": 2834,
+      "min": -0.006808194797486067,
+      "mean": -3.7518956216806754e-05,
+      "max": 0.006667414680123329
+    },
+    "radial-velocity": {
+      "count": 2834,
+      "min": -122.92790985107422,
+      "mean": -98.5348913048722,
+      "max": -76.2857666015625
+    },
+    "tangential-velocity": {
+      "count": 2834,
+      "min": -110.2303237915039,
+      "mean": -87.4861905657244,
+      "max": -53.47798156738281
+    },
+    "rel-velocity-magnitude": {
+      "count": 2834,
+      "min": 133.52099609375,
+      "mean": 133.8411291764501,
+      "max": 134.1044158935547
+    },
+    "relative-x-velocity": {
+      "count": 2834,
+      "min": 133.52099609375,
+      "mean": 133.8411291764501,
+      "max": 134.1044158935547
+    },
+    "relative-y-velocity": {
+      "count": 2834,
+      "min": -0.0196108128875494,
+      "mean": -0.0005787977810271737,
+      "max": 0.012461154721677303
+    },
+    "relative-z-velocity": {
+      "count": 2834,
+      "min": -0.006808194797486067,
+      "mean": -3.7518956216806754e-05,
+      "max": 0.006667414680123329
+    },
+    "rel-axial-velocity": {
+      "count": 2834,
+      "min": -0.006808194797486067,
+      "mean": -3.7518956216806754e-05,
+      "max": 0.006667414680123329
+    },
+    "rel-radial-velocity": {
+      "count": 2834,
+      "min": -122.92790985107422,
+      "mean": -98.5348913048722,
+      "max": -76.2857666015625
+    },
+    "rel-tangential-velocity": {
+      "count": 2834,
+      "min": -110.2303237915039,
+      "mean": -87.4861905657244,
+      "max": -53.47798156738281
+    },
+    "mesh-x-velocity": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "mesh-y-velocity": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "mesh-z-velocity": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "velocity-angle": {
+      "count": 2834,
+      "min": -1.5709120035171509,
+      "mean": -1.57079666916047,
+      "max": -1.5707064867019653
+    },
+    "relative-velocity-angle": {
+      "count": 2834,
+      "min": 1.5707064867019653,
+      "mean": 1.57079666916047,
+      "max": 1.5709120035171509
+    },
+    "temperature": {
+      "count": 2834,
+      "min": 1764.0654296875,
+      "mean": 1764.1004303990744,
+      "max": 1764.142822265625
+    },
+    "total-temperature": {
+      "count": 2834,
+      "min": 1772.9990234375,
+      "mean": 1772.9999904376818,
+      "max": 1773.0008544921875
+    },
+    "rel-total-temperature": {
+      "count": 2834,
+      "min": 1772.9990234375,
+      "mean": 1772.9999904376818,
+      "max": 1773.0008544921875
+    },
+    "wall-temperature": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "wall-adjacent-temperature": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "reference-temperature-at-y+": {
+      "count": 2834,
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    },
+    "dx-velocity-dx": {
+      "count": 2834,
+      "min": -6.378420829772949,
+      "mean": 0.052468537890385934,
+      "max": 8.397648811340332
+    },
+    "dy-velocity-dx": {
+      "count": 2834,
+      "min": -19.02830696105957,
+      "mean": -1.0020915504255619,
+      "max": 20.2738094329834
+    },
+    "dz-velocity-dx": {
+      "count": 2834,
+      "min": -7.030979156494141,
+      "mean": 0.012871891308120534,
+      "max": 8.21903133392334
+    },
+    "dx-velocity-dy": {
+      "count": 2834,
+      "min": -73.59312438964844,
+      "mean": -1.0469234065502095,
+      "max": 26.43132781982422
+    },
+    "dy-velocity-dy": {
+      "count": 2834,
+      "min": -39.234859466552734,
+      "mean": 0.06357714529106513,
+      "max": 38.987911224365234
+    },
+    "dz-velocity-dy": {
+      "count": 2834,
+      "min": -39.684226989746094,
+      "mean": 0.10250065810607117,
+      "max": 63.054771423339844
+    },
+    "dx-velocity-dz": {
+      "count": 2834,
+      "min": -113.63886260986328,
+      "mean": -0.3855742727175071,
+      "max": 68.77263641357422
+    },
+    "dy-velocity-dz": {
+      "count": 2834,
+      "min": -58.06336975097656,
+      "mean": -0.07367771132787462,
+      "max": 48.05308151245117
+    },
+    "dz-velocity-dz": {
+      "count": 2834,
+      "min": -64.14409637451172,
+      "mean": 0.19363222079616785,
+      "max": 115.24248504638672
+    },
+    "pressure-hessian-indicator": {
+      "count": 2834,
+      "min": 0.00014393829042091966,
+      "mean": 0.0009955381453553614,
+      "max": 0.005656947381794453
+    }
+  },
+  "status": "ok"
+}

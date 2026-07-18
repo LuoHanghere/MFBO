@@ -1,0 +1,3736 @@
+{
+  "case": "C3X_filmcooled_baseline",
+  "units": "mm / deg",
+  "mode": "full-span",
+  "effective_span_mm": 76.2,
+  "profile_points": {
+    "raw": 78,
+    "densified": 438
+  },
+  "feasibility": "OK",
+  "warnings": [],
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "s_frac": 0.254,
+      "x_mm": 32.51858685343111,
+      "y_mm": 123.58799440352946,
+      "tangent_deg": -47.70756278461645,
+      "injection_deg": 35.0,
+      "p_over_D": 4.0,
+      "D_mm": 0.99,
+      "L_mm": 3.35,
+      "fixed": false,
+      "injection_sense": "forward",
+      "span_pitch_mm": 3.96,
+      "effective_span_mm": 76.2,
+      "n_holes": 19,
+      "tangent_xy": [
+        0.6729148796767618,
+        -0.7397199231530872
+      ],
+      "outward_normal_xy": [
+        0.7397199231530872,
+        0.6729148796767618
+      ],
+      "forward_jet_direction_xy": [
+        0.9755055167397177,
+        -0.21997496859955734
+      ],
+      "forward_hole_axis_from_outlet_to_plenum_xy": [
+        -0.9755055167397177,
+        0.21997496859955734
+      ],
+      "jet_direction_xy": [
+        0.9755055167397177,
+        -0.21997496859955734
+      ],
+      "hole_axis_from_outlet_to_plenum_xy": [
+        -0.9755055167397177,
+        0.21997496859955734
+      ]
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "s_frac": 0.276,
+      "x_mm": 34.93608329312537,
+      "y_mm": 120.52904078170634,
+      "tangent_deg": -56.68316444837606,
+      "injection_deg": 35.0,
+      "p_over_D": 4.0,
+      "D_mm": 0.99,
+      "L_mm": 3.35,
+      "fixed": false,
+      "injection_sense": "forward",
+      "span_pitch_mm": 3.96,
+      "effective_span_mm": 76.2,
+      "n_holes": 19,
+      "tangent_xy": [
+        0.5492683844241393,
+        -0.8356460027260921
+      ],
+      "outward_normal_xy": [
+        0.8356460027260921,
+        0.5492683844241393
+      ],
+      "forward_jet_direction_xy": [
+        0.929241176258974,
+        -0.3694737288967086
+      ],
+      "forward_hole_axis_from_outlet_to_plenum_xy": [
+        -0.929241176258974,
+        0.3694737288967086
+      ],
+      "jet_direction_xy": [
+        0.929241176258974,
+        -0.3694737288967086
+      ],
+      "hole_axis_from_outlet_to_plenum_xy": [
+        -0.929241176258974,
+        0.3694737288967086
+      ]
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "s_frac": 0.197,
+      "x_mm": 17.71999089390669,
+      "y_mm": 91.97229420408843,
+      "tangent_deg": -41.681048263919166,
+      "injection_deg": 20.0,
+      "p_over_D": 4.0,
+      "D_mm": 0.99,
+      "L_mm": 3.35,
+      "fixed": false,
+      "injection_sense": "forward",
+      "span_pitch_mm": 3.96,
+      "effective_span_mm": 76.2,
+      "n_holes": 19,
+      "tangent_xy": [
+        0.7468581798101245,
+        -0.6649833526117085
+      ],
+      "outward_normal_xy": [
+        -0.6649833526117085,
+        -0.7468581798101245
+      ],
+      "forward_jet_direction_xy": [
+        0.47437941877172896,
+        -0.880320491097303
+      ],
+      "forward_hole_axis_from_outlet_to_plenum_xy": [
+        -0.47437941877172896,
+        0.880320491097303
+      ],
+      "jet_direction_xy": [
+        0.47437941877172896,
+        -0.880320491097303
+      ],
+      "hole_axis_from_outlet_to_plenum_xy": [
+        -0.47437941877172896,
+        0.880320491097303
+      ]
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "s_frac": 0.225,
+      "x_mm": 20.64476195677496,
+      "y_mm": 89.2588051704616,
+      "tangent_deg": -43.6067636348543,
+      "injection_deg": 20.0,
+      "p_over_D": 4.0,
+      "D_mm": 0.99,
+      "L_mm": 3.35,
+      "fixed": true,
+      "injection_sense": "forward",
+      "span_pitch_mm": 3.96,
+      "effective_span_mm": 76.2,
+      "n_holes": 19,
+      "tangent_xy": [
+        0.7240904483925305,
+        -0.6897050257513746
+      ],
+      "outward_normal_xy": [
+        -0.6897050257513746,
+        -0.7240904483925305
+      ],
+      "forward_jet_direction_xy": [
+        0.44452943937610134,
+        -0.8957642421574826
+      ],
+      "forward_hole_axis_from_outlet_to_plenum_xy": [
+        -0.44452943937610134,
+        0.8957642421574826
+      ],
+      "jet_direction_xy": [
+        0.44452943937610134,
+        -0.8957642421574826
+      ],
+      "hole_axis_from_outlet_to_plenum_xy": [
+        -0.44452943937610134,
+        0.8957642421574826
+      ]
+    }
+  ],
+  "plenums": [
+    {
+      "id": "suction_plenum",
+      "surface": "suction",
+      "shape": "axis_aligned_box",
+      "min_corner_mm": [
+        22.541897048056423,
+        119.78677777351031,
+        0.0
+      ],
+      "max_corner_mm": [
+        33.80312535265781,
+        127.7682827499501,
+        76.2
+      ],
+      "inlet_target_center_mm": [
+        22.541897048056423,
+        123.7775302617302,
+        38.1
+      ],
+      "nominal_axis_from_holes_to_plenum": [
+        -0.955302287736693,
+        0.2956307478004289,
+        0.0
+      ],
+      "connected_rows": [
+        "SS1",
+        "SS2"
+      ]
+    },
+    {
+      "id": "pressure_plenum",
+      "surface": "pressure",
+      "shape": "axis_aligned_box",
+      "min_corner_mm": [
+        11.876199237699998,
+        208.0096153816892,
+        0.0
+      ],
+      "max_corner_mm": [
+        21.135588334865023,
+        219.0277983458088,
+        76.2
+      ],
+      "inlet_target_center_mm": [
+        16.50589378628251,
+        219.0277983458088,
+        38.1
+      ],
+      "nominal_axis_from_holes_to_plenum": [
+        -0.45951931380230304,
+        0.8881677770796803,
+        0.0
+      ],
+      "connected_rows": [
+        "PS1",
+        "PS2"
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "id": "SS1_000",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        2.460000000000001
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        2.460000000000001
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        2.460000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        2.460000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_001",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        6.420000000000001
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        6.420000000000001
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        6.420000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        6.420000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_002",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        10.38
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        10.38
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        10.38
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        10.38
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_003",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        14.34
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        14.34
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        14.34
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        14.34
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_004",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        18.3
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        18.3
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        18.3
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        18.3
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_005",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        22.26
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        22.26
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        22.26
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        22.26
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_006",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        26.22
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        26.22
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        26.22
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        26.22
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_007",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        30.18
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        30.18
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        30.18
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        30.18
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_008",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        34.14
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        34.14
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        34.14
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        34.14
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_009",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        38.1
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        38.1
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        38.1
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        38.1
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_010",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        42.06
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        42.06
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        42.06
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        42.06
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_011",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        46.02
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        46.02
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        46.02
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        46.02
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_012",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        49.98
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        49.98
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        49.98
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        49.98
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_013",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        53.94
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        53.94
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        53.94
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        53.94
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_014",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        57.9
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        57.9
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        57.9
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        57.9
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_015",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        61.86
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        61.86
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        61.86
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        61.86
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_016",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        65.82
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        65.82
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        65.82
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        65.82
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_017",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        69.78
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        69.78
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        69.78
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        69.78
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS1_018",
+      "row_id": "SS1",
+      "surface": "suction",
+      "outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        73.74000000000001
+      ],
+      "plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        73.74000000000001
+      ],
+      "passage_outlet_center_mm": [
+        32.51858685343111,
+        123.58799440352946,
+        73.74000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        29.250643372353053,
+        124.32491054833798,
+        73.74000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.9755055167397177,
+        -0.21997496859955734,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.9755055167397177,
+        0.21997496859955734,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_000",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        2.460000000000001
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        2.460000000000001
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        2.460000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        2.460000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_001",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        6.420000000000001
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        6.420000000000001
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        6.420000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        6.420000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_002",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        10.38
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        10.38
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        10.38
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        10.38
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_003",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        14.34
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        14.34
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        14.34
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        14.34
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_004",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        18.3
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        18.3
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        18.3
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        18.3
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_005",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        22.26
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        22.26
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        22.26
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        22.26
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_006",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        26.22
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        26.22
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        26.22
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        26.22
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_007",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        30.18
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        30.18
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        30.18
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        30.18
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_008",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        34.14
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        34.14
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        34.14
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        34.14
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_009",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        38.1
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        38.1
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        38.1
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        38.1
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_010",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        42.06
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        42.06
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        42.06
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        42.06
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_011",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        46.02
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        46.02
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        46.02
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        46.02
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_012",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        49.98
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        49.98
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        49.98
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        49.98
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_013",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        53.94
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        53.94
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        53.94
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        53.94
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_014",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        57.9
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        57.9
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        57.9
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        57.9
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_015",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        61.86
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        61.86
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        61.86
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        61.86
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_016",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        65.82
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        65.82
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        65.82
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        65.82
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_017",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        69.78
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        69.78
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        69.78
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        69.78
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "SS2_018",
+      "row_id": "SS2",
+      "surface": "suction",
+      "outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        73.74000000000001
+      ],
+      "plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        73.74000000000001
+      ],
+      "passage_outlet_center_mm": [
+        34.93608329312537,
+        120.52904078170634,
+        73.74000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        31.823125352657808,
+        121.76677777351031,
+        73.74000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "jet_direction": [
+        0.929241176258974,
+        -0.3694737288967086,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.929241176258974,
+        0.3694737288967086,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 35.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_000",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        2.460000000000001
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        2.460000000000001
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        2.460000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        2.460000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_001",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        6.420000000000001
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        6.420000000000001
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        6.420000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        6.420000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_002",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        10.38
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        10.38
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        10.38
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        10.38
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_003",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        14.34
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        14.34
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        14.34
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        14.34
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_004",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        18.3
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        18.3
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        18.3
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        18.3
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_005",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        22.26
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        22.26
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        22.26
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        22.26
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_006",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        26.22
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        26.22
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        26.22
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        26.22
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_007",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        30.18
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        30.18
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        30.18
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        30.18
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_008",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        34.14
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        34.14
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        34.14
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        34.14
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_009",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        38.1
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        38.1
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        38.1
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        38.1
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_010",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        42.06
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        42.06
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        42.06
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        42.06
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_011",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        46.02
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        46.02
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        46.02
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        46.02
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_012",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        49.98
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        49.98
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        49.98
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        49.98
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_013",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        53.94
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        53.94
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        53.94
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        53.94
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_014",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        57.9
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        57.9
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        57.9
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        57.9
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_015",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        61.86
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        61.86
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        61.86
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        61.86
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_016",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        65.82
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        65.82
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        65.82
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        65.82
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_017",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        69.78
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        69.78
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        69.78
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        69.78
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS1_018",
+      "row_id": "PS1",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        17.71999089390669,
+        91.97229420408843,
+        73.74000000000001
+      ],
+      "plenum_end_center_mm": [
+        16.1308198410214,
+        94.9213678492644,
+        73.74000000000001
+      ],
+      "passage_outlet_center_mm": [
+        17.71999089390669,
+        209.70229420408845,
+        73.74000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        16.1308198410214,
+        212.6513678492644,
+        73.74000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.47437941877172896,
+        -0.880320491097303,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.47437941877172896,
+        0.880320491097303,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": false
+    },
+    {
+      "id": "PS2_000",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        2.460000000000001
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        2.460000000000001
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        2.460000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        2.460000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_001",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        6.420000000000001
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        6.420000000000001
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        6.420000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        6.420000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_002",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        10.38
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        10.38
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        10.38
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        10.38
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_003",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        14.34
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        14.34
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        14.34
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        14.34
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_004",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        18.3
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        18.3
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        18.3
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        18.3
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_005",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        22.26
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        22.26
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        22.26
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        22.26
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_006",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        26.22
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        26.22
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        26.22
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        26.22
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_007",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        30.18
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        30.18
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        30.18
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        30.18
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_008",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        34.14
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        34.14
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        34.14
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        34.14
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_009",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        38.1
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        38.1
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        38.1
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        38.1
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_010",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        42.06
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        42.06
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        42.06
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        42.06
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_011",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        46.02
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        46.02
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        46.02
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        46.02
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_012",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        49.98
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        49.98
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        49.98
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        49.98
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_013",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        53.94
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        53.94
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        53.94
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        53.94
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_014",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        57.9
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        57.9
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        57.9
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        57.9
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_015",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        61.86
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        61.86
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        61.86
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        61.86
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_016",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        65.82
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        65.82
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        65.82
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        65.82
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_017",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        69.78
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        69.78
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        69.78
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        69.78
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    },
+    {
+      "id": "PS2_018",
+      "row_id": "PS2",
+      "surface": "pressure",
+      "outlet_center_mm": [
+        20.64476195677496,
+        89.2588051704616,
+        73.74000000000001
+      ],
+      "plenum_end_center_mm": [
+        19.155588334865023,
+        92.25961538168917,
+        73.74000000000001
+      ],
+      "passage_outlet_center_mm": [
+        20.64476195677496,
+        206.9888051704616,
+        73.74000000000001
+      ],
+      "passage_plenum_end_center_mm": [
+        19.155588334865023,
+        209.9896153816892,
+        73.74000000000001
+      ],
+      "passage_pitch_shift_mm": [
+        0.0,
+        117.73,
+        0.0
+      ],
+      "jet_direction": [
+        0.44452943937610134,
+        -0.8957642421574826,
+        0.0
+      ],
+      "hole_axis_from_outlet_to_plenum": [
+        -0.44452943937610134,
+        0.8957642421574826,
+        0.0
+      ],
+      "diameter_mm": 0.99,
+      "length_mm": 3.35,
+      "span_pitch_mm": 3.96,
+      "injection_angle_alpha_deg": 20.0,
+      "injection_sense": "forward",
+      "fixed": true
+    }
+  ]
+}

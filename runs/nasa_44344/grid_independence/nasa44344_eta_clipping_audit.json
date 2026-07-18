@@ -1,0 +1,49 @@
+{
+  "audits": [
+    {
+      "label": "coarse_iter1800",
+      "face_count": 26831,
+      "area_m2": 0.001576764527683284,
+      "raw_eta_bar": 0.5740716501975982,
+      "clipped_eta_bar": 0.5722904722232899,
+      "absolute_change": -0.0017811779743083234,
+      "relative_change_pct": -0.3102710216913226,
+      "eta_outside_0_1_area_fraction": 0.015522665033873081,
+      "taw_above_tg_area_fraction": 1.1671449069569058e-05,
+      "taw_below_tc_area_fraction": 0.015510993584803515,
+      "Tg_ref_K": 701.0,
+      "Tc_ref_K": 593.6263151083753,
+      "post_dir": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\post_mdot_iter1800"
+    },
+    {
+      "label": "paper_iter2500",
+      "face_count": 30877,
+      "area_m2": 0.0015793395537671308,
+      "raw_eta_bar": 0.5495265197244976,
+      "clipped_eta_bar": 0.5466451413902899,
+      "absolute_change": -0.0028813783342077626,
+      "relative_change_pct": -0.5243383587114826,
+      "eta_outside_0_1_area_fraction": 0.019602770430520732,
+      "taw_above_tg_area_fraction": 0.0001249130347061327,
+      "taw_below_tc_area_fraction": 0.019477857395814594,
+      "Tg_ref_K": 701.0,
+      "Tc_ref_K": 593.6263151083753,
+      "post_dir": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\post_iter2500"
+    },
+    {
+      "label": "fine_iter2000",
+      "face_count": 36751,
+      "area_m2": 0.001585575265656432,
+      "raw_eta_bar": 0.4939307168979948,
+      "clipped_eta_bar": 0.4923823987620238,
+      "absolute_change": -0.0015483181359710052,
+      "relative_change_pct": -0.3134686876116594,
+      "eta_outside_0_1_area_fraction": 0.01558042751371479,
+      "taw_above_tg_area_fraction": 0.0021010450458571668,
+      "taw_below_tc_area_fraction": 0.013479382467857624,
+      "Tg_ref_K": 701.0,
+      "Tc_ref_K": 593.6263151083753,
+      "post_dir": "E:\\Work\\BOfm\\runs\\nasa_44344\\fine\\post_iter2000"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "generated": "2026-06-29",
+  "tier": "smoke",
+  "automation": "geometry (SpaceClaim headless) + mesh (PyFluent) — no Workbench GUI required",
+  "cases": {
+    "baseline": {
+      "design": {
+        "SS1_s_over_s0": 0.241023,
+        "SS2_s_over_s0": 0.262977,
+        "PS1_s_over_s0": 0.210839,
+        "PS2_s_over_s0": 0.239161
+      },
+      "geometry": {
+        "scdoc": "runs/workbench/baseline/c3x_wb_baseline.scdoc",
+        "sat": "runs/workbench/baseline/c3x_wb_baseline.sat",
+        "layout_png": "runs/workbench/baseline/c3x_wb_baseline_layout.png"
+      },
+      "mesh": {
+        "cells": 511457,
+        "faces": 2751803,
+        "min_ortho_quality": 0.22,
+        "vane_wall_zones": 1011,
+        "film_hole_wall_zones": 30,
+        "msh": "runs/workbench/baseline/c3x_wb_baseline_smoke.msh.h5",
+        "cas": "runs/workbench/baseline/c3x_wb_baseline_smoke.cas.h5"
+      }
+    },
+    "variant_a": {
+      "design_delta": "SS rows +0.014 s/s0 downstream; PS1 -0.014 s/s0 upstream; PS2 fixed",
+      "design": {
+        "SS1_s_over_s0": 0.268,
+        "SS2_s_over_s0": 0.290,
+        "PS1_s_over_s0": 0.187,
+        "PS2_s_over_s0": 0.239161
+      },
+      "geometry": {
+        "scdoc": "runs/workbench/variant_a/c3x_wb_variant_a.scdoc",
+        "sat": "runs/workbench/variant_a/c3x_wb_variant_a.sat",
+        "layout_png": "runs/workbench/variant_a/c3x_wb_variant_a_layout.png"
+      },
+      "mesh": {
+        "cells": 523718,
+        "faces": 2816505,
+        "min_ortho_quality": 0.21,
+        "vane_wall_zones": 1016,
+        "film_hole_wall_zones": 30,
+        "msh": "runs/workbench/variant_a/c3x_wb_variant_a_smoke.msh.h5",
+        "cas": "runs/workbench/variant_a/c3x_wb_variant_a_smoke.cas.h5"
+      }
+    }
+  },
+  "compare_with_workbench_gui": {
+    "note": "Open both .cas.h5 in Fluent or import .msh.h5; compare against 1.wbpj mesh visually",
+    "zone_naming_in_auto_mesh": "coolant_inlet_LE/SS/PS (mesh.py reclassification from SAT)",
+    "zone_naming_in_workbench_gui": "qian/ss/ps (from Discovery body labels on SCDOC)"
+  }
+}

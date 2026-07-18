@@ -1,0 +1,46 @@
+{
+  "available": true,
+  "path": "fluent-20260715-192153-294568.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0,
+    "temperature_limited": 800
+  },
+  "residual_row_count": 401,
+  "temperature_limits": {
+    "event_count": 800,
+    "by_limit": [
+      {
+        "limit_K": 300.0,
+        "event_count": 400,
+        "max_cell_count": 86,
+        "last_cell_count": 75,
+        "last_zone_id": 339
+      },
+      {
+        "limit_K": 1000.0,
+        "event_count": 400,
+        "max_cell_count": 1393,
+        "last_cell_count": 1313,
+        "last_zone_id": 339
+      }
+    ],
+    "last_event": {
+      "limit_K": 1000.0,
+      "cell_count": 1313,
+      "zone_id": 339
+    }
+  },
+  "last_residual_row": {
+    "iteration": 2000,
+    "continuity": 0.0012463,
+    "x_velocity": 3.9113e-06,
+    "y_velocity": 8.1032e-06,
+    "z_velocity": 3.1822e-06,
+    "energy": 6.9711e-05,
+    "k": 0.00011058,
+    "omega": 0.00092893
+  }
+}

@@ -1,96 +1,89 @@
-# BOfm - turbine-vane film-cooling BO sandbox
+# BOfm
 
-This repository is the working codebase for the first paper: a
-physics-prior, multi-fidelity Bayesian optimization workflow for C3X turbine
-vane film cooling. The current priority is the no-film validation case: make
-the clean C3X vane simulation repeatable, compare it with experimental data,
-then add film holes.
+BOfm is a research codebase for automated C3X turbine-vane film-cooling
+geometry, CFD evaluation, and multi-fidelity Bayesian optimization (MFBO).
+The current production problem maximizes protected-area adiabatic
+film-cooling effectiveness using coarse and paper-grade Fluent meshes.
 
-## What works now
+## Current Model
 
-- C3X profile parsing, arc-length parametrization, and baseline hole-placement
-  checks.
-- Single-pitch periodic passage generation for the no-film validation domain.
-- Headless SpaceClaim build of the no-film fluid domain and ACIS `.sat` export.
-- Headless Fluent Meshing import, zone classification, surface meshing, prism
-  layers, and poly-hexcore volume meshing.
-- Headless Fluent setup for compressible SST/ideal-gas no-film flow:
-  pressure inlet, pressure outlet, span symmetry, and two non-conformal
-  translational periodic interfaces.
-- Coarse and refined no-film runs through 200 iterations.
-- ParaView-oriented EnSight Gold export plus wall y+ JSON/CSV summaries.
+- Five fixed NASA leading-edge cooling rows.
+- Four parameterized downstream rows: `SS1`, `SS2`, `PS1`, and `PS2`.
+- Eight optimization variables: four row positions, suction/pressure injection
+  angles, shared hole diameter, and integer spanwise hole count.
+- L2: coarse CFD, relative cost `0.20`.
+- L3: paper-grid CFD, relative cost `1.00`.
+- Fine CFD is reserved for independent finalist audits.
 
-## Current domain choice
+The standard-MFBO configuration has its physics prior disabled. The proposed
+PI-MFBO will use the same CFD data and budget with a separately frozen L1
+knowledge model.
 
-The downstream periodic boundaries are inclined with the nominal exit flow
-angle rather than forced horizontal. These are pitchwise periodic boundaries,
-not measured wake traces, so aligning them with the expected outlet direction
-keeps the downstream passage consistent with the cascade periodicity.
-
-The stable baseline keeps the downstream extension at `1.0 Cax`. A `1.5 Cax`
-trial built and meshed, but its short solve showed severe inlet/outlet reversed
-flow and unstable residual behavior. Keep longer outlets as later
-domain-length sensitivity tests, not the main validation path.
-
-## Main commands
-
-Run from the repository root with the project environment:
-
-```powershell
-& .\.venv\python.exe scripts\check_parametrization.py
-& .\.venv\python.exe scripts\check_passage.py
-& .\.venv\python.exe scripts\build_nofilm_domain.py
-& .\.venv\python.exe scripts\build_nofilm_mesh.py --tier coarse --cores 4
-& .\.venv\python.exe scripts\build_nofilm_mesh.py --tier refined --cores 1
-& .\.venv\python.exe scripts\run_nofilm_setup.py --case-in runs\fluid\c3x_nofilm_refined.cas.h5 --split-case runs\fluid\c3x_nofilm_refined_split.cas.h5 --case-out runs\fluid\c3x_nofilm_refined_setup.cas.h5 --cores 4
-& .\.venv\python.exe scripts\run_nofilm_iterate.py --case runs\fluid\c3x_nofilm_refined_setup.cas.h5 --iters 200 --out-prefix runs\fluid\c3x_nofilm_refined_run200
-& .\.venv\python.exe scripts\export_nofilm_results.py --case runs\fluid\c3x_nofilm_refined_run200.cas.h5 --data runs\fluid\c3x_nofilm_refined_run200.dat.h5
-```
-
-Open the EnSight Gold `.case` file written under
-`runs/fluid/paraview/c3x_nofilm_refined_run200/` in ParaView. The Fluent
-`.cas.h5/.dat.h5` files are also kept in `runs/fluid/` for restart and review.
-
-## Latest no-film refined smoke result
-
-The refined mesh run at 200 iterations is stable enough for workflow
-validation:
-
-- mesh: 14,108 cells, 88,576 faces, 67,174 nodes
-- iteration 200 residuals: continuity about `1.0e-2`, momentum about `1e-6`,
-  energy about `4e-6`, turbulence about `1e-4`
-- outlet reversed flow: 2 faces, about `0.8%` of pressure-outlet area
-
-This is not yet the final validation result. The wall is currently adiabatic,
-so heat-transfer-coefficient alignment against the experiments still needs the
-proper wall thermal condition and extracted comparison stations.
-
-## Repository layout
+## Production Loop
 
 ```text
-configs/       C3X baseline data and generated passage/placement checks
-bofm/geometry/ Profile parametrization and passage construction
-bofm/cad/      SpaceClaim launcher and journals
-bofm/cfd/      Fluent launch, meshing, and no-film setup helpers
-scripts/       Repeatable check/build/run/export entry points
-runs/          Generated CFD artifacts, ignored by git
+8D design
+  -> geometry feasibility gate
+  -> SpaceClaim SCDOC generation
+  -> native-CAD Fluent meshing
+  -> NASA boundary conditions and solve
+  -> result contract and projection figures
+  -> SQLite experiment ledger
+  -> cost-aware constrained acquisition
 ```
 
-## Local setup
+Primary entry points:
 
-Fluent 2024R2 is expected at `D:\Ansys\ANSYS Inc\v242`, with license
-`1055@localhost`. The project Python environment lives in `.venv`.
+```powershell
+# Execute exactly one ask-evaluate-record step.
+& .\.venv\python.exe scripts\run_one_optimization_iteration.py `
+  --config configs\c3x_nasa_standard_mfbo_8d.yaml
+
+# Finish startup sampling and continue into acquisition-driven standard MFBO.
+& .\.venv\python.exe scripts\run_standard_mfbo_cycle.py `
+  --config configs\c3x_nasa_standard_mfbo_8d.yaml `
+  --bo-iterations 1
+
+# Start the local experiment monitor.
+& .\.venv\python.exe scripts\run_optimization_ui.py `
+  --config configs\c3x_nasa_standard_mfbo_8d.yaml
+```
+
+## Repository Layout
+
+```text
+bofm/          Geometry, CFD, Workbench, and optimization libraries
+configs/       Frozen model, mesh, validation, and optimizer configuration
+docs/          Method decisions, validation records, and current project status
+scripts/       Reproducible command-line workflows
+tests/         Unit and contract tests
+runs/          Local CFD artifacts; Git keeps JSON records only
+```
+
+See [project status](docs/project_status.md) for the current numerical results
+and remaining MFBO startup work. The benchmark protocol is documented in
+[c3x_optimization_benchmark_protocol.md](docs/c3x_optimization_benchmark_protocol.md).
+For a new workstation or server, follow [server migration](docs/server_migration.md)
+and let Codex read the root [AGENTS.md](AGENTS.md) first.
+
+## Environment
+
+- Windows and PowerShell
+- Python 3.11 environment from `environment.yml` or `requirements.txt`
+- ANSYS/Fluent 2024 R2 for production CFD
+- A local fixed-leading-edge SCDOC template (large CAD binaries are not stored
+  in Git)
 
 ```powershell
 conda env create --prefix .venv -f environment.yml
-& .\.venv\python.exe your_script.py
+& .\.venv\python.exe -m pytest -q
 ```
 
-## Next work
+## Data Policy
 
-1. Export and inspect y+ and flow fields in ParaView for the refined run.
-2. Add experimental comparison scripts for exit Mach/pressure and, after wall
-   thermal setup is corrected, HTC.
-3. Run a mesh sensitivity sequence once the comparison metrics are automated.
-4. Add film-hole CAD/mesh/solve workflow after the clean-vane validation is
-   trustworthy.
+Fluent case/data/mesh files, CAD binaries, Workbench projects, transcripts,
+SQLite ledgers, and large CSV exports remain local. Small JSON manifests and
+result summaries under `runs/` are retained in Git for provenance. Recreating
+CFD cases requires the external SCDOC template and an ANSYS installation.
+
+No public-use license has been selected yet.

@@ -1,0 +1,37 @@
+{
+  "output_mesh": {
+    "exists": true, 
+    "dst": "E:\\\\Work\\\\BOfm\\\\runs\\\\workbench\\\\grid_independence\\\\smoke_probe\\\\smoke_layers2_mesh.msh.h5"
+  }, 
+  "steps": [
+    "opened Fluent mesh container", 
+    "imported geometry", 
+    "generated surface mesh", 
+    "described geometry", 
+    "updated boundaries/regions", 
+    "set boundary layer arguments", 
+    "boundary layers via UpdateExistingChildArguments", 
+    "boundary layers via ExecuteExistingChild", 
+    "generated volume mesh", 
+    "wrote mesh"
+  ], 
+  "boundary_layers_attempts": [
+    {
+      "ok": true, 
+      "method": "Arguments.set_state"
+    }, 
+    {
+      "error": "Exception('Generic Command\\n',)", 
+      "ok": false, 
+      "method": "AddChildAndUpdate"
+    }, 
+    {
+      "ok": true, 
+      "method": "UpdateExistingChildArguments"
+    }, 
+    {
+      "ok": true, 
+      "method": "ExecuteExistingChild"
+    }
+  ]
+}

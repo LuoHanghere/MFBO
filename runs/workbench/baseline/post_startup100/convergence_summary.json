@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": ".cache_workbench_film_startup100_live.txt",
+  "warnings": {
+    "artificial_wall": 59,
+    "reversed_flow": 12,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 100,
+  "last_residual_row": {
+    "iteration": 100,
+    "continuity": 0.026938,
+    "x_velocity": 1.439e-05,
+    "y_velocity": 4.4692e-05,
+    "z_velocity": 2.3475e-06,
+    "energy": 5.4178e-06,
+    "k": 0.00097208,
+    "omega": 0.000504
+  }
+}

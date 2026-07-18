@@ -1,0 +1,147 @@
+{
+  "name": "kumar_case1_coarse",
+  "route": "workbench",
+  "simulation_case": "kumar_case1_tr3",
+  "mesh_tier": "coarse",
+  "created_at": "2026-07-05T14:28:41",
+  "status": {
+    "topology_ok": true,
+    "post_valid": true
+  },
+  "inputs": {
+    "design": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_design.json",
+      "exists": true,
+      "bytes": 1198,
+      "mtime": "2026-07-03T15:47:49"
+    },
+    "layout": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_layout.json",
+      "exists": true,
+      "bytes": 49077,
+      "mtime": "2026-07-03T15:47:49"
+    },
+    "topology": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\kumar_case1_coarse_topology_check.json",
+      "exists": true,
+      "bytes": 1366,
+      "mtime": "2026-07-05T13:59:04"
+    },
+    "mesh_case": {
+      "path": "E:\\Work\\BOfm\\runs\\direct_cad\\coarse\\kumar_case1_coarse.msh.h5",
+      "exists": true,
+      "bytes": 198317647,
+      "mtime": "2026-07-05T13:47:31"
+    },
+    "mesh_meta": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\kumar_case1_coarse_mesh_meta.json",
+      "exists": true,
+      "bytes": 1104,
+      "mtime": "2026-07-05T13:59:04"
+    },
+    "setup_case": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\kumar_case1_coarse_setup.cas.h5",
+      "exists": true,
+      "bytes": 199060611,
+      "mtime": "2026-07-05T14:00:29"
+    }
+  },
+  "outputs": {
+    "run_case": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\kumar_case1_coarse_iter1000.cas.h5",
+      "exists": true,
+      "bytes": 199057885,
+      "mtime": "2026-07-05T14:27:22"
+    },
+    "run_data": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\kumar_case1_coarse_iter1000.dat.h5",
+      "exists": true,
+      "bytes": 125318983,
+      "mtime": "2026-07-05T14:27:31"
+    },
+    "post_dir": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\post_iter1000",
+      "exists": true,
+      "bytes": 8192,
+      "mtime": "2026-07-05T14:28:40"
+    },
+    "log": {
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\logs\\kumar_case1_coarse_iterate1000.log",
+      "exists": true,
+      "bytes": 123803,
+      "mtime": "2026-07-05T14:27:31"
+    }
+  },
+  "geometry_summary": {
+    "diameter_mm": 0.99,
+    "periodic_span_mm": 14.85,
+    "row_count": 4
+  },
+  "mesh_summary": {
+    "cell_count": null,
+    "face_count": null,
+    "node_count": null,
+    "note": "Fill after Workbench/Fluent mesh count is recorded; setup/export still records case/data file sizes."
+  },
+  "topology_summary": {
+    "ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "marker_count": 20,
+    "cavity_checked_markers": 0,
+    "cavity_failed_markers": 0
+  },
+  "result_summary": {
+    "valid": true,
+    "eta_bar": 0.40280612582153924,
+    "coolant_mass_flow_ratio": null,
+    "mass_imbalance": 1.49360857903914e-06,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 7883.563020318397,
+      "inlet_total_pressure_mean_Pa": 285129.89086759,
+      "outlet_total_pressure_mean_Pa": 277246.3278472716,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 6.5473833084106445,
+    "y_plus_max": 8.391889572143555,
+    "mass_flow_report_available": true,
+    "last_residual_row": {
+      "iteration": 953,
+      "continuity": 0.00099955,
+      "x_velocity": 1.1719e-07,
+      "y_velocity": 3.4705e-07,
+      "z_velocity": 3.9132e-08,
+      "energy": 5.5833e-07,
+      "k": 8.731e-05,
+      "omega": 3.6897e-05
+    },
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 97,
+      "divergence": 0,
+      "floating_point": 0
+    }
+  },
+  "convergence_summary": {
+    "available": true,
+    "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\logs\\kumar_case1_coarse_iterate1000.log",
+    "warnings": {
+      "artificial_wall": 0,
+      "reversed_flow": 97,
+      "divergence": 0,
+      "floating_point": 0
+    },
+    "residual_row_count": 954,
+    "last_residual_row": {
+      "iteration": 953,
+      "continuity": 0.00099955,
+      "x_velocity": 1.1719e-07,
+      "y_velocity": 3.4705e-07,
+      "z_velocity": 3.9132e-08,
+      "energy": 5.5833e-07,
+      "k": 8.731e-05,
+      "omega": 3.6897e-05
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\logs\\kumar_case1_coarse_iterate1000.log",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 97,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 954,
+  "last_residual_row": {
+    "iteration": 953,
+    "continuity": 0.00099955,
+    "x_velocity": 1.1719e-07,
+    "y_velocity": 3.4705e-07,
+    "z_velocity": 3.9132e-08,
+    "energy": 5.5833e-07,
+    "k": 8.731e-05,
+    "omega": 3.6897e-05
+  }
+}

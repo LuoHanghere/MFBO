@@ -1,0 +1,74 @@
+{
+  "config": "E:\\Work\\BOfm\\configs\\c3x_optimization_coarse.yaml",
+  "seed": 20260712,
+  "fixed": {
+    "diameter_mm": 0.99,
+    "span_count": 5
+  },
+  "candidates": [
+    {
+      "candidate_id": "DOE-01",
+      "design": {
+        "SS1_s": 0.2553955692718034,
+        "SS2_s": 0.27681297360840446,
+        "PS1_s": 0.199222240964891,
+        "PS2_s": 0.22650335657799278,
+        "suction_angle_deg": 36.51687319335982,
+        "pressure_angle_deg": 26.184087382702728
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.8737810812485577,
+      "physics_prior": 0.10447415006981532,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-02",
+      "design": {
+        "SS1_s": 0.24735645094616346,
+        "SS2_s": 0.2526131051563713,
+        "PS1_s": 0.2039000137283029,
+        "PS2_s": 0.23588242402520596,
+        "suction_angle_deg": 40.039556728006865,
+        "pressure_angle_deg": 38.87728925837649
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.7823221945055288,
+      "physics_prior": 0.09163363689038942,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-03",
+      "design": {
+        "SS1_s": 0.23419874224530443,
+        "SS2_s": 0.24915778283618376,
+        "PS1_s": 0.22497120963714315,
+        "PS2_s": 0.24690691710023563,
+        "suction_angle_deg": 43.11164009827606,
+        "pressure_angle_deg": 31.775867263636613
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 0.8166922083929085,
+      "physics_prior": 0.09688179446643982,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-04",
+      "design": {
+        "SS1_s": 0.2500218481997392,
+        "SS2_s": 0.2651476510939923,
+        "PS1_s": 0.21431152408475918,
+        "PS2_s": 0.22874271738357216,
+        "suction_angle_deg": 39.516912326052754,
+        "pressure_angle_deg": 31.118937844086144
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.4568812008171597,
+      "physics_prior": 0.10326794997217147,
+      "issues": []
+    }
+  ]
+}

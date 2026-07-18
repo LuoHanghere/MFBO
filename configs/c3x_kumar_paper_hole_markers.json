@@ -1,0 +1,1375 @@
+{
+  "source": {
+    "paper": "Kumar et al., A Numerical Study of Film Cooling on NASA-C3X Vane by Forward and Reverse Injection, 2023",
+    "paper_file": "978-981-19-3379-0_28-39.pdf",
+    "primary_geometry": "NASA CR-182133 Tables II-IV",
+    "method": "Table III surface-arc placement; no U/V fit and no figure scaling"
+  },
+  "units": "mm",
+  "selected_case": {
+    "pressure_angle_deg": 30.0,
+    "suction_angle_deg": 35.0,
+    "orientation": "forward",
+    "case_id": 1,
+    "custom_override": false
+  },
+  "paper_cases": {
+    "1": {
+      "pressure_angle_deg": 30.0,
+      "suction_angle_deg": 35.0,
+      "orientation": "forward"
+    },
+    "2": {
+      "pressure_angle_deg": 30.0,
+      "suction_angle_deg": 35.0,
+      "orientation": "reverse"
+    },
+    "3": {
+      "pressure_angle_deg": 45.0,
+      "suction_angle_deg": 50.0,
+      "orientation": "forward"
+    },
+    "4": {
+      "pressure_angle_deg": 45.0,
+      "suction_angle_deg": 50.0,
+      "orientation": "reverse"
+    },
+    "5": {
+      "pressure_angle_deg": 60.0,
+      "suction_angle_deg": 75.0,
+      "orientation": "forward"
+    },
+    "6": {
+      "pressure_angle_deg": 60.0,
+      "suction_angle_deg": 75.0,
+      "orientation": "reverse"
+    }
+  },
+  "geometry": {
+    "diameter_mm": 0.99,
+    "physical_hole_length_mm": 3.35,
+    "p_over_D": 4.0,
+    "s_over_D": 3.0,
+    "leading_edge_s_over_D": 7.5,
+    "periodic_span_mm": 14.85,
+    "downstream_span_pitch_mm": 2.9699999999999998,
+    "leading_edge_span_pitch_mm": 7.425,
+    "common_period_derivation": "LCM(3D downstream, 7.5D leading edge) = 15D",
+    "inline_rows": true,
+    "downstream_marker_passage_overlap_D": 3.0,
+    "downstream_marker_inner_overlap_D": 3.0,
+    "downstream_marker_total_length_mm": 9.29,
+    "leading_edge_radial_angle_deg": 90.0,
+    "leading_edge_marker_passage_overlap_D": 0.5,
+    "leading_edge_marker_inner_overlap_D": 0.0,
+    "leading_edge_stagger": "adjacent rows offset by 0.5 span pitch",
+    "reference_surface_arcs_mm": {
+      "suction": 180.37,
+      "pressure": 139.82
+    },
+    "row_pair_centers_s_over_s0": {
+      "suction": 0.252,
+      "pressure": 0.225
+    },
+    "row_pair_spacing_mm": 3.96,
+    "reconstruction": {
+      "geometric_stagnation_xy_mm": [
+        0.21807406461839665,
+        109.59043010315082
+      ],
+      "split_shift_from_min_x_mm": 2.6988323804065004,
+      "computed_surface_arcs_mm": {
+        "suction": 180.38443202933286,
+        "pressure": 139.8344320293328
+      },
+      "surface_arc_errors_vs_table_iii_mm": {
+        "suction_mm": 0.014432029332851926,
+        "pressure_mm": 0.014432029332795082
+      }
+    }
+  },
+  "external_flow_json": "E:\\Work\\BOfm\\configs\\c3x_kumar_paper_external_flow.json",
+  "external_flow_summary": {
+    "physical_pitch_mm": 117.73,
+    "periodic_width_mm": 117.73,
+    "span_mm": 14.85,
+    "min_wall_clearance_mm": 14.32835081608296
+  },
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "source_nasa_hole": 12,
+      "surface_arc_reference_mm": 43.473240000000004,
+      "s_over_s0": 0.241022564728059,
+      "surface_xy_mm": [
+        29.41764801179551,
+        126.89040491042803
+      ],
+      "surface_tangent_le_to_te": [
+        0.7664468190056273,
+        -0.6423077717388722
+      ],
+      "surface_tangent_angle_deg": -39.96412026739391,
+      "outward_normal_xy": [
+        0.6423077717388722,
+        0.7664468190056273
+      ],
+      "streamwise_injection_angle_deg": 35.0,
+      "orientation": "forward",
+      "coolant_exit_axis_xy": [
+        0.9857638737243307,
+        -0.16813561567973026
+      ],
+      "surface_to_plenum_axis_xy": [
+        -0.9857638737243307,
+        0.16813561567973026
+      ],
+      "shared_pair_frame": {
+        "center_surface_arc_reference_mm": 45.45324,
+        "center_xy_mm": [
+          30.889934290641197,
+          125.56729326001127
+        ],
+        "tangent_le_to_te": [
+          0.7110518650822522,
+          -0.7031395630762434
+        ],
+        "outward_normal_xy": [
+          0.7031395630762435,
+          0.7110518650822523
+        ],
+        "coolant_exit_axis_xy": [
+          0.9857638737243307,
+          -0.16813561567973026
+        ]
+      },
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 3.0,
+      "span_pitch_mm": 2.9699999999999998,
+      "span_positions_mm": [
+        1.4849999999999999,
+        4.455,
+        7.425000000000001,
+        10.395,
+        13.365
+      ],
+      "cylinder_markers": [
+        {
+          "id": "SS1_z01",
+          "start_mm": [
+            32.34536671675677,
+            126.39104213185924,
+            1.4849999999999999
+          ],
+          "end_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            1.4849999999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            1.98
+          ]
+        },
+        {
+          "id": "SS1_z02",
+          "start_mm": [
+            32.34536671675677,
+            126.39104213185924,
+            4.455
+          ],
+          "end_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            4.455
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            4.95
+          ]
+        },
+        {
+          "id": "SS1_z03",
+          "start_mm": [
+            32.34536671675677,
+            126.39104213185924,
+            7.425000000000001
+          ],
+          "end_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            7.425000000000001
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            7.920000000000001
+          ]
+        },
+        {
+          "id": "SS1_z04",
+          "start_mm": [
+            32.34536671675677,
+            126.39104213185924,
+            10.395
+          ],
+          "end_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            10.395
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            10.889999999999999
+          ]
+        },
+        {
+          "id": "SS1_z05",
+          "start_mm": [
+            32.34536671675677,
+            126.39104213185924,
+            13.365
+          ],
+          "end_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            13.365
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            23.18762032985774,
+            127.95302200152393,
+            13.86
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "source_nasa_hole": 11,
+      "surface_arc_reference_mm": 47.43324,
+      "s_over_s0": 0.262977435271941,
+      "surface_xy_mm": [
+        32.24113975996128,
+        124.12041559927965
+      ],
+      "surface_tangent_le_to_te": [
+        0.6567853977198965,
+        -0.7540775433215852
+      ],
+      "surface_tangent_angle_deg": -48.94483269548158,
+      "outward_normal_xy": [
+        0.7540775433215853,
+        0.6567853977198966
+      ],
+      "streamwise_injection_angle_deg": 35.0,
+      "orientation": "forward",
+      "coolant_exit_axis_xy": [
+        0.9857638737243307,
+        -0.16813561567973026
+      ],
+      "surface_to_plenum_axis_xy": [
+        -0.9857638737243307,
+        0.16813561567973026
+      ],
+      "shared_pair_frame": {
+        "center_surface_arc_reference_mm": 45.45324,
+        "center_xy_mm": [
+          30.889934290641197,
+          125.56729326001127
+        ],
+        "tangent_le_to_te": [
+          0.7110518650822522,
+          -0.7031395630762434
+        ],
+        "outward_normal_xy": [
+          0.7031395630762435,
+          0.7110518650822523
+        ],
+        "coolant_exit_axis_xy": [
+          0.9857638737243307,
+          -0.16813561567973026
+        ]
+      },
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 3.0,
+      "span_pitch_mm": 2.9699999999999998,
+      "span_positions_mm": [
+        1.4849999999999999,
+        4.455,
+        7.425000000000001,
+        10.395,
+        13.365
+      ],
+      "cylinder_markers": [
+        {
+          "id": "SS2_z01",
+          "start_mm": [
+            35.16885846492254,
+            123.62105282071086,
+            1.4849999999999999
+          ],
+          "end_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            1.4849999999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            1.98
+          ]
+        },
+        {
+          "id": "SS2_z02",
+          "start_mm": [
+            35.16885846492254,
+            123.62105282071086,
+            4.455
+          ],
+          "end_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            4.455
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            4.95
+          ]
+        },
+        {
+          "id": "SS2_z03",
+          "start_mm": [
+            35.16885846492254,
+            123.62105282071086,
+            7.425000000000001
+          ],
+          "end_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            7.425000000000001
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            7.920000000000001
+          ]
+        },
+        {
+          "id": "SS2_z04",
+          "start_mm": [
+            35.16885846492254,
+            123.62105282071086,
+            10.395
+          ],
+          "end_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            10.395
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            10.889999999999999
+          ]
+        },
+        {
+          "id": "SS2_z05",
+          "start_mm": [
+            35.16885846492254,
+            123.62105282071086,
+            13.365
+          ],
+          "end_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            13.365
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            26.01111207802351,
+            125.18303269037555,
+            13.86
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "source_nasa_hole": 18,
+      "surface_arc_reference_mm": 29.479499999999998,
+      "s_over_s0": 0.2108389357745673,
+      "surface_xy_mm": [
+        20.736090540889506,
+        89.19666106345755
+      ],
+      "surface_tangent_le_to_te": [
+        0.7224955211078489,
+        -0.6913756012321364
+      ],
+      "surface_tangent_angle_deg": -43.739098503120225,
+      "outward_normal_xy": [
+        -0.6913756012321364,
+        -0.7224955211078489
+      ],
+      "streamwise_injection_angle_deg": 30.0,
+      "orientation": "forward",
+      "coolant_exit_axis_xy": [
+        0.2669956220724834,
+        -0.9636977419264443
+      ],
+      "surface_to_plenum_axis_xy": [
+        -0.2669956220724834,
+        0.9636977419264443
+      ],
+      "shared_pair_frame": {
+        "center_surface_arc_reference_mm": 31.4595,
+        "center_xy_mm": [
+          22.15732908073126,
+          87.81780982848323
+        ],
+        "tangent_le_to_te": [
+          0.7130738623772219,
+          -0.7010889150417591
+        ],
+        "outward_normal_xy": [
+          -0.7010889150417591,
+          -0.7130738623772219
+        ],
+        "coolant_exit_axis_xy": [
+          0.2669956220724834,
+          -0.9636977419264443
+        ]
+      },
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 3.0,
+      "span_pitch_mm": 2.9699999999999998,
+      "span_positions_mm": [
+        1.4849999999999999,
+        4.455,
+        7.425000000000001,
+        10.395,
+        13.365
+      ],
+      "cylinder_markers": [
+        {
+          "id": "PS1_z01",
+          "start_mm": [
+            21.52906753844478,
+            86.33447876993601,
+            1.4849999999999999
+          ],
+          "end_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            1.4849999999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            1.98
+          ]
+        },
+        {
+          "id": "PS1_z02",
+          "start_mm": [
+            21.52906753844478,
+            86.33447876993601,
+            4.455
+          ],
+          "end_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            4.455
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            4.95
+          ]
+        },
+        {
+          "id": "PS1_z03",
+          "start_mm": [
+            21.52906753844478,
+            86.33447876993601,
+            7.425000000000001
+          ],
+          "end_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            7.425000000000001
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            7.920000000000001
+          ]
+        },
+        {
+          "id": "PS1_z04",
+          "start_mm": [
+            21.52906753844478,
+            86.33447876993601,
+            10.395
+          ],
+          "end_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            10.395
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            10.889999999999999
+          ]
+        },
+        {
+          "id": "PS1_z05",
+          "start_mm": [
+            21.52906753844478,
+            86.33447876993601,
+            13.365
+          ],
+          "end_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            13.365
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            19.04867820939141,
+            95.28723079243268,
+            13.86
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "source_nasa_hole": 19,
+      "surface_arc_reference_mm": 33.439499999999995,
+      "s_over_s0": 0.23916106422543268,
+      "surface_xy_mm": [
+        23.559705158013575,
+        86.41977980300881
+      ],
+      "surface_tangent_le_to_te": [
+        0.7033055752562969,
+        -0.7108876618801377
+      ],
+      "surface_tangent_angle_deg": -45.307183905036865,
+      "outward_normal_xy": [
+        -0.7108876618801379,
+        -0.703305575256297
+      ],
+      "streamwise_injection_angle_deg": 30.0,
+      "orientation": "forward",
+      "coolant_exit_axis_xy": [
+        0.2669956220724834,
+        -0.9636977419264443
+      ],
+      "surface_to_plenum_axis_xy": [
+        -0.2669956220724834,
+        0.9636977419264443
+      ],
+      "shared_pair_frame": {
+        "center_surface_arc_reference_mm": 31.4595,
+        "center_xy_mm": [
+          22.15732908073126,
+          87.81780982848323
+        ],
+        "tangent_le_to_te": [
+          0.7130738623772219,
+          -0.7010889150417591
+        ],
+        "outward_normal_xy": [
+          -0.7010889150417591,
+          -0.7130738623772219
+        ],
+        "coolant_exit_axis_xy": [
+          0.2669956220724834,
+          -0.9636977419264443
+        ]
+      },
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 3.0,
+      "span_pitch_mm": 2.9699999999999998,
+      "span_positions_mm": [
+        1.4849999999999999,
+        4.455,
+        7.425000000000001,
+        10.395,
+        13.365
+      ],
+      "cylinder_markers": [
+        {
+          "id": "PS2_z01",
+          "start_mm": [
+            24.35268215556885,
+            83.55759750948727,
+            1.4849999999999999
+          ],
+          "end_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            1.4849999999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            1.98
+          ]
+        },
+        {
+          "id": "PS2_z02",
+          "start_mm": [
+            24.35268215556885,
+            83.55759750948727,
+            4.455
+          ],
+          "end_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            4.455
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            4.95
+          ]
+        },
+        {
+          "id": "PS2_z03",
+          "start_mm": [
+            24.35268215556885,
+            83.55759750948727,
+            7.425000000000001
+          ],
+          "end_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            7.425000000000001
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            7.920000000000001
+          ]
+        },
+        {
+          "id": "PS2_z04",
+          "start_mm": [
+            24.35268215556885,
+            83.55759750948727,
+            10.395
+          ],
+          "end_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            10.395
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            10.889999999999999
+          ]
+        },
+        {
+          "id": "PS2_z05",
+          "start_mm": [
+            24.35268215556885,
+            83.55759750948727,
+            13.365
+          ],
+          "end_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            13.365
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.0,
+            0.0,
+            0.495
+          ],
+          "radius_point_mm": [
+            21.87229282651548,
+            92.51034953198393,
+            13.86
+          ]
+        }
+      ]
+    }
+  ],
+  "leading_edge_rows": [
+    {
+      "row_id": "LE1",
+      "surface": "pressure",
+      "source_nasa_hole": 17,
+      "signed_surface_arc_from_stagnation_mm": -7.92,
+      "surface_xy_mm": [
+        4.068047280270947,
+        102.84311546184864
+      ],
+      "surface_tangent_le_to_te": [
+        0.7650409154560035,
+        -0.6439816749553051
+      ],
+      "outward_normal_xy": [
+        -0.6439816749553051,
+        -0.7650409154560035
+      ],
+      "radial_injection_angle_deg": 90.0,
+      "axis_plane": "XY",
+      "coolant_exit_axis_xyz": [
+        -0.6439816749553051,
+        -0.7650409154560035,
+        0.0
+      ],
+      "surface_to_plenum_axis_xyz": [
+        0.6439816749553051,
+        0.7650409154560035,
+        -0.0
+      ],
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 7.5,
+      "span_pitch_mm": 7.425,
+      "span_phase_mm": 2.8,
+      "span_positions_mm": [
+        2.8,
+        10.225
+      ],
+      "stagger_group": "A",
+      "cylinder_markers": [
+        {
+          "id": "LE1_NASA17_z01",
+          "surface_point_mm": [
+            4.068047280270947,
+            102.84311546184864,
+            2.8
+          ],
+          "start_mm": [
+            3.7492763511680707,
+            102.46442020869792,
+            2.8
+          ],
+          "end_mm": [
+            6.22538589137122,
+            105.40600252862625,
+            2.8
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.3786952531507217,
+            -0.318770929102876,
+            0.0
+          ],
+          "radius_point_mm": [
+            6.604081144521942,
+            105.08723159952336,
+            2.8
+          ]
+        },
+        {
+          "id": "LE1_NASA17_z02",
+          "surface_point_mm": [
+            4.068047280270947,
+            102.84311546184864,
+            10.225
+          ],
+          "start_mm": [
+            3.7492763511680707,
+            102.46442020869792,
+            10.225
+          ],
+          "end_mm": [
+            6.22538589137122,
+            105.40600252862625,
+            10.225
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.3786952531507217,
+            -0.318770929102876,
+            0.0
+          ],
+          "radius_point_mm": [
+            6.604081144521942,
+            105.08723159952336,
+            10.225
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "LE2",
+      "surface": "pressure",
+      "source_nasa_hole": 16,
+      "signed_surface_arc_from_stagnation_mm": -3.96,
+      "surface_xy_mm": [
+        1.5640498495798025,
+        105.88616974495662
+      ],
+      "surface_tangent_le_to_te": [
+        0.4955101861323256,
+        -0.8686021272361173
+      ],
+      "outward_normal_xy": [
+        -0.8686021272361173,
+        -0.4955101861323256
+      ],
+      "radial_injection_angle_deg": 90.0,
+      "axis_plane": "XY",
+      "coolant_exit_axis_xyz": [
+        -0.8686021272361173,
+        -0.4955101861323256,
+        0.0
+      ],
+      "surface_to_plenum_axis_xyz": [
+        0.8686021272361173,
+        0.4955101861323256,
+        -0.0
+      ],
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 7.5,
+      "span_pitch_mm": 7.425,
+      "span_phase_mm": 6.512499999999999,
+      "span_positions_mm": [
+        6.512499999999999,
+        13.9375
+      ],
+      "stagger_group": "B",
+      "cylinder_markers": [
+        {
+          "id": "LE2_NASA16_z01",
+          "surface_point_mm": [
+            1.5640498495798025,
+            105.88616974495662,
+            6.512499999999999
+          ],
+          "start_mm": [
+            1.1340917965979245,
+            105.64089220282112,
+            6.512499999999999
+          ],
+          "end_mm": [
+            4.473866975820796,
+            107.5461288684999,
+            6.512499999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.24527754213550118,
+            -0.42995805298187806,
+            0.0
+          ],
+          "radius_point_mm": [
+            4.719144517956297,
+            107.11617081551803,
+            6.512499999999999
+          ]
+        },
+        {
+          "id": "LE2_NASA16_z02",
+          "surface_point_mm": [
+            1.5640498495798025,
+            105.88616974495662,
+            13.9375
+          ],
+          "start_mm": [
+            1.1340917965979245,
+            105.64089220282112,
+            13.9375
+          ],
+          "end_mm": [
+            4.473866975820796,
+            107.5461288684999,
+            13.9375
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.24527754213550118,
+            -0.42995805298187806,
+            0.0
+          ],
+          "radius_point_mm": [
+            4.719144517956297,
+            107.11617081551803,
+            13.9375
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "LE3",
+      "surface": "stagnation",
+      "source_nasa_hole": 15,
+      "signed_surface_arc_from_stagnation_mm": 0.0,
+      "surface_xy_mm": [
+        0.21807406461839665,
+        109.59043010315082
+      ],
+      "surface_tangent_le_to_te": [
+        -0.17798238522517568,
+        0.9840336734835639
+      ],
+      "outward_normal_xy": [
+        -0.9840336734835639,
+        -0.17798238522517568
+      ],
+      "radial_injection_angle_deg": 90.0,
+      "axis_plane": "XY",
+      "coolant_exit_axis_xyz": [
+        -0.984033673483564,
+        -0.1779823852251757,
+        0.0
+      ],
+      "surface_to_plenum_axis_xyz": [
+        0.984033673483564,
+        0.1779823852251757,
+        -0.0
+      ],
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 7.5,
+      "span_pitch_mm": 7.425,
+      "span_phase_mm": 2.8,
+      "span_positions_mm": [
+        2.8,
+        10.225
+      ],
+      "stagger_group": "A",
+      "cylinder_markers": [
+        {
+          "id": "LE3_NASA15_z01",
+          "surface_point_mm": [
+            0.21807406461839665,
+            109.59043010315082,
+            2.8
+          ],
+          "start_mm": [
+            -0.26902260375596754,
+            109.50232882246436,
+            2.8
+          ],
+          "end_mm": [
+            3.514586870788336,
+            110.18667109365516,
+            2.8
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            -0.08810128068646197,
+            0.48709666837436416,
+            0.0
+          ],
+          "radius_point_mm": [
+            3.426485590101874,
+            110.67376776202953,
+            2.8
+          ]
+        },
+        {
+          "id": "LE3_NASA15_z02",
+          "surface_point_mm": [
+            0.21807406461839665,
+            109.59043010315082,
+            10.225
+          ],
+          "start_mm": [
+            -0.26902260375596754,
+            109.50232882246436,
+            10.225
+          ],
+          "end_mm": [
+            3.514586870788336,
+            110.18667109365516,
+            10.225
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            -0.08810128068646197,
+            0.48709666837436416,
+            0.0
+          ],
+          "radius_point_mm": [
+            3.426485590101874,
+            110.67376776202953,
+            10.225
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "LE4",
+      "surface": "suction",
+      "source_nasa_hole": 14,
+      "signed_surface_arc_from_stagnation_mm": 3.96,
+      "surface_xy_mm": [
+        0.18349167315347628,
+        113.53146278639429
+      ],
+      "surface_tangent_le_to_te": [
+        0.14946886522241817,
+        0.9887664326468221
+      ],
+      "outward_normal_xy": [
+        -0.9887664326468222,
+        0.1494688652224182
+      ],
+      "radial_injection_angle_deg": 90.0,
+      "axis_plane": "XY",
+      "coolant_exit_axis_xyz": [
+        -0.9887664326468222,
+        0.1494688652224182,
+        0.0
+      ],
+      "surface_to_plenum_axis_xyz": [
+        0.9887664326468222,
+        -0.1494688652224182,
+        -0.0
+      ],
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 7.5,
+      "span_pitch_mm": 7.425,
+      "span_phase_mm": 6.512499999999999,
+      "span_positions_mm": [
+        6.512499999999999,
+        13.9375
+      ],
+      "stagger_group": "B",
+      "cylinder_markers": [
+        {
+          "id": "LE4_NASA14_z01",
+          "surface_point_mm": [
+            0.18349167315347628,
+            113.53146278639429,
+            6.512499999999999
+          ],
+          "start_mm": [
+            -0.3059477110067007,
+            113.60544987467938,
+            6.512499999999999
+          ],
+          "end_mm": [
+            3.4958592225203304,
+            113.03074208789918,
+            6.512499999999999
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.07398708828509701,
+            0.48943938416017696,
+            0.0
+          ],
+          "radius_point_mm": [
+            3.5698463108054272,
+            113.52018147205936,
+            6.512499999999999
+          ]
+        },
+        {
+          "id": "LE4_NASA14_z02",
+          "surface_point_mm": [
+            0.18349167315347628,
+            113.53146278639429,
+            13.9375
+          ],
+          "start_mm": [
+            -0.3059477110067007,
+            113.60544987467938,
+            13.9375
+          ],
+          "end_mm": [
+            3.4958592225203304,
+            113.03074208789918,
+            13.9375
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.07398708828509701,
+            0.48943938416017696,
+            0.0
+          ],
+          "radius_point_mm": [
+            3.5698463108054272,
+            113.52018147205936,
+            13.9375
+          ]
+        }
+      ]
+    },
+    {
+      "row_id": "LE5",
+      "surface": "suction",
+      "source_nasa_hole": 13,
+      "signed_surface_arc_from_stagnation_mm": 7.92,
+      "surface_xy_mm": [
+        1.4201620731155704,
+        117.278285317811
+      ],
+      "surface_tangent_le_to_te": [
+        0.4135005455481562,
+        0.9105038708492001
+      ],
+      "outward_normal_xy": [
+        -0.9105038708492003,
+        0.41350054554815624
+      ],
+      "radial_injection_angle_deg": 90.0,
+      "axis_plane": "XY",
+      "coolant_exit_axis_xyz": [
+        -0.9105038708492004,
+        0.4135005455481563,
+        0.0
+      ],
+      "surface_to_plenum_axis_xyz": [
+        0.9105038708492004,
+        -0.4135005455481563,
+        -0.0
+      ],
+      "direction_checks": {
+        "outside_probe_in_passage": true,
+        "inside_probe_in_blade": true
+      },
+      "diameter_mm": 0.99,
+      "physical_hole_length_mm": 3.35,
+      "p_over_D": 4.0,
+      "s_over_D": 7.5,
+      "span_pitch_mm": 7.425,
+      "span_phase_mm": 2.8,
+      "span_positions_mm": [
+        2.8,
+        10.225
+      ],
+      "stagger_group": "A",
+      "cylinder_markers": [
+        {
+          "id": "LE5_NASA13_z01",
+          "surface_point_mm": [
+            1.4201620731155704,
+            117.278285317811,
+            2.8
+          ],
+          "start_mm": [
+            0.9694626570452163,
+            117.48296808785733,
+            2.8
+          ],
+          "end_mm": [
+            4.470350040460392,
+            115.89305849022467,
+            2.8
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.20468277004633734,
+            0.45069941607035413,
+            0.0
+          ],
+          "radius_point_mm": [
+            4.675032810506729,
+            116.34375790629502,
+            2.8
+          ]
+        },
+        {
+          "id": "LE5_NASA13_z02",
+          "surface_point_mm": [
+            1.4201620731155704,
+            117.278285317811,
+            10.225
+          ],
+          "start_mm": [
+            0.9694626570452163,
+            117.48296808785733,
+            10.225
+          ],
+          "end_mm": [
+            4.470350040460392,
+            115.89305849022467,
+            10.225
+          ],
+          "radius_mm": 0.495,
+          "radius_vector_mm": [
+            0.20468277004633734,
+            0.45069941607035413,
+            0.0
+          ],
+          "radius_point_mm": [
+            4.675032810506729,
+            116.34375790629502,
+            10.225
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "ok",
+  "design": "E:\\Work\\BOfm\\configs\\c3x_downstream_design_baseline.json",
+  "cavities": "E:\\Work\\BOfm\\configs\\c3x_fixed_downstream_plenums.json",
+  "additional_margin_D": 0.25,
+  "resolution": 101,
+  "plot": "E:\\Work\\BOfm\\configs\\c3x_pair_feasibility_map.png",
+  "pairs": [
+    {
+      "surface": "suction",
+      "row_ids": [
+        "SS1",
+        "SS2"
+      ],
+      "baseline": [
+        0.241022565,
+        0.262977435
+      ],
+      "baseline_margin_mm": 0.38144079755648486,
+      "feasible_fraction": 0.15627782724844166,
+      "feasible_x_extent": [
+        0.237,
+        0.294
+      ],
+      "feasible_y_extent": [
+        0.2376,
+        0.29400000000000004
+      ]
+    },
+    {
+      "surface": "pressure",
+      "row_ids": [
+        "PS1",
+        "PS2"
+      ],
+      "baseline": [
+        0.210838936,
+        0.239161064
+      ],
+      "baseline_margin_mm": 0.6152942175040663,
+      "feasible_fraction": 0.25976331360946747,
+      "feasible_x_extent": [
+        0.19240000000000002,
+        0.27040000000000003
+      ],
+      "feasible_y_extent": [
+        0.1925,
+        0.2705
+      ]
+    }
+  ],
+  "interpretation": {
+    "black_contour": "dynamic geometry-gate boundary (reserve = 0 mm)",
+    "green": "full hole radius plus requested margin fits inside the assigned plenum",
+    "red": "cavity miss or insufficient cylinder clearance",
+    "gray": "row order is reversed",
+    "hatched": "ordered but row separation is below 0.005 s/s0",
+    "blue_dashed": "one-row-at-a-time conditional intervals from the earlier scan"
+  }
+}

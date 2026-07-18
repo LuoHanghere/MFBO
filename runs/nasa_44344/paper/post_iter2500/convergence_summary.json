@@ -1,0 +1,39 @@
+{
+  "available": true,
+  "path": "fluent-20260715-211227-290180.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0,
+    "temperature_limited": 164
+  },
+  "residual_row_count": 301,
+  "temperature_limits": {
+    "event_count": 164,
+    "by_limit": [
+      {
+        "limit_K": 1000.0,
+        "event_count": 164,
+        "max_cell_count": 1,
+        "last_cell_count": 1,
+        "last_zone_id": 321
+      }
+    ],
+    "last_event": {
+      "limit_K": 1000.0,
+      "cell_count": 1,
+      "zone_id": 321
+    }
+  },
+  "last_residual_row": {
+    "iteration": 2500,
+    "continuity": 0.0011935,
+    "x_velocity": 8.1478e-07,
+    "y_velocity": 3.9488e-06,
+    "z_velocity": 7.9318e-08,
+    "energy": 3.5186e-06,
+    "k": 6.8101e-05,
+    "omega": 5.1451e-05
+  }
+}

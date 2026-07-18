@@ -1,0 +1,53 @@
+{
+  "ok": true,
+  "error_count": 0,
+  "warning_count": 0,
+  "marker_count": 28,
+  "cavity_checked_markers": 28,
+  "cavity_failed_markers": 0,
+  "cavity_clearance_min_mm": 0.9035876456707452,
+  "cavity_clearance_required_mm": 0.7626476995526386,
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "s_over_s0": 0.23943719057061552,
+      "marker_count": 7,
+      "marker_length_min_mm": 9.45118159642111,
+      "marker_length_max_mm": 9.45118159642111
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "s_over_s0": 0.2732321569125405,
+      "marker_count": 7,
+      "marker_length_min_mm": 9.45118159642111,
+      "marker_length_max_mm": 9.45118159642111
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "s_over_s0": 0.21497507399160465,
+      "marker_count": 7,
+      "marker_length_min_mm": 10.976476995526381,
+      "marker_length_max_mm": 10.976476995526381
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "s_over_s0": 0.23059783677884707,
+      "marker_count": 7,
+      "marker_length_min_mm": 10.976476995526381,
+      "marker_length_max_mm": 10.976476995526381
+    }
+  ],
+  "issues": [],
+  "notes": [
+    "This is a pre-CAD gate; it cannot replace a final Discovery/Fluent boundary-zone check.",
+    "Cavity checks are only run when --cavities provides profile_xy_mm polygons."
+  ],
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0013_L2\\c3x_design.json",
+  "layout_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0013_L2\\c3x_layout.json",
+  "cavities_json": "E:\\Work\\BOfm\\configs\\c3x_fixed_downstream_plenums.json",
+  "min_cavity_margin_d": 0.25
+}

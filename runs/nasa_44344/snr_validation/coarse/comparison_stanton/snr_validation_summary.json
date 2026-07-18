@@ -1,0 +1,28 @@
+{
+  "definition": "SNR = 1 - q_FC/q_NFC on identical prescribed-Tw meshes",
+  "point_count": 29,
+  "mae": 0.23669830208975284,
+  "rmse": 0.33474267181277695,
+  "bias": -0.18517147780534535,
+  "sides": {
+    "pressure": {
+      "point_count": 14,
+      "mae": 0.16146790321284263,
+      "rmse": 0.24717278802699674,
+      "bias": -0.054733767195141496
+    },
+    "suction": {
+      "point_count": 15,
+      "mae": 0.3069133410415357,
+      "rmse": 0.39951684267072707,
+      "bias": -0.3069133410415357
+    }
+  },
+  "reference_quality": "NASA Figure 30 approximate manual digitization; trend-validation use only",
+  "fc_face_file": "E:\\Work\\BOfm\\runs\\nasa_44344\\snr_validation\\coarse\\fc\\post\\heat_transfer_stanton_number_surface_faces.csv",
+  "nfc_face_file": "E:\\Work\\BOfm\\runs\\nasa_44344\\snr_validation\\coarse\\nfc\\post\\heat_transfer_stanton_number_surface_faces.csv",
+  "paired_face_count": 26831,
+  "binned_point_count": 101,
+  "pair_distance_max_m": 0.0,
+  "bin_width_pct": 2.0
+}

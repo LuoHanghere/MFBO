@@ -12,7 +12,7 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
-SPACECLAIM_EXE = r"D:\Ansys\ANSYS Inc\v242\scdm\SpaceClaim.exe"
+DEFAULT_SPACECLAIM_EXE = r"D:\Ansys\ANSYS Inc\v242\scdm\SpaceClaim.exe"
 
 
 @dataclass
@@ -34,7 +34,7 @@ def run_journal(journal: str | Path,
                 out_scdoc: str | Path | None = None,
                 *,
                 env_extra: dict[str, str] | None = None,
-                spaceclaim_exe: str | Path = SPACECLAIM_EXE,
+                spaceclaim_exe: str | Path | None = None,
                 headless: bool = True,
                 timeout_s: int = 600) -> JournalResult:
     """Run `journal` inside SpaceClaim, passing paths to it via env vars.
@@ -43,6 +43,9 @@ def run_journal(journal: str | Path,
     BOFM_PASSAGE_JSON); values are stringified and resolved if they are paths.
     """
     journal = Path(journal).resolve()
+    spaceclaim_exe = spaceclaim_exe or os.environ.get(
+        "BOFM_SPACECLAIM_EXE", DEFAULT_SPACECLAIM_EXE
+    )
     status_path = journal.with_suffix(".status.txt")
     if status_path.exists():
         status_path.unlink()

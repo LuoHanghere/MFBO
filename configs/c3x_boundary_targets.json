@@ -1,0 +1,28 @@
+{
+  "source": "Confirmed 2026-07-03 on c3x_wb_inlet_review.scdoc",
+  "units": "mm",
+  "selection_rule": "Exclude span caps; select a large lateral face facing the central cavity. Area alone is insufficient because SS/PS have equal-area opposite faces.",
+  "boundaries": {
+    "coolant_inlet_LE": {
+      "body_names": ["fluid_fixed_LE", "fluid"],
+      "center_mm": [12.269227108151835, 111.47149590436086, 7.425],
+      "area_mm2": 240.87739619980931,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    },
+    "coolant_inlet_SS": {
+      "body_names": ["SS_plenum", "SS"],
+      "center_mm": [24.690018907376874, 123.3587033473422, 7.425],
+      "area_mm2": 160.62730932192043,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    },
+    "coolant_inlet_PS": {
+      "body_names": ["PS_plenum", "PS"],
+      "center_mm": [23.149537032309617, 95.26616097319796, 7.425],
+      "area_mm2": 189.0096426111641,
+      "cad_tolerance_mm": 0.5,
+      "mesh_tolerance_mm": 2.0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": "runs\\kumar_periodic_v2\\coarse\\logs\\kumar_case1_periodic_v2_coarse_iterate1000.log",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 106,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 1002,
+  "last_residual_row": {
+    "iteration": 1000,
+    "continuity": 0.001011,
+    "x_velocity": 8.55e-08,
+    "y_velocity": 2.7933e-07,
+    "z_velocity": 3.0942e-08,
+    "energy": 4.5394e-07,
+    "k": 5.5631e-05,
+    "omega": 2.2465e-05
+  }
+}

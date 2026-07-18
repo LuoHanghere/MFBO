@@ -1,0 +1,21 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\workbench\\periodic_v2\\smoke\\periodic_v2_smoke.msh.h5",
+  "exists": true,
+  "fluent_version": "FluentVersion.v242",
+  "cell_count": 909264,
+  "face_count": 4195957,
+  "boundary_zone_counts": {
+    "inlet": 677,
+    "outlet": 678,
+    "qian": 362,
+    "ss": 617,
+    "ps": 565,
+    "vane_wall": 23357,
+    "film_hole_wall": 14723,
+    "periodic_low": 9752,
+    "periodic_high": 9860,
+    "span_low": 8749,
+    "span_high": 9006
+  },
+  "status": "ok"
+}

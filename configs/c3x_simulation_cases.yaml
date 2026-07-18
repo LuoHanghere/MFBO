@@ -1,0 +1,229 @@
+default_case: nasa_44344_validation
+
+sources:
+  nasa_cr182133:
+    file: .cache_CR182133.pdf
+    test_conditions_pages: [30, 31, 32, 33, 34]
+    geometry_page: 18
+  kumar_2023:
+    file: 978-981-19-3379-0_28-39.pdf
+    boundary_condition_pages: [3, 4, 5, 6, 7]
+
+cases:
+  nasa_44344_validation:
+    purpose: Reproduce the Hylton condition used by Kumar for validation.
+    run_code: 44344
+    coolant_boundary:
+      mode: measured_mass_flow
+      mass_flow_key: periodic_14p85mm_mass_flow_kg_s
+      note: The periodic slice does not reproduce the full-span NASA hole pitch exactly, so measured coolant flow is imposed for external-flow validation; Pc/Pt remains a diagnostic target.
+    mainstream:
+      inlet_total_pressure_Pa: 285130.0
+      inlet_total_temperature_K: 701.0
+      inlet_mach: 0.17
+      inlet_reynolds_true_chord: 5.4e5
+      exit_mach: 0.89
+      exit_reynolds_true_chord: 2.03e6
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 170416.542
+      outlet_pressure_note: Derived from Pt and Ma2 with gamma=1.4; NASA defines Ma2 from measured Pt and exit static pressure.
+    coolant:
+      suction:
+        pc_over_pt: 1.051
+        tc_over_tg: 0.85
+        total_temperature_K: 595.85
+        full_vane_mass_flow_kg_s: 0.0134
+        periodic_14p85mm_mass_flow_kg_s: 0.0026114173
+      showerhead:
+        pc_over_pt: 1.048
+        tc_over_tg: 0.86
+        total_temperature_K: 602.86
+        full_vane_mass_flow_kg_s: 0.00638
+        periodic_14p85mm_mass_flow_kg_s: 0.0012433465
+      pressure:
+        pc_over_pt: 1.050
+        tc_over_tg: 0.83
+        total_temperature_K: 581.83
+        full_vane_mass_flow_kg_s: 0.00752
+        periodic_14p85mm_mass_flow_kg_s: 0.0014655118
+    walls:
+      optimization_mode: adiabatic
+      heat_transfer_validation: Use local measured Tw/Tg data; Table VI gives only arc-weighted average 0.79.
+    provenance_note: Kumar lists the three validation values in a different verbal order; the numbers exactly match NASA run 44344 in SS, LE, PS column order.
+
+  nasa_44344_snr_fc:
+    purpose: Fluid-only, prescribed-temperature reproduction of NASA CR-182133 run 44344 for Stanton-number-reduction validation.
+    run_code: 44344
+    validation_role: film_cooled
+    coolant_boundary:
+      mode: measured_mass_flow
+      mass_flow_key: periodic_14p85mm_mass_flow_kg_s
+    mainstream:
+      inlet_total_pressure_Pa: 285130.0
+      inlet_total_temperature_K: 701.0
+      inlet_mach: 0.17
+      inlet_reynolds_true_chord: 5.4e5
+      exit_mach: 0.89
+      exit_reynolds_true_chord: 2.03e6
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 170416.542
+    coolant:
+      suction:
+        pc_over_pt: 1.051
+        tc_over_tg: 0.85
+        total_temperature_K: 595.85
+        full_vane_mass_flow_kg_s: 0.0134
+        periodic_14p85mm_mass_flow_kg_s: 0.0026114173
+      showerhead:
+        pc_over_pt: 1.048
+        tc_over_tg: 0.86
+        total_temperature_K: 602.86
+        full_vane_mass_flow_kg_s: 0.00638
+        periodic_14p85mm_mass_flow_kg_s: 0.0012433465
+      pressure:
+        pc_over_pt: 1.050
+        tc_over_tg: 0.83
+        total_temperature_K: 581.83
+        full_vane_mass_flow_kg_s: 0.00752
+        periodic_14p85mm_mass_flow_kg_s: 0.0014655118
+    walls:
+      thermal_mode: isothermal
+      temperature_K: 553.79
+      temperature_source: NASA CR-182133 Table VI arc-weighted Tw/Tg=0.79 multiplied by Tg=701 K; uniform validation approximation.
+    numerics:
+      turbulence_model: sst_k_omega
+      pressure_velocity_coupling: SIMPLEC
+    comparison:
+      metric: stanton_number_reduction
+      definition: 1 - St_FC / St_NFC
+      nasa_reference_csv: configs/validation/nasa_cr182133_fig30_run44344_snr.csv
+      note: This is a prescribed-wall-temperature fluid calculation, not CHT and not adiabatic effectiveness.
+
+  nasa_44344_snr_nfc:
+    purpose: Zero-net-coolant reference paired with nasa_44344_snr_fc on the identical perforated mesh.
+    run_code: 44344-NFC
+    validation_role: non_film_cooled_reference
+    coolant_boundary:
+      mode: zero_mass_flow
+      note: Each plenum inlet has zero prescribed net mass flow; the holes and plenums remain resolved, matching a no-blowing rather than a no-hole reference.
+    mainstream:
+      inlet_total_pressure_Pa: 285130.0
+      inlet_total_temperature_K: 701.0
+      inlet_mach: 0.17
+      inlet_reynolds_true_chord: 5.4e5
+      exit_mach: 0.89
+      exit_reynolds_true_chord: 2.03e6
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 170416.542
+    coolant:
+      suction: {pc_over_pt: 1.0, tc_over_tg: 1.0, total_temperature_K: 701.0, periodic_14p85mm_mass_flow_kg_s: 0.0}
+      showerhead: {pc_over_pt: 1.0, tc_over_tg: 1.0, total_temperature_K: 701.0, periodic_14p85mm_mass_flow_kg_s: 0.0}
+      pressure: {pc_over_pt: 1.0, tc_over_tg: 1.0, total_temperature_K: 701.0, periodic_14p85mm_mass_flow_kg_s: 0.0}
+    walls:
+      thermal_mode: isothermal
+      temperature_K: 553.79
+      temperature_source: Same prescribed temperature as the paired FC calculation so the Stanton ratio is consistent.
+    numerics:
+      turbulence_model: sst_k_omega
+      pressure_velocity_coupling: SIMPLEC
+    comparison:
+      metric: stanton_number_reduction_reference
+      paired_case: nasa_44344_snr_fc
+
+  nasa_44155_high_blowing:
+    purpose: High-blowing NASA sensitivity case retained for comparison.
+    run_code: 44155
+    mainstream:
+      inlet_total_pressure_Pa: 280950.0
+      inlet_total_temperature_K: 705.0
+      inlet_mach: 0.19
+      inlet_reynolds_true_chord: 6.0e5
+      exit_mach: 0.90
+      exit_reynolds_true_chord: 2.00e6
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 166114.517
+    coolant:
+      suction: {pc_over_pt: 1.101, tc_over_tg: 0.66, total_temperature_K: 465.30, full_vane_mass_flow_kg_s: 0.0160}
+      showerhead: {pc_over_pt: 1.103, tc_over_tg: 0.72, total_temperature_K: 507.60, full_vane_mass_flow_kg_s: 0.00949}
+      pressure: {pc_over_pt: 1.101, tc_over_tg: 0.69, total_temperature_K: 486.45, full_vane_mass_flow_kg_s: 0.0107}
+
+  kumar_parametric:
+    purpose: Reproduce the simplified operating point used for Kumar angle/orientation comparisons.
+    mainstream:
+      pressure_Pa: 285130.0
+      temperature_K: 1773.0
+    coolant:
+      pc_over_p_mainstream: 1.15
+      pressure_Pa: 327899.5
+      temperature_K: 773.0
+    numerics:
+      flow: steady_RANS
+      density: ideal_gas
+      air_properties: singh_temperature_polynomials
+      turbulence_model: realizable_k_epsilon
+      pressure_velocity_coupling: SIMPLE
+      flow_residual: 1.0e-5
+      energy_residual: 1.0e-8
+      wall_y_plus: less_than_1
+      selected_grid_cells: 3500000
+      grid_study_cells: [2000000, 3500000, 4500000]
+    source_inconsistency: The paper also states temperature ratio=3, which conflicts with explicit 1773 K and 773 K (ratio 2.294). Use dimensional temperatures unless intentionally reproducing the ratio-3 plots.
+
+  kumar_case1_tr3:
+    purpose: Reproduce Kumar Figures 6 and 7 for case 1, forward injection at alpha_P=30 deg and alpha_S=35 deg.
+    mainstream:
+      inlet_total_pressure_Pa: 285130.0
+      inlet_total_temperature_K: 1773.0
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 170416.542
+      outlet_pressure_note: Kumar does not report the numerical outlet value; the NASA 44344 value is retained as an explicit inference because the paper changes temperature and plenum pressure ratio from its validated condition.
+    coolant:
+      suction: {pc_over_pt: 1.15, total_temperature_K: 591.0}
+      showerhead: {pc_over_pt: 1.15, total_temperature_K: 591.0}
+      pressure: {pc_over_pt: 1.15, total_temperature_K: 591.0}
+    walls:
+      optimization_mode: adiabatic
+    geometry:
+      orientation: forward
+      pressure_angle_deg: 30.0
+      suction_angle_deg: 35.0
+    extraction:
+      pressure: {X_over_Cax_magnitude: 0.31, signed_X_over_Cax: -0.31, reference_csv: configs/validation/kumar_fig6_ps_forward_30deg.csv}
+      suction: {X_over_Cax_magnitude: 0.48, signed_X_over_Cax: 0.48, reference_csv: configs/validation/kumar_fig7_ss_forward_35deg.csv}
+    numerics:
+      flow: steady_RANS
+      density: ideal_gas
+      air_properties: singh_temperature_polynomials
+      turbulence_model: realizable_k_epsilon
+      pressure_velocity_coupling: SIMPLE
+      flow_residual: 1.0e-5
+      energy_residual: 1.0e-8
+      wall_y_plus: less_than_1
+    provenance_note: Figure labels state TR=3; with Tmain=1773 K this fixes Tc=591 K. Outlet pressure and inlet turbulence are not reported for the parametric case and are inherited from NASA 44344 as documented assumptions.
+
+  kumar_case1_explicit_773K:
+    purpose: Source-ambiguity sensitivity for Kumar case 1 using the explicit 1773 K and 773 K temperatures stated in the paper.
+    mainstream:
+      inlet_total_pressure_Pa: 285130.0
+      inlet_total_temperature_K: 1773.0
+      inlet_turbulence_intensity_pct: 6.5
+      outlet_static_pressure_Pa: 170416.542
+    coolant:
+      suction: {pc_over_pt: 1.15, total_temperature_K: 773.0}
+      showerhead: {pc_over_pt: 1.15, total_temperature_K: 773.0}
+      pressure: {pc_over_pt: 1.15, total_temperature_K: 773.0}
+    walls:
+      optimization_mode: adiabatic
+    geometry:
+      orientation: forward
+      pressure_angle_deg: 30.0
+      suction_angle_deg: 35.0
+    numerics:
+      flow: steady_RANS
+      density: ideal_gas
+      air_properties: singh_temperature_polynomials
+      turbulence_model: realizable_k_epsilon
+      pressure_velocity_coupling: SIMPLE
+      flow_residual: 1.0e-5
+      energy_residual: 1.0e-8
+      wall_y_plus: less_than_1

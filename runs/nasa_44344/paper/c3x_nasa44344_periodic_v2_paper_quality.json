@@ -1,0 +1,26 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\nasa_44344\\paper\\c3x_nasa44344_periodic_v2_paper.msh.h5",
+  "cores": 4,
+  "precision": "double",
+  "cell_count": 3776658,
+  "face_count": 16022515,
+  "cell_quality": {
+    "Orthogonal Quality": [
+      3776658,
+      0.006013967844536894,
+      0.9999999822495031,
+      0.8097681612305163,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      3776658,
+      1.039917363332421e-08,
+      0.9939860321504598,
+      0.1881452314040184,
+      0.0,
+      0
+    ]
+  },
+  "status": "ok"
+}

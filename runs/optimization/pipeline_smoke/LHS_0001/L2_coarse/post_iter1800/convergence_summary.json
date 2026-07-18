@@ -1,0 +1,22 @@
+{
+  "available": true,
+  "path": "E:\\Work\\BOfm\\runs\\optimization\\pipeline_smoke\\LHS_0001\\L2_coarse\\fluent_solve.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0,
+    "temperature_limited": 0
+  },
+  "residual_row_count": 1801,
+  "last_residual_row": {
+    "iteration": 1800,
+    "continuity": 0.0036629,
+    "x_velocity": 7.0195e-07,
+    "y_velocity": 3.253e-06,
+    "z_velocity": 1.765e-07,
+    "energy": 3.4802e-06,
+    "k": 0.00093605,
+    "omega": 0.00013013
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source": "runs/nasa_44344/paper/post_iter2500",
+  "simulation_case": "nasa_44344_validation",
+  "mesh_tier": "paper",
+  "protected_mask": {
+    "pressure_xmin": 0.26530,
+    "suction_xmin": 0.37638
+  },
+  "coolant_actual_kg_s": 0.00532027764711529,
+  "delta_total_pressure_Pa": 83495.63310854707,
+  "note": "Frozen NASA paper baseline for high-fidelity optimization ratios. Pressure loss is diagnostic."
+}

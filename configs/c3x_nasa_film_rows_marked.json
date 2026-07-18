@@ -1,0 +1,302 @@
+{
+  "source": "NASA CR-182133 Fig. 8 plus CAD-ready surface row exits",
+  "units": "uv in cm; xy and arc in mm",
+  "fit": {
+    "scale": 10.0,
+    "angle_deg": 33.0,
+    "reflection": -1.0,
+    "rms_camber_mm": 5.336881877691468
+  },
+  "raw_fig8_uv_rows": [
+    {
+      "nasa_hole": 11,
+      "group": "suction",
+      "uv_cm": [
+        3.592,
+        2.024
+      ],
+      "raw_fit_xy_mm": [
+        32.43838278066608,
+        128.25823897790042
+      ],
+      "projected_surface_xy_mm": [
+        30.12036752053808,
+        126.29002127811879
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 41.6988261961302,
+      "distance_to_suction_mm": 3.0409004685980756,
+      "distance_to_pressure_mm": 36.119724528296175
+    },
+    {
+      "nasa_hole": 12,
+      "group": "suction",
+      "uv_cm": [
+        3.556,
+        1.631
+      ],
+      "raw_fit_xy_mm": [
+        29.99602996859667,
+        131.35814425732053
+      ],
+      "projected_surface_xy_mm": [
+        28.043481504828126,
+        127.99369488790246
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 39.01215833993135,
+      "distance_to_suction_mm": 3.889982655840838,
+      "distance_to_pressure_mm": 35.51135311418026
+    },
+    {
+      "nasa_hole": 13,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.498,
+        0.541
+      ],
+      "raw_fit_xy_mm": [
+        -1.5870814808381966,
+        123.84459175716613
+      ],
+      "projected_surface_xy_mm": [
+        3.3192489854671137,
+        120.94566704409804
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 9.35330707798672,
+      "distance_to_suction_mm": 5.698758034574951,
+      "distance_to_pressure_mm": 11.681309858059581
+    },
+    {
+      "nasa_hole": 14,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.211,
+        0.828
+      ],
+      "raw_fit_xy_mm": [
+        -2.430951980348436,
+        119.87449319666963
+      ],
+      "projected_surface_xy_mm": [
+        1.766345005264558,
+        118.02067165631702
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 6.040681003024465,
+      "distance_to_suction_mm": 4.58845903206199,
+      "distance_to_pressure_mm": 7.990118897738629
+    },
+    {
+      "nasa_hole": 15,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.041,
+        1.196
+      ],
+      "raw_fit_xy_mm": [
+        -1.8524202970003576,
+        115.86229914710493
+      ],
+      "projected_surface_xy_mm": [
+        0.602782300309814,
+        115.27981496337205
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 3.061371697307994,
+      "distance_to_suction_mm": 2.5233524561855365,
+      "distance_to_pressure_mm": 4.056007889538684
+    },
+    {
+      "nasa_hole": 16,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.005,
+        1.6
+      ],
+      "raw_fit_xy_mm": [
+        0.046,
+        112.278
+      ],
+      "projected_surface_xy_mm": [
+        0.046,
+        112.278
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 0.0,
+      "distance_to_suction_mm": 0.0,
+      "distance_to_pressure_mm": 0.0
+    },
+    {
+      "nasa_hole": 17,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.109,
+        1.994
+      ],
+      "raw_fit_xy_mm": [
+        3.064095188622447,
+        109.54006255871066
+      ],
+      "projected_surface_xy_mm": [
+        0.4148394021412975,
+        108.68966043439697
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -3.6210201939850144,
+      "distance_to_suction_mm": 4.074947852427074,
+      "distance_to_pressure_mm": 2.7823982452627245
+    },
+    {
+      "nasa_hole": 18,
+      "group": "pressure",
+      "uv_cm": [
+        0.559,
+        3.505
+      ],
+      "raw_fit_xy_mm": [
+        15.067608563453913,
+        99.31862593462293
+      ],
+      "projected_surface_xy_mm": [
+        12.489473082659005,
+        96.46198186930391
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -21.18701191609073,
+      "distance_to_suction_mm": 19.839206133310878,
+      "distance_to_pressure_mm": 3.84801219764906
+    },
+    {
+      "nasa_hole": 19,
+      "group": "pressure",
+      "uv_cm": [
+        0.643,
+        3.891
+      ],
+      "raw_fit_xy_mm": [
+        17.874398515686075,
+        96.53885433176622
+      ],
+      "projected_surface_xy_mm": [
+        15.457687833965247,
+        93.98472017224321
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -25.0532930798662,
+      "distance_to_suction_mm": 23.781768226942248,
+      "distance_to_pressure_mm": 3.5162610574281628
+    }
+  ],
+  "surface_rows": [
+    {
+      "id": "SS1",
+      "nasa_hole": 12,
+      "group": "suction",
+      "surface_xy_mm": [
+        32.49644152527691,
+        123.82039569460417
+      ],
+      "s_over_surface": 0.254,
+      "tangent_deg": -49.194485826003564,
+      "injection_deg": 35.0
+    },
+    {
+      "id": "SS2",
+      "nasa_hole": 11,
+      "group": "suction",
+      "surface_xy_mm": [
+        34.894198195524005,
+        120.73518291922619
+      ],
+      "s_over_surface": 0.276,
+      "tangent_deg": -54.86474724195486,
+      "injection_deg": 35.0
+    },
+    {
+      "id": "PS1",
+      "nasa_hole": 18,
+      "group": "pressure",
+      "surface_xy_mm": [
+        17.727842923828607,
+        91.9877292404173
+      ],
+      "s_over_surface": 0.197,
+      "tangent_deg": -41.981930926450374,
+      "injection_deg": 20.0
+    },
+    {
+      "id": "PS2",
+      "nasa_hole": 19,
+      "group": "pressure",
+      "surface_xy_mm": [
+        20.65411186445962,
+        89.27466091465229
+      ],
+      "s_over_surface": 0.225,
+      "tangent_deg": -43.77748272069746,
+      "injection_deg": 20.0
+    },
+    {
+      "id": "LE1_0",
+      "nasa_hole": null,
+      "group": "leading_edge",
+      "surface_xy_mm": [
+        2.246247267506104,
+        104.8261701954206
+      ],
+      "arc_s_mm": -7.92,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0
+    },
+    {
+      "id": "LE2_0",
+      "nasa_hole": null,
+      "group": "leading_edge",
+      "surface_xy_mm": [
+        0.509764192939605,
+        108.36424286729697
+      ],
+      "arc_s_mm": -3.96,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0
+    },
+    {
+      "id": "LE3_0",
+      "nasa_hole": null,
+      "group": "leading_edge",
+      "surface_xy_mm": [
+        0.046,
+        112.278
+      ],
+      "arc_s_mm": 0.0,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0
+    },
+    {
+      "id": "LE4_0",
+      "nasa_hole": null,
+      "group": "leading_edge",
+      "surface_xy_mm": [
+        0.9170740986035331,
+        116.12146998096428
+      ],
+      "arc_s_mm": 3.96,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0
+    },
+    {
+      "id": "LE5_0",
+      "nasa_hole": null,
+      "group": "leading_edge",
+      "surface_xy_mm": [
+        2.6177606592478866,
+        119.69585736141057
+      ],
+      "arc_s_mm": 7.92,
+      "slant_deg": 45.0,
+      "skew_deg": 90.0
+    }
+  ]
+}

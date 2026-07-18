@@ -1,0 +1,86 @@
+{
+  "span_periodic_interface": {
+    "surface_id": [
+      13
+    ],
+    "zone_type": "periodic"
+  },
+  "span_high": {
+    "surface_id": [
+      2
+    ],
+    "zone_type": "interface"
+  },
+  "pitch_periodic_interface": {
+    "surface_id": [
+      12
+    ],
+    "zone_type": "periodic"
+  },
+  "periodic_high": {
+    "surface_id": [
+      5
+    ],
+    "zone_type": "interface"
+  },
+  "ps": {
+    "surface_id": [
+      9
+    ],
+    "zone_type": "pressure-inlet"
+  },
+  "qian": {
+    "surface_id": [
+      7
+    ],
+    "zone_type": "pressure-inlet"
+  },
+  "ss": {
+    "surface_id": [
+      8
+    ],
+    "zone_type": "pressure-inlet"
+  },
+  "inlet": {
+    "surface_id": [
+      11
+    ],
+    "zone_type": "pressure-inlet"
+  },
+  "outlet": {
+    "surface_id": [
+      10
+    ],
+    "zone_type": "pressure-outlet"
+  },
+  "periodic_low": {
+    "surface_id": [
+      6
+    ],
+    "zone_type": "interface"
+  },
+  "vane_wall": {
+    "surface_id": [
+      4
+    ],
+    "zone_type": "wall"
+  },
+  "span_low": {
+    "surface_id": [
+      3
+    ],
+    "zone_type": "interface"
+  },
+  "plenum_wall": {
+    "surface_id": [
+      1
+    ],
+    "zone_type": "wall"
+  },
+  "film_hole_wall": {
+    "surface_id": [
+      0
+    ],
+    "zone_type": "wall"
+  }
+}

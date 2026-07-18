@@ -1,0 +1,200 @@
+{
+  "surfaces": [
+    "inlet",
+    "outlet",
+    "ps",
+    "qian",
+    "ss"
+  ],
+  "available_fields": [
+    "pressure",
+    "absolute-pressure",
+    "total-pressure"
+  ],
+  "fields": {
+    "pressure": {
+      "field": "pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2835,
+          "min": 280003.25,
+          "mean": 280022.4069223986,
+          "p95": 280045.21875,
+          "max": 280045.6875
+        },
+        {
+          "surface": "outlet",
+          "count": 2828,
+          "min": 169526.234375,
+          "mean": 170389.30520685998,
+          "p95": 170692.125,
+          "max": 171142.375
+        },
+        {
+          "surface": "ps",
+          "count": 1186,
+          "min": 309287.40625,
+          "mean": 309319.94701201515,
+          "p95": 309367.3125,
+          "max": 309369.21875
+        },
+        {
+          "surface": "qian",
+          "count": 785,
+          "min": 300664.59375,
+          "mean": 300668.5539012739,
+          "p95": 300674.28125,
+          "max": 300674.8125
+        },
+        {
+          "surface": "ss",
+          "count": 1477,
+          "min": 249429.09375,
+          "mean": 249653.61643111036,
+          "p95": 249893.40625,
+          "max": 249900.078125
+        }
+      ],
+      "count": 9111,
+      "min": 169526.234375,
+      "mean": 246662.40173279552,
+      "p95": 309315.78125,
+      "max": 309369.21875
+    },
+    "absolute-pressure": {
+      "field": "absolute-pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2835,
+          "min": 280003.25,
+          "mean": 280022.4069223986,
+          "p95": 280045.21875,
+          "max": 280045.6875
+        },
+        {
+          "surface": "outlet",
+          "count": 2828,
+          "min": 169526.234375,
+          "mean": 170389.30520685998,
+          "p95": 170692.125,
+          "max": 171142.375
+        },
+        {
+          "surface": "ps",
+          "count": 1186,
+          "min": 309287.40625,
+          "mean": 309319.94701201515,
+          "p95": 309367.3125,
+          "max": 309369.21875
+        },
+        {
+          "surface": "qian",
+          "count": 785,
+          "min": 300664.59375,
+          "mean": 300668.5539012739,
+          "p95": 300674.28125,
+          "max": 300674.8125
+        },
+        {
+          "surface": "ss",
+          "count": 1477,
+          "min": 249429.09375,
+          "mean": 249653.61643111036,
+          "p95": 249893.40625,
+          "max": 249900.078125
+        }
+      ],
+      "count": 9111,
+      "min": 169526.234375,
+      "mean": 246662.40173279552,
+      "p95": 309315.78125,
+      "max": 309369.21875
+    },
+    "total-pressure": {
+      "field": "total-pressure",
+      "surfaces": [
+        {
+          "surface": "inlet",
+          "count": 2835,
+          "min": 285128.96875,
+          "mean": 285129.94072971784,
+          "p95": 285130.1875,
+          "max": 285130.71875
+        },
+        {
+          "surface": "outlet",
+          "count": 2828,
+          "min": 226505.234375,
+          "mean": 259437.9532134017,
+          "p95": 281468.21875,
+          "max": 284677.375
+        },
+        {
+          "surface": "ps",
+          "count": 1186,
+          "min": 309303.65625,
+          "mean": 309335.5185760961,
+          "p95": 309382.375,
+          "max": 309384.65625
+        },
+        {
+          "surface": "qian",
+          "count": 785,
+          "min": 300666.71875,
+          "mean": 300675.2128582803,
+          "p95": 300681.1875,
+          "max": 300681.75
+        },
+        {
+          "surface": "ss",
+          "count": 1477,
+          "min": 249447.765625,
+          "mean": 249740.6194249323,
+          "p95": 249979.65625,
+          "max": 249989.421875
+        }
+      ],
+      "count": 9111,
+      "min": 226505.234375,
+      "mean": 275908.54743407696,
+      "p95": 309332.125,
+      "max": 309384.65625
+    }
+  },
+  "note": "Use these summaries for diagnostics; finalize pressure-loss definition before publication.",
+  "pressure_loss_diagnostic": {
+    "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+    "delta_total_pressure_Pa": 25691.98751631615,
+    "inlet_total_pressure_mean_Pa": 285129.94072971784,
+    "outlet_total_pressure_mean_Pa": 259437.9532134017,
+    "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+  },
+  "coolant_pressure_diagnostic": {
+    "interpretation": "With measured mass flow imposed, this is the total pressure required by the modeled inlet/hole system; it is diagnostic rather than an imposed validation quantity.",
+    "zones": {
+      "qian": {
+        "region": "showerhead",
+        "required_total_pressure_mean_Pa": 300675.2128582803,
+        "nasa_total_pressure_target_Pa": 298816.24,
+        "required_over_nasa_target": 1.0062211239197718,
+        "error_Pa": 1858.9728582802927
+      },
+      "ss": {
+        "region": "suction",
+        "required_total_pressure_mean_Pa": 249740.6194249323,
+        "nasa_total_pressure_target_Pa": 299671.63,
+        "required_over_nasa_target": 0.8333809223947302,
+        "error_Pa": -49931.01057506772
+      },
+      "ps": {
+        "region": "pressure",
+        "required_total_pressure_mean_Pa": 309335.5185760961,
+        "nasa_total_pressure_target_Pa": 299386.5,
+        "required_over_nasa_target": 1.033231353371298,
+        "error_Pa": 9949.018576096103
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "available": true,
+  "path": "fluent-20260714-000630-275808.trn",
+  "warnings": {
+    "artificial_wall": 0,
+    "reversed_flow": 0,
+    "divergence": 0,
+    "floating_point": 0
+  },
+  "residual_row_count": 51,
+  "last_residual_row": {
+    "iteration": 750,
+    "continuity": 0.0019917,
+    "x_velocity": 5.5937e-06,
+    "y_velocity": 1.89e-05,
+    "z_velocity": 6.0776e-07,
+    "energy": 3.11e-05,
+    "k": 0.00069265,
+    "omega": 0.00035614
+  }
+}

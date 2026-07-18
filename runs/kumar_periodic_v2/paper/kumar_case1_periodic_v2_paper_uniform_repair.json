@@ -1,0 +1,47 @@
+{
+  "mesh_in": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\paper\\kumar_case1_periodic_v2_paper_uniform.msh.h5",
+  "mesh_out": "E:\\Work\\BOfm\\runs\\kumar_periodic_v2\\paper\\kumar_case1_periodic_v2_paper_uniform_repaired.msh.h5",
+  "quality_limit": 0.05,
+  "cores": 8,
+  "precision": "single",
+  "before": {
+    "Orthogonal Quality": [
+      3664014,
+      0.01076413165951318,
+      0.999999999638768,
+      0.8760218231796921,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      3664014,
+      2.01728744819718e-10,
+      0.9892358683404868,
+      0.1199505754883149,
+      0.0,
+      0
+    ]
+  },
+  "improve_return": true,
+  "after": {
+    "Orthogonal Quality": [
+      3664014,
+      0.02524311370518517,
+      0.999999999638768,
+      0.8759967575375316,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      3664014,
+      2.01728744819718e-10,
+      0.974756886295383,
+      0.1199705036156,
+      0.0,
+      0
+    ]
+  },
+  "mesh_out_exists": true,
+  "mesh_out_bytes": 359888767,
+  "status": "ok"
+}

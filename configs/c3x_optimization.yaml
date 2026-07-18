@@ -1,0 +1,55 @@
+name: C3X downstream film-hole optimization
+
+objective:
+  name: protected_eta_bar
+  label: Protected-area eta_bar
+  maximize: true
+
+variables:
+  - {name: SS1_s, label: SS1 arc position, unit: s/s0, bounds: [0.226, 0.256], baseline: 0.241022565}
+  - {name: SS2_s, label: SS2 arc position, unit: s/s0, bounds: [0.248, 0.278], baseline: 0.262977435}
+  - {name: PS1_s, label: PS1 arc position, unit: s/s0, bounds: [0.196, 0.226], baseline: 0.210838936}
+  - {name: PS2_s, label: PS2 arc position, unit: s/s0, bounds: [0.224, 0.254], baseline: 0.239161064}
+  - {name: suction_angle_deg, label: Suction injection angle, unit: deg, bounds: [25.0, 45.0], baseline: 35.0}
+  - {name: pressure_angle_deg, label: Pressure injection angle, unit: deg, bounds: [20.0, 40.0], baseline: 30.0}
+  - {name: diameter_mm, label: Hole diameter, unit: mm, bounds: [0.85, 1.10], baseline: 0.99}
+  - {name: span_count, label: Holes per span, unit: count, kind: integer, bounds: [4, 7], baseline: 5}
+
+fidelities:
+  - {name: L1, kind: knowledge, level: 0.00, relative_cost: 0.001, mesh_tier: knowledge_1d}
+  - {name: L2, kind: cfd, level: 0.50, relative_cost: 0.20, mesh_tier: coarse}
+  - {name: L3, kind: cfd, level: 1.00, relative_cost: 1.00, mesh_tier: paper}
+
+constraints:
+  - {name: coolant_mass_ratio, label: Coolant mass flow / baseline, upper: 1.0}
+  - {name: loss_ratio, label: Total pressure loss / baseline, upper: 1.02}
+
+physics_prior:
+  enabled: true
+  c0: 0.68
+  c1: 0.22
+  c2: 0.82
+  blowing_ratio: 1.0
+  angle_sigma_deg: 18.0
+  suction_weight: 0.56
+  periodic_span_mm: 14.85
+  suction_arc_mm: 177.82
+  pressure_arc_mm: 137.23
+
+optimizer:
+  initial_designs: 8
+  candidate_pool: 2048
+  seed: 20260711
+  equivalent_high_fidelity_budget: 12.0
+
+storage:
+  database: runs/optimization/c3x_bo.sqlite3
+  run_root: runs/optimization/trials
+
+# Demo mode exercises persistence, pause/resume, priors, constraints, and BO
+# without consuming Fluent licenses. Switch to `type: command` only after the
+# command stages have passed one end-to-end smoke test and result.json follows
+# the contract documented in docs/optimization_framework.md.
+evaluator:
+  type: demo
+  demo_delay_seconds: 0.20

@@ -1,0 +1,21 @@
+{
+  "mesh": "E:\\Work\\BOfm\\test_files\\dp0\\FLTG\\Fluent\\FLTG.msh.h5",
+  "exists": true,
+  "fluent_version": "FluentVersion.v242",
+  "cell_count": 498622,
+  "face_count": 2353223,
+  "boundary_zone_counts": {
+    "inlet": 281,
+    "outlet": 276,
+    "qian": 402,
+    "ss": 248,
+    "ps": 300,
+    "vane_wall": 17479,
+    "film_hole_wall": 0,
+    "periodic_low": 9411,
+    "periodic_high": 9507,
+    "span_low": 6879,
+    "span_high": 6903
+  },
+  "status": "ok"
+}

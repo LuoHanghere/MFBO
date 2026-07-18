@@ -1,14 +1,18 @@
-"""Fluent Meshing (watertight) driver for the C3X no-film fluid domain.
+"""Fluent Meshing (watertight) utilities for the C3X fluid domain.
 
 CAD bridge findings (PyFluent 0.20.0 + Fluent Meshing 2024R2, headless):
-  * The native SpaceClaim **.scdoc** reader (PartMgr AttachAssembly) FAILS
-    headless -> unusable for automation.
+  * Historical finding: native SpaceClaim **.scdoc** attachment failed before
+    the workstation CAD readers were reconfigured.
+  * Current finding (2026-07-03): native SCDOC import works with
+    ``UseBodyLabels='Yes'``.  The production native-CAD path is implemented by
+    ``scripts/run_fluent_native_cad_mesh.py``.
   * Headless SpaceClaim DocumentSave only writes .scdoc / **.sat** (ACIS) / .fmd.
     .fmd is faceted (rejected by watertight import); .pmdb needs Workbench.
-  * **.sat imports reliably** (~5 s) but as a SINGLE face zone -- ACIS does not
-    carry named selections, and .sat ignores LengthUnit (units come from file).
-  * Fix: import with CadImportOptions.OneZonePer = 'face' -> one zone per CAD
-    face, then merge/rename zones into BC groups by location (classify_zone).
+  * **.sat imports reliably** (~5 s) but may not carry SpaceClaim named
+    selections unless Fluent's geometry-label import is explicitly enabled.
+  * Fix: import with UseBodyLabels='Yes' and CadImportOptions.OneZonePer='face'
+    -> one zone per CAD face, then merge/rename zones into BC groups by
+    location as a fallback (classify_zone).
 
 So the boundary tagging that build_fluid_domain.py does in SpaceClaim is redone
 here on the imported zones, using the SAME geometric rules.
@@ -28,7 +32,8 @@ IMPORT_CAD_OPTIONS = {
     "OneZonePer": "face",
     "ExtractFeatures": True,
     "FeatureAngle": 40.0,
-    "ImportNamedSelections": True,   # harmless; .sat has none
+    "ImportNamedSelections": True,
+    "ImportPartNames": True,
 }
 
 EPS_MM = 0.5
@@ -46,12 +51,31 @@ class DomainBounds:
     pitch_mm: float
     span_mm: float
     te_x_mm: float = 78.16   # axial chord (TE)
+    y_low: float | None = None
+    y_high: float | None = None
+    physical_pitch_mm: float | None = None
 
     @classmethod
     def from_passage_json(cls, path: str | Path, span_mm: float) -> "DomainBounds":
         d = json.loads(Path(path).read_text(encoding="utf-8"))
-        return cls(float(d["x_in"]), float(d["x_out"]),
-                   float(d["pitch_mm"]), float(span_mm))
+        pitch = float(d.get("periodic_width_mm", d["pitch_mm"]))
+        y_low = d.get("y_low")
+        y_high = d.get("y_high")
+        return cls(
+            float(d["x_in"]),
+            float(d["x_out"]),
+            pitch,
+            float(span_mm),
+            y_low=float(y_low) if y_low is not None else None,
+            y_high=float(y_high) if y_high is not None else None,
+            physical_pitch_mm=float(d.get("physical_pitch_mm", pitch)),
+        )
+
+    @property
+    def pitch_candidates_mm(self) -> tuple[float, ...]:
+        if self.physical_pitch_mm is None or abs(self.physical_pitch_mm - self.pitch_mm) < 1.0e-9:
+            return (self.pitch_mm,)
+        return (self.pitch_mm, self.physical_pitch_mm)
 
 
 def classify_zone(bbox_mm: tuple, b: DomainBounds) -> str:
@@ -65,15 +89,26 @@ def classify_zone(bbox_mm: tuple, b: DomainBounds) -> str:
     Periodic low/high still need the +pitch pairing done on the full set.
     """
     x0, y0, z0, x1, y1, z1 = bbox_mm
-    dz, dx = z1 - z0, x1 - x0
+    dz, dx, dy = z1 - z0, x1 - x0, y1 - y0
+    cy = 0.5 * (y0 + y1)
     cz = 0.5 * (z0 + z1)
     if dz < EPS_MM:
         return "span_low" if cz < b.span_mm * 0.5 else "span_high"
+    axial = b.x_out - b.x_in
+    if b.y_low is not None and dy < EPS_MM and dx > 0.5 * axial and abs(cy - b.y_low) < EPS_MM:
+        return "periodic_low"
+    if b.y_high is not None and dy < EPS_MM and dx > 0.5 * axial and abs(cy - b.y_high) < EPS_MM:
+        return "periodic_high"
     if dx < EPS_MM and abs(0.5 * (x0 + x1) - b.x_in) < EPS_MM:
         return "inlet"
     if dx < EPS_MM and abs(0.5 * (x0 + x1) - b.x_out) < EPS_MM:
         return "outlet"
-    if abs(x0 - b.x_in) < EPS_MM or abs(x1 - b.x_out) < EPS_MM:
+    touches_in = abs(x0 - b.x_in) < EPS_MM or abs(x1 - b.x_in) < EPS_MM
+    touches_out = abs(x0 - b.x_out) < EPS_MM or abs(x1 - b.x_out) < EPS_MM
+    # Surface-mesh wrappers can span inlet->outlet; those are not periodic extensions.
+    if touches_in and touches_out:
+        return "vane_wall"
+    if touches_in or touches_out:
         return "periodic"   # split into low/high by +pitch pairing on caller side
     return "vane_wall"
 
@@ -153,6 +188,10 @@ def classify_split_case_boundaries(case_path: str | Path, b: DomainBounds,
         # faces on the blade near z=0/z=span can also have dz~0; keep those wall.
         if dz < eps_mm and (dx > 0.7 * axial or dy > 0.7 * b.pitch_mm):
             groups["span_low" if cz < b.span_mm * 0.5 else "span_high"].append(name)
+        elif b.y_low is not None and dy < eps_mm and dx > 0.5 * axial and abs(cy - b.y_low) < eps_mm:
+            groups["periodic_low"].append(name)
+        elif b.y_high is not None and dy < eps_mm and dx > 0.5 * axial and abs(cy - b.y_high) < eps_mm:
+            groups["periodic_high"].append(name)
         elif dx < eps_mm and abs(cx - b.x_in) < eps_mm and dy > 0.5 * b.pitch_mm:
             groups["inlet"].append(name)
         elif dx < eps_mm and abs(cx - b.x_out) < eps_mm and dy > 0.5 * b.pitch_mm:
@@ -172,11 +211,14 @@ def classify_split_case_boundaries(case_path: str | Path, b: DomainBounds,
         for j, (other, ox, oy) in enumerate(candidates):
             if i == j or j in used:
                 continue
-            if abs(ox - cx) < 3.0 and abs((cy + b.pitch_mm) - oy) < 3.0:
-                match, is_low = j, True
-                break
-            if abs(ox - cx) < 3.0 and abs((cy - b.pitch_mm) - oy) < 3.0:
-                match, is_low = j, False
+            for pitch_i in b.pitch_candidates_mm:
+                if abs(ox - cx) < 3.0 and abs((cy + pitch_i) - oy) < 3.0:
+                    match, is_low = j, True
+                    break
+                if abs(ox - cx) < 3.0 and abs((cy - pitch_i) - oy) < 3.0:
+                    match, is_low = j, False
+                    break
+            if match is not None:
                 break
         if match is None:
             groups["vane_wall"].append(name)
@@ -222,11 +264,14 @@ def assign_groups(zone_bboxes_mm: dict, b: DomainBounds) -> dict:
             if j == i or j in used:
                 continue
             zj, cxj, cyj = periodic[j]
-            if abs(cxj - cx) < EPS_MM and abs((cy + b.pitch_mm) - cyj) < 3.0:
-                match, is_low = j, True
-                break
-            if abs(cxj - cx) < EPS_MM and abs((cy - b.pitch_mm) - cyj) < 3.0:
-                match, is_low = j, False
+            for pitch_i in b.pitch_candidates_mm:
+                if abs(cxj - cx) < EPS_MM and abs((cy + pitch_i) - cyj) < 3.0:
+                    match, is_low = j, True
+                    break
+                if abs(cxj - cx) < EPS_MM and abs((cy - pitch_i) - cyj) < 3.0:
+                    match, is_low = j, False
+                    break
+            if match is not None:
                 break
         if match is not None:
             lo, hi = (zid, periodic[match][0]) if is_low \
@@ -241,9 +286,15 @@ def assign_groups(zone_bboxes_mm: dict, b: DomainBounds) -> dict:
     return groups
 
 
-def get_zone_bboxes_mm(meshing_utilities, expected_axial_mm: float) -> dict:
+def get_zone_bboxes_mm(meshing_utilities, expected_axial_mm: float,
+                       *, boundary_only: bool = False) -> dict:
     """Return {zone_id: bbox_mm} for all face zones, auto-correcting m vs mm."""
     ids = list(meshing_utilities.get_face_zones(filter="*"))
+    if boundary_only:
+        ids = [
+            zid for zid in ids
+            if str(meshing_utilities.get_zone_type(zone_id=zid)).lower() != "interior"
+        ]
     raw, gx0, gx1 = {}, None, None
     for zid in ids:
         bb = meshing_utilities.get_bounding_box_of_zone_list(zone_id_list=[zid])
@@ -258,9 +309,52 @@ def get_zone_bboxes_mm(meshing_utilities, expected_axial_mm: float) -> dict:
 WATERTIGHT_SURFACE_CONTROLS = {"MinSize": 0.2, "MaxSize": 4.0, "GrowthRate": 1.2}
 
 
+def estimate_first_cell_mm(*, y_plus: float, reynolds: float,
+                           length_mm: float) -> float:
+    """Heuristic first-layer height [mm] for target y+ (turbulent, high Re)."""
+    # Calibrated order-of-magnitude for compressor/vane external flows.
+    h = 1.5 * length_mm / (reynolds ** 0.8) * y_plus
+    return float(max(0.001, min(h, 0.05)))
+
+
+def _apply_bl_control(m, *, n_prism: int, growth_rate: float,
+                      first_height_mm: float | None,
+                      zone_names: list[str] | None) -> None:
+    """Configure prism BL via the watertight workflow task (no custom TUI)."""
+    bl = m.workflow.TaskObject["Add Boundary Layers"]
+    args: dict = {
+        "BLControlName": "smooth-transition_1",
+        "NumberOfLayers": n_prism,
+        "Rate": growth_rate,
+        "OffsetMethodType": "first-height" if first_height_mm is not None else "smooth-transition",
+    }
+    if first_height_mm is not None:
+        args["FirstHeight"] = first_height_mm
+    if zone_names:
+        for key in ("ZoneSelectionList", "BLZoneList"):
+            try:
+                bl.arguments.set_state({**args, key: zone_names})
+                return
+            except Exception:
+                pass
+    bl.arguments.set_state(args)
+
+
+def _run_task(wf, name: str, args: dict | None = None) -> None:
+    t = wf.TaskObject[name]
+    if args:
+        t.arguments.set_state(args)
+    t.Execute()
+
+
 def build_watertight_mesh(m, sat_path, b: DomainBounds, out_msh=None, *,
                           n_prism: int = 8, volume_fill: str = "poly-hexcore",
-                          surface_controls: dict = None) -> dict:
+                          surface_controls: dict = None,
+                          prism_growth_rate: float = 1.2,
+                          first_height_mm: float | None = None,
+                          bl_zone_names: list[str] | None = None,
+                          extra_face_targets: dict[str, tuple] | None = None,
+                          hole_diameter_mm: float | None = None) -> dict:
     """Full no-film watertight mesh: import .sat -> re-tag BC zones -> surface
     mesh -> describe -> boundaries/regions -> prism BL -> volume mesh -> write.
 
@@ -270,35 +364,35 @@ def build_watertight_mesh(m, sat_path, b: DomainBounds, out_msh=None, *,
     """
     wf = m.workflow
     wf.InitializeWorkflow(WorkflowType="Watertight Geometry")
-    wf.TaskObject["Import Geometry"].arguments.set_state(
-        {"FileName": str(sat_path), "CadImportOptions": IMPORT_CAD_OPTIONS})
-    wf.TaskObject["Import Geometry"].Execute()
+    _run_task(wf, "Import Geometry",
+              {
+                  "FileName": str(sat_path),
+                  "UseBodyLabels": "Yes",
+                  "CadImportOptions": IMPORT_CAD_OPTIONS,
+              })
 
-    groups = tag_zones(m, b, rename=True)
+    groups = tag_zones(
+        m, b, rename=True, extra_face_targets=extra_face_targets,
+        hole_diameter_mm=hole_diameter_mm,
+    )
 
-    sm = wf.TaskObject["Generate the Surface Mesh"]
-    sm.arguments.set_state(
-        {"CFDSurfaceMeshControls": surface_controls or WATERTIGHT_SURFACE_CONTROLS})
-    sm.Execute()
+    _run_task(wf, "Generate the Surface Mesh",
+              {"CFDSurfaceMeshControls": surface_controls or WATERTIGHT_SURFACE_CONTROLS})
 
-    # Surface mesh regenerates face zones; re-tag so BC groups survive volume mesh.
-    groups = tag_zones(m, b, rename=True)
+    # Keep import-time BC zone names; re-tagging after surface mesh mis-classifies
+    # the extra envelope wrapper Fluent adds on fine surface meshes.
 
-    dg = wf.TaskObject["Describe Geometry"]
-    dg.arguments.set_state(
-        {"SetupType": "The geometry consists of only fluid regions with no voids"})
-    dg.Execute()
-    wf.TaskObject["Update Boundaries"].Execute()
-    wf.TaskObject["Update Regions"].Execute()
+    _run_task(wf, "Describe Geometry",
+              {"SetupType": "The geometry consists of only fluid regions with no voids"})
+    _run_task(wf, "Update Boundaries")
+    _run_task(wf, "Update Regions")
 
-    bl = wf.TaskObject["Add Boundary Layers"]
-    bl.arguments.set_state({"BLControlName": "smooth-transition_1",
-                            "NumberOfLayers": n_prism,
-                            "PrismPreferences": {"MergeBoundaryLayers": "no"}})
-    bl.Execute()
+    bl_zones = bl_zone_names if bl_zone_names is not None else ["vane_wall"]
+    _apply_bl_control(m, n_prism=n_prism, growth_rate=prism_growth_rate,
+                      first_height_mm=first_height_mm, zone_names=bl_zones)
+    _run_task(wf, "Add Boundary Layers")
 
-    vm = wf.TaskObject["Generate the Volume Mesh"]
-    vm.arguments.set_state({
+    _run_task(wf, "Generate the Volume Mesh", {
         "VolumeFill": volume_fill,
         "ReMergeZones": "No",
         "MergeCellZones": False,
@@ -308,19 +402,80 @@ def build_watertight_mesh(m, sat_path, b: DomainBounds, out_msh=None, *,
             "MergeBodyLabels": "no",
         },
     })
-    vm.Execute()
 
     if out_msh:
         m.tui.file.write_mesh(str(out_msh))
     return groups
 
 
-def tag_zones(m, b: DomainBounds, rename: bool = True) -> dict:
+def _bbox_center(bb: tuple) -> tuple[float, float, float]:
+    return (0.5 * (bb[0] + bb[3]), 0.5 * (bb[1] + bb[4]), 0.5 * (bb[2] + bb[5]))
+
+
+def _dist3(a: tuple, b: tuple) -> float:
+    return float(np.linalg.norm(np.asarray(a, dtype=float) - np.asarray(b, dtype=float)))
+
+
+def _claim_extra_targets(bboxes: dict, targets: dict[str, tuple]) -> dict[str, list]:
+    """Claim imported face zones nearest to explicit target points.
+
+    `targets` maps boundary name -> (x_mm, y_mm, z_mm, tolerance_mm).
+    Claimed zone ids are removed from the regular geometric classifier so
+    coolant/plenum inlets do not get merged into `vane_wall`.
+    """
+    claimed: dict[str, list] = {}
+    used: set = set()
+    for name, spec in targets.items():
+        pt = tuple(float(v) for v in spec[:3])
+        tol = float(spec[3]) if len(spec) > 3 else 2.0
+        best, best_d = None, 1.0e99
+        for zid, bb in bboxes.items():
+            if zid in used:
+                continue
+            d = _dist3(_bbox_center(bb), pt)
+            if d < best_d:
+                best, best_d = zid, d
+        if best is not None and best_d <= tol:
+            claimed[name] = [best]
+            used.add(best)
+    for zid in used:
+        bboxes.pop(zid, None)
+    return claimed
+
+
+def _claim_film_hole_walls(bboxes: dict, diameter_mm: float | None) -> list:
+    """Remove and return lateral film-hole zones using their z extent.
+
+    All current C3X cylinders lie in the XY plane. After boolean union their
+    lateral wall has a z extent of one diameter, while vane and plenum side
+    walls span the full 14.85 mm period. This remains stable as row positions
+    and in-plane injection angles change.
+    """
+    if diameter_mm is None:
+        return []
+    diameter = float(diameter_mm)
+    claimed = []
+    for zid, bb in list(bboxes.items()):
+        dx, dy, dz = bb[3] - bb[0], bb[4] - bb[1], bb[5] - bb[2]
+        if 0.75 * diameter <= dz <= 1.25 * diameter and max(dx, dy) >= 1.5 * diameter:
+            claimed.append(zid)
+            bboxes.pop(zid, None)
+    return claimed
+
+
+def tag_zones(m, b: DomainBounds, rename: bool = True,
+              extra_face_targets: dict[str, tuple] | None = None,
+              hole_diameter_mm: float | None = None,
+              boundary_only: bool = False) -> dict:
     """Classify imported face zones into BC groups and (optionally) rename+merge
     them into the 7 named boundary zones. Returns the {group: [zone_id]} map."""
     mu = m.meshing_utilities
-    bboxes = get_zone_bboxes_mm(mu, b.x_out - b.x_in)
+    bboxes = get_zone_bboxes_mm(mu, b.x_out - b.x_in, boundary_only=boundary_only)
+    extra_groups = _claim_extra_targets(bboxes, extra_face_targets or {})
+    hole_walls = _claim_film_hole_walls(bboxes, hole_diameter_mm)
     groups = assign_groups(bboxes, b)
+    groups["film_hole_wall"] = hole_walls
+    groups.update(extra_groups)
     if rename:
         for g, zl in groups.items():
             for k, zid in enumerate(zl):

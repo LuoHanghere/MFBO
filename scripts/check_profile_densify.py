@@ -19,20 +19,22 @@ from bofm.geometry import parametrization as P
 from bofm.geometry.profile import densify_profile
 
 root = Path(__file__).resolve().parents[1]
-profile = P.load_profile(root / "configs" / "c3x_coordinates.csv")
+source_profile = P.load_profile(root / "configs" / "c3x_coordinates.csv")
+profile = P.clean_profile(source_profile)
 dense = densify_profile(profile)
 
 raw_surf = P.build_surfaces(profile)
 dense_surf = P.build_surfaces(dense)
 
-print("points: raw=%d  densified=%d" % (profile.shape[0], dense.shape[0]))
+print("points: source_raw=%d  cleaned_raw=%d  densified=%d" %
+      (source_profile.shape[0], profile.shape[0], dense.shape[0]))
 print("arc length [mm]      raw      densified   ref")
 for name, ref in (("suction", P.REF_SUCTION_ARC_MM), ("pressure", P.REF_PRESSURE_ARC_MM)):
     print("  %-9s %9.2f %11.2f %7.2f"
           % (name, raw_surf[name].arc_mm, dense_surf[name].arc_mm, ref))
 
 # bounding box (axial x, tangential y) -- must be unchanged by densification
-for tag, xy in (("raw", profile), ("densified", dense)):
+for tag, xy in (("source_raw", source_profile), ("cleaned_raw", profile), ("densified", dense)):
     print("  %-9s bbox mm: x=%.2f  y=%.2f"
           % (tag, np.ptp(xy[:, 0]), np.ptp(xy[:, 1])))
 
@@ -42,10 +44,14 @@ te = profile[te_i]
 
 fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(12, 7))
 for ax in (ax0, ax1):
+    ax.plot(np.append(source_profile[:, 0], source_profile[0, 0]),
+            np.append(source_profile[:, 1], source_profile[0, 1]),
+            "-", color="tab:red", lw=1.0, marker="o", ms=3,
+            label="source polyline (78 pts)")
     ax.plot(np.append(profile[:, 0], profile[0, 0]),
             np.append(profile[:, 1], profile[0, 1]),
-            "-", color="tab:red", lw=1.0, marker="o", ms=3,
-            label="raw polyline (78 pts)")
+            "-", color="tab:orange", lw=1.0, marker="o", ms=2.5,
+            label="cleaned polyline (77 pts)")
     ax.plot(np.append(dense[:, 0], dense[0, 0]),
             np.append(dense[:, 1], dense[0, 1]),
             "-", color="tab:blue", lw=1.2, label="densified spline")

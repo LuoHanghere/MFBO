@@ -1,0 +1,94 @@
+{
+  "valid": true,
+  "simulation_case": "nasa_44344_validation",
+  "wall_thermal_mode": "adiabatic",
+  "objective": {
+    "eta_bar": 0.5598945868588365,
+    "protected_eta_bar": 0.6606764203605601,
+    "protected_area_m2": 0.0012235528563082736
+  },
+  "constraints": {
+    "coolant_mass_flow_ratio": 1.000000450420511,
+    "coolant_actual_kg_s": 0.005320277996361255,
+    "mass_imbalance": -5.784444510937604e-06,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 25062.908613346575,
+      "inlet_total_pressure_mean_Pa": 285129.9524858956,
+      "outlet_total_pressure_mean_Pa": 260067.04387254902,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 8.467696189880371,
+    "y_plus_max": 11.56072998046875
+  },
+  "references": {
+    "Tg_ref_K": 701.0,
+    "Tc_ref": {
+      "method": "coolant target mass-flow weighted",
+      "value_K": 593.6263151083753,
+      "components": [
+        {
+          "region": "suction",
+          "total_temperature_K": 595.85,
+          "weight_kg_s": 0.0026114173
+        },
+        {
+          "region": "showerhead",
+          "total_temperature_K": 602.86,
+          "weight_kg_s": 0.0012433465
+        },
+        {
+          "region": "pressure",
+          "total_temperature_K": 581.83,
+          "weight_kg_s": 0.0014655118
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "selected_wall_surfaces": [
+      "vane_wall"
+    ],
+    "all_wall_surfaces": [
+      "film_hole_wall",
+      "plenum_wall",
+      "vane_wall"
+    ],
+    "available_scalar_fields": [
+      "wall-temperature",
+      "temperature",
+      "y-plus"
+    ],
+    "available_heat_transfer_fields": [
+      "heat-flux",
+      "stanton-number",
+      "heat-transfer-coef",
+      "heat-transfer-coef-wall-adj",
+      "wall-adjacent-temperature"
+    ],
+    "mass_flow_report_available": true,
+    "convergence": {
+      "available": true,
+      "path": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0007_L2\\fluent_solve.trn",
+      "warnings": {
+        "artificial_wall": 0,
+        "reversed_flow": 0,
+        "divergence": 0,
+        "floating_point": 0,
+        "temperature_limited": 0
+      },
+      "residual_row_count": 1801,
+      "last_residual_row": {
+        "iteration": 1800,
+        "continuity": 0.0039911,
+        "x_velocity": 9.5422e-07,
+        "y_velocity": 4.1782e-06,
+        "z_velocity": 2.9006e-07,
+        "energy": 3.6878e-06,
+        "k": 0.00096899,
+        "omega": 0.00018938
+      }
+    },
+    "export_log": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0007_L2\\post_iter1800\\export_workbench_film_results.log"
+  }
+}

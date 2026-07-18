@@ -1,0 +1,26 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\direct_cad\\coarse\\kumar_case1_coarse.msh.h5",
+  "cores": 8,
+  "precision": "single",
+  "cell_count": 1863861,
+  "face_count": 8125797,
+  "cell_quality": {
+    "Orthogonal Quality": [
+      1863861,
+      0.03961819340454542,
+      0.9999999598591004,
+      0.848804111449407,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      1863861,
+      1.806645388846562e-08,
+      0.9603818065954546,
+      0.1491275559854746,
+      0.0,
+      0
+    ]
+  },
+  "status": "ok"
+}

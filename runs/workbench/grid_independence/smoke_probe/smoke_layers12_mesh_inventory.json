@@ -1,0 +1,21 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\workbench\\grid_independence\\smoke_probe\\smoke_layers12_mesh.msh.h5",
+  "exists": true,
+  "fluent_version": "FluentVersion.v242",
+  "cell_count": 387827,
+  "face_count": 1935247,
+  "boundary_zone_counts": {
+    "inlet": 126,
+    "outlet": 128,
+    "qian": 308,
+    "ss": 206,
+    "ps": 221,
+    "vane_wall": 17475,
+    "film_hole_wall": 0,
+    "periodic_low": 9361,
+    "periodic_high": 9470,
+    "span_low": 6674,
+    "span_high": 6709
+  },
+  "status": "ok"
+}

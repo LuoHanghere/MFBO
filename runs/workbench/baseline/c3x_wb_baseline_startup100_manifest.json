@@ -1,0 +1,131 @@
+{
+  "name": "baseline_startup100",
+  "route": "workbench",
+  "simulation_case": "nasa_44344_validation",
+  "mesh_tier": "smoke",
+  "created_at": "2026-07-01T15:20:48",
+  "status": {
+    "topology_ok": true,
+    "post_valid": true
+  },
+  "inputs": {
+    "design": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_design.json",
+      "exists": true,
+      "bytes": 1198,
+      "mtime": "2026-06-29T17:01:12"
+    },
+    "layout": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_layout.json",
+      "exists": true,
+      "bytes": 49077,
+      "mtime": "2026-06-29T17:01:12"
+    },
+    "topology": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_topology_check_no_cavities.json",
+      "exists": true,
+      "bytes": 1288,
+      "mtime": "2026-07-01T15:01:29"
+    },
+    "mesh_meta": null,
+    "setup_case": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_setup.cas.h5",
+      "exists": true,
+      "bytes": 54244990,
+      "mtime": "2026-06-29T18:50:36"
+    }
+  },
+  "outputs": {
+    "run_case": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_startup100_nopatch.cas.h5",
+      "exists": true,
+      "bytes": 54242562,
+      "mtime": "2026-06-29T23:26:35"
+    },
+    "run_data": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_startup100_nopatch.dat.h5",
+      "exists": true,
+      "bytes": 32382591,
+      "mtime": "2026-06-29T23:26:39"
+    },
+    "post_dir": {
+      "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\post_startup100",
+      "exists": true,
+      "bytes": 8192,
+      "mtime": "2026-07-01T15:16:54"
+    },
+    "log": {
+      "path": "E:\\Work\\BOfm\\.cache_workbench_film_startup100_live.txt",
+      "exists": true,
+      "bytes": 49938,
+      "mtime": "2026-06-29T23:26:39"
+    }
+  },
+  "geometry_summary": {
+    "diameter_mm": 0.99,
+    "periodic_span_mm": 14.85,
+    "row_count": 4
+  },
+  "mesh_summary": null,
+  "topology_summary": {
+    "ok": true,
+    "error_count": 0,
+    "warning_count": 0,
+    "marker_count": 20,
+    "cavity_checked_markers": 0,
+    "cavity_failed_markers": 0
+  },
+  "result_summary": {
+    "valid": true,
+    "eta_bar": 0.5273822826891554,
+    "coolant_mass_flow_ratio": 0.8460983302841748,
+    "mass_imbalance": -5.2720890380358225e-05,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 40577.583678347466,
+      "inlet_total_pressure_mean_Pa": 285150.0105574324,
+      "outlet_total_pressure_mean_Pa": 244572.42687908496,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 51.54108810424805,
+    "y_plus_max": 68.28389739990234,
+    "mass_flow_report_available": true,
+    "last_residual_row": {
+      "iteration": 100,
+      "continuity": 0.026938,
+      "x_velocity": 1.439e-05,
+      "y_velocity": 4.4692e-05,
+      "z_velocity": 2.3475e-06,
+      "energy": 5.4178e-06,
+      "k": 0.00097208,
+      "omega": 0.000504
+    },
+    "warnings": {
+      "artificial_wall": 59,
+      "reversed_flow": 12,
+      "divergence": 0,
+      "floating_point": 0
+    }
+  },
+  "convergence_summary": {
+    "available": true,
+    "path": ".cache_workbench_film_startup100_live.txt",
+    "warnings": {
+      "artificial_wall": 59,
+      "reversed_flow": 12,
+      "divergence": 0,
+      "floating_point": 0
+    },
+    "residual_row_count": 100,
+    "last_residual_row": {
+      "iteration": 100,
+      "continuity": 0.026938,
+      "x_velocity": 1.439e-05,
+      "y_velocity": 4.4692e-05,
+      "z_velocity": 2.3475e-06,
+      "energy": 5.4178e-06,
+      "k": 0.00097208,
+      "omega": 0.000504
+    }
+  }
+}

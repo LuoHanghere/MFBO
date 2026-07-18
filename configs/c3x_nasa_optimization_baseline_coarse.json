@@ -1,0 +1,12 @@
+{
+  "source": "runs/nasa_44344/coarse/post_mdot_iter1800",
+  "simulation_case": "nasa_44344_validation",
+  "mesh_tier": "coarse",
+  "protected_mask": {
+    "pressure_xmin": 0.26530,
+    "suction_xmin": 0.37638
+  },
+  "coolant_actual_kg_s": 0.005320277879945933,
+  "delta_total_pressure_Pa": 21268.476887595083,
+  "note": "Frozen NASA coarse baseline for optimization ratios. Pressure loss is diagnostic."
+}

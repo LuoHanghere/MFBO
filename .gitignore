@@ -1,36 +1,68 @@
-# Python
+# Python environments and caches
+.venv/
 __pycache__/
 *.py[cod]
-.venv/
 .pytest_cache/
 .ipynb_checkpoints/
 
-# CFD artifacts (large binaries — archive on server, not in git)
+# ANSYS / Fluent large solver artifacts
 *.cas
 *.cas.h5
 *.dat
 *.dat.h5
 *.msh
 *.msh.h5
+*.h5
 *.cdat
 *.trn
 *.scdoc
 *.pmdb
-runs/
-results/
-fluent-*/
+*.sat
+*.sf
+*.fmd
+*.dsco
+*.wbpj
+*.wbjn
+*.wbdp
+*.ip
+*.set
+*.gz
+fluent-*
+cleanup-fluent-*.bat
+FM_*/
+*_files/
+runs_workflow_files/
 
-# Data / scratch
-*.h5
-*.sqlite
+# Keep source workflow templates stored under configs
+*.wft
+!configs/**/*.wft
+
+# Local CFD tree: retain only compact JSON provenance
+runs/**
+!runs/**/
+!runs/**/*.json
+results/
+
+# Large or machine-generated tabular exports
 *.csv
 !configs/**/*.csv
+*.sqlite
+*.sqlite3
 
-# Local cached source reports / scratch extractions (kept locally, not committed)
+# Local references, manuscript binaries, logs, and scratch
 .cache_*
 *.pdf
+*.docx
 *.log
+*.status.txt
+.sab
+tmp/
 
-# OS
+# OS/editor files
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+.env
+.env.*
+!.env.example

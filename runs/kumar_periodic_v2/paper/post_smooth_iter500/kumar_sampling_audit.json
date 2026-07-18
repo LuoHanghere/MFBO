@@ -1,0 +1,191 @@
+{
+  "sampling_definition": "X/Cax is the axial location magnitude measured from the stagnation-point frame; pressure is reported with a negative sign and suction with a positive sign.",
+  "outlier_area_audit": {
+    "total_wall_area_m2": 0.0015817936429207984,
+    "physical_temperature_area_fraction": 0.9995413546960772,
+    "above_mainstream_face_count": 31,
+    "above_mainstream_area_fraction": 0.0002059099132313737,
+    "below_coolant_face_count": 174,
+    "below_coolant_area_fraction": 0.00025273539069144184
+  },
+  "sides": {
+    "pressure": {
+      "published_station_X_over_Cax": 0.31,
+      "signed_station_X_over_Cax": -0.31,
+      "published_station_metrics": {
+        "rmse": 0.24266911946816974,
+        "mae": 0.20895840364833182,
+        "mean_bias": -0.102277535603319,
+        "mean_cfd": 0.35427418853461207,
+        "mean_reference": 0.456551724137931,
+        "shape_correlation": 0.27696481880034957
+      },
+      "diagnostic_best_station_X_over_Cax": 0.9632264529058117,
+      "diagnostic_best_station_metrics": {
+        "rmse": 0.0686432546699798,
+        "mae": 0.06065000145497132,
+        "mean_bias": -0.026928457618201986,
+        "mean_cfd": 0.42962326651972904,
+        "mean_reference": 0.456551724137931,
+        "shape_correlation": 0.007740461617365978
+      },
+      "station_sweep_note": "Best station is diagnostic only and must not replace the published coordinate.",
+      "last_downstream_row_X_over_Cax": 0.3014291854636931,
+      "candidates": {
+        "published_absolute": {
+          "station_X_over_Cax": 0.31,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.24266911946816974,
+            "mae": 0.20895840364833182,
+            "mean_bias": -0.102277535603319,
+            "mean_cfd": 0.35427418853461207,
+            "mean_reference": 0.456551724137931,
+            "shape_correlation": 0.27696481880034957
+          }
+        },
+        "published_distance_downstream_of_last_row": {
+          "station_X_over_Cax": 0.6114291854636931,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.0720090021689665,
+            "mae": 0.064153010128459,
+            "mean_bias": 0.022751699239221854,
+            "mean_cfd": 0.4793034233771529,
+            "mean_reference": 0.456551724137931,
+            "shape_correlation": -0.38390932755415547
+          }
+        },
+        "diagnostic_best_rmse": {
+          "station_X_over_Cax": 0.9632264529058117,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.0686432546699798,
+            "mae": 0.06065000145497132,
+            "mean_bias": -0.026928457618201986,
+            "mean_cfd": 0.42962326651972904,
+            "mean_reference": 0.456551724137931,
+            "shape_correlation": 0.007740461617365978
+          }
+        },
+        "diagnostic_best_shape_correlation": {
+          "station_X_over_Cax": 0.297875751503006,
+          "downstream_of_last_row": false,
+          "metrics": {
+            "rmse": 0.19932475886057466,
+            "mae": 0.16935796558303348,
+            "mean_bias": -0.15106451532959053,
+            "mean_cfd": 0.30548720880834057,
+            "mean_reference": 0.456551724137931,
+            "shape_correlation": 0.6044737323179217
+          }
+        },
+        "diagnostic_best_absolute_mean_bias": {
+          "station_X_over_Cax": 0.5327054108216432,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.07067479170355105,
+            "mae": 0.061734539649071336,
+            "mean_bias": 6.366857118823221e-05,
+            "mean_cfd": 0.4566153927091192,
+            "mean_reference": 0.456551724137931,
+            "shape_correlation": -0.3183252841489811
+          }
+        }
+      },
+      "station_band_half_width_X_over_Cax": 0.01,
+      "station_band_face_count": 1732,
+      "station_band_temperature_min_K": 581.05419921875,
+      "station_band_temperature_max_K": 1636.5037841796875
+    },
+    "suction": {
+      "published_station_X_over_Cax": 0.48,
+      "signed_station_X_over_Cax": 0.48,
+      "published_station_metrics": {
+        "rmse": 0.1669489218652991,
+        "mae": 0.14031255533646092,
+        "mean_bias": 0.1350779799661518,
+        "mean_cfd": 0.4664917730696001,
+        "mean_reference": 0.3314137931034483,
+        "shape_correlation": 0.7394420928282344
+      },
+      "diagnostic_best_station_X_over_Cax": 0.37056112224448895,
+      "diagnostic_best_station_metrics": {
+        "rmse": 0.11621623796762091,
+        "mae": 0.09798284603146673,
+        "mean_bias": 0.027392301358406115,
+        "mean_cfd": 0.35880609446185435,
+        "mean_reference": 0.3314137931034483,
+        "shape_correlation": 0.5201621513299065
+      },
+      "station_sweep_note": "Best station is diagnostic only and must not replace the published coordinate.",
+      "last_downstream_row_X_over_Cax": 0.4125017877144308,
+      "candidates": {
+        "published_absolute": {
+          "station_X_over_Cax": 0.48,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.1669489218652991,
+            "mae": 0.14031255533646092,
+            "mean_bias": 0.1350779799661518,
+            "mean_cfd": 0.4664917730696001,
+            "mean_reference": 0.3314137931034483,
+            "shape_correlation": 0.7394420928282344
+          }
+        },
+        "published_distance_downstream_of_last_row": {
+          "station_X_over_Cax": 0.8925017877144308,
+          "downstream_of_last_row": true,
+          "metrics": {
+            "rmse": 0.17154359827826055,
+            "mae": 0.13584486569752,
+            "mean_bias": 0.097038394303477,
+            "mean_cfd": 0.4284521874069252,
+            "mean_reference": 0.3314137931034483,
+            "shape_correlation": -0.06976708719392845
+          }
+        },
+        "diagnostic_best_rmse": {
+          "station_X_over_Cax": 0.37056112224448895,
+          "downstream_of_last_row": false,
+          "metrics": {
+            "rmse": 0.11621623796762091,
+            "mae": 0.09798284603146673,
+            "mean_bias": 0.027392301358406115,
+            "mean_cfd": 0.35880609446185435,
+            "mean_reference": 0.3314137931034483,
+            "shape_correlation": 0.5201621513299065
+          }
+        },
+        "diagnostic_best_shape_correlation": {
+          "station_X_over_Cax": 0.38919839679358714,
+          "downstream_of_last_row": false,
+          "metrics": {
+            "rmse": 0.1545450254773691,
+            "mae": 0.1442432639619187,
+            "mean_bias": 0.1442432639619187,
+            "mean_cfd": 0.475657057065367,
+            "mean_reference": 0.3314137931034483,
+            "shape_correlation": 0.9480838585644334
+          }
+        },
+        "diagnostic_best_absolute_mean_bias": {
+          "station_X_over_Cax": 0.36869739478957914,
+          "downstream_of_last_row": false,
+          "metrics": {
+            "rmse": 0.12261300762360831,
+            "mae": 0.09857597761758648,
+            "mean_bias": 0.0031938627013762804,
+            "mean_cfd": 0.33460765580482466,
+            "mean_reference": 0.3314137931034483,
+            "shape_correlation": 0.3766097042027293
+          }
+        }
+      },
+      "station_band_half_width_X_over_Cax": 0.01,
+      "station_band_face_count": 141,
+      "station_band_temperature_min_K": 1106.8363037109375,
+      "station_band_temperature_max_K": 1316.8824462890625
+    }
+  }
+}

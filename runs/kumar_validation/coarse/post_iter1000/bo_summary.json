@@ -1,0 +1,82 @@
+{
+  "valid": true,
+  "simulation_case": "kumar_case1_tr3",
+  "objective": {
+    "eta_bar": 0.40280612582153924
+  },
+  "constraints": {
+    "coolant_mass_flow_ratio": null,
+    "mass_imbalance": 1.49360857903914e-06,
+    "pressure_loss": {
+      "definition": "diagnostic_delta_p0 = mean(total-pressure on inlet) - mean(total-pressure on outlet)",
+      "delta_total_pressure_Pa": 7883.563020318397,
+      "inlet_total_pressure_mean_Pa": 285129.89086759,
+      "outlet_total_pressure_mean_Pa": 277246.3278472716,
+      "note": "Diagnostic only; final loss coefficient definition must be fixed before publication."
+    },
+    "y_plus_p95": 6.5473833084106445,
+    "y_plus_max": 8.391889572143555
+  },
+  "references": {
+    "Tg_ref_K": 1773.0,
+    "Tc_ref": {
+      "method": "simple mean coolant temperature",
+      "value_K": 591.0,
+      "components": [
+        {
+          "region": "suction",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        },
+        {
+          "region": "showerhead",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        },
+        {
+          "region": "pressure",
+          "total_temperature_K": 591.0,
+          "weight_kg_s": 0.0
+        }
+      ]
+    }
+  },
+  "diagnostics": {
+    "selected_wall_surfaces": [
+      "vane_wall"
+    ],
+    "all_wall_surfaces": [
+      "film_hole_wall",
+      "plenum_wall",
+      "vane_wall"
+    ],
+    "available_scalar_fields": [
+      "wall-temperature",
+      "temperature",
+      "y-plus"
+    ],
+    "mass_flow_report_available": true,
+    "convergence": {
+      "available": true,
+      "path": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\logs\\kumar_case1_coarse_iterate1000.log",
+      "warnings": {
+        "artificial_wall": 0,
+        "reversed_flow": 97,
+        "divergence": 0,
+        "floating_point": 0
+      },
+      "residual_row_count": 954,
+      "last_residual_row": {
+        "iteration": 953,
+        "continuity": 0.00099955,
+        "x_velocity": 1.1719e-07,
+        "y_velocity": 3.4705e-07,
+        "z_velocity": 3.9132e-08,
+        "energy": 5.5833e-07,
+        "k": 8.731e-05,
+        "omega": 3.6897e-05
+      }
+    },
+    "export_log": "E:\\Work\\BOfm\\runs\\kumar_validation\\coarse\\post_iter1000\\export_workbench_film_results.log"
+  }
+}

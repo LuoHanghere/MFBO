@@ -1,0 +1,152 @@
+{
+  "source_config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo.yaml",
+  "target_config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo_8d.yaml",
+  "source_cost": 4.2,
+  "target_cost": 4.2,
+  "migrated": [
+    {
+      "source_trial_id": 1,
+      "target_trial_id": 1,
+      "fidelity": "L2",
+      "objective": 0.682210488894674,
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 20.0,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 2,
+      "target_trial_id": 2,
+      "fidelity": "L3",
+      "objective": 0.6489496053020241,
+      "design": {
+        "SS1_s": 0.241022565,
+        "SS2_s": 0.262977435,
+        "PS1_s": 0.210838936,
+        "PS2_s": 0.239161064,
+        "suction_angle_deg": 35.0,
+        "pressure_angle_deg": 20.0,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 3,
+      "target_trial_id": 3,
+      "fidelity": "L2",
+      "objective": 0.6920976477798865,
+      "design": {
+        "SS1_s": 0.2436241765445602,
+        "SS2_s": 0.27588599092776295,
+        "PS1_s": 0.2073283497899597,
+        "PS2_s": 0.24931721441420235,
+        "suction_angle_deg": 40.91818132663535,
+        "pressure_angle_deg": 24.50087689612895,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 4,
+      "target_trial_id": 4,
+      "fidelity": "L3",
+      "objective": 0.6574795585257655,
+      "design": {
+        "SS1_s": 0.2436241765445602,
+        "SS2_s": 0.27588599092776295,
+        "PS1_s": 0.2073283497899597,
+        "PS2_s": 0.24931721441420235,
+        "suction_angle_deg": 40.91818132663535,
+        "pressure_angle_deg": 24.50087689612895,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 5,
+      "target_trial_id": 5,
+      "fidelity": "L2",
+      "objective": 0.6686129064442368,
+      "design": {
+        "SS1_s": 0.25132425880518633,
+        "SS2_s": 0.2762834779036399,
+        "PS1_s": 0.2062801001888814,
+        "PS2_s": 0.24314866489931847,
+        "suction_angle_deg": 39.900525514380554,
+        "pressure_angle_deg": 29.032437763574954,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 6,
+      "target_trial_id": 6,
+      "fidelity": "L2",
+      "objective": 0.6681706689015978,
+      "design": {
+        "SS1_s": 0.255329204084681,
+        "SS2_s": 0.27684090022535307,
+        "PS1_s": 0.2126529374003558,
+        "PS2_s": 0.23776962698842385,
+        "suction_angle_deg": 38.452797728663626,
+        "pressure_angle_deg": 25.055338365780166,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 7,
+      "target_trial_id": 7,
+      "fidelity": "L2",
+      "objective": 0.6606764203605601,
+      "design": {
+        "SS1_s": 0.24817760465683364,
+        "SS2_s": 0.2636037187126676,
+        "PS1_s": 0.21226662432252022,
+        "PS2_s": 0.22965586056445633,
+        "suction_angle_deg": 34.35686932662608,
+        "pressure_angle_deg": 29.504559323321793,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 9,
+      "target_trial_id": 8,
+      "fidelity": "L2",
+      "objective": 0.7023754827271168,
+      "design": {
+        "SS1_s": 0.24166763021051885,
+        "SS2_s": 0.2713517213910818,
+        "PS1_s": 0.21064888978749513,
+        "PS2_s": 0.25063435127586126,
+        "suction_angle_deg": 30.77472446486354,
+        "pressure_angle_deg": 26.400274001061916,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    },
+    {
+      "source_trial_id": 10,
+      "target_trial_id": 9,
+      "fidelity": "L3",
+      "objective": 0.6658036945608767,
+      "design": {
+        "SS1_s": 0.24166763021051885,
+        "SS2_s": 0.2713517213910818,
+        "PS1_s": 0.21064888978749513,
+        "PS2_s": 0.25063435127586126,
+        "suction_angle_deg": 30.77472446486354,
+        "pressure_angle_deg": 26.400274001061916,
+        "diameter_mm": 0.99,
+        "span_count": 5
+      }
+    }
+  ]
+}

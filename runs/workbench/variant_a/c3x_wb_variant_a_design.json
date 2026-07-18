@@ -1,0 +1,52 @@
+{
+  "name": "c3x_downstream_baseline_case1",
+  "geometry": {
+    "periodic_span_mm": 14.85,
+    "diameter_mm": 0.99,
+    "physical_hole_length_mm": 3.35,
+    "passage_overlap_D": 3.0,
+    "inner_overlap_D": 3.0,
+    "span_count": 5,
+    "span_phase_fraction": 0.5
+  },
+  "surface_settings": {
+    "suction": {
+      "injection_angle_deg": 35.0,
+      "orientation": "forward"
+    },
+    "pressure": {
+      "injection_angle_deg": 30.0,
+      "orientation": "forward"
+    }
+  },
+  "rows": {
+    "SS1": {
+      "surface": "suction",
+      "source_nasa_hole": 12,
+      "s_over_s0": 0.268
+    },
+    "SS2": {
+      "surface": "suction",
+      "source_nasa_hole": 11,
+      "s_over_s0": 0.29
+    },
+    "PS1": {
+      "surface": "pressure",
+      "source_nasa_hole": 18,
+      "s_over_s0": 0.187
+    },
+    "PS2": {
+      "surface": "pressure",
+      "source_nasa_hole": 19,
+      "s_over_s0": 0.225
+    }
+  },
+  "constraints": {
+    "row_order": [
+      "SS1 < SS2",
+      "PS1 < PS2"
+    ],
+    "same_surface_rows_parallel": true,
+    "span_periodicity": "span_count must be an integer; pitch=periodic_span/span_count"
+  }
+}

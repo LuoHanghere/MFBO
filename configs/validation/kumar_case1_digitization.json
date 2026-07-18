@@ -1,0 +1,64 @@
+{
+  "source": {
+    "paper": "Kumar et al., A Numerical Study of Film Cooling on NASA-C3X Vane by Forward and Reverse Injection",
+    "file": "978-981-19-3379-0_28-39.pdf",
+    "figures": [
+      6,
+      7
+    ]
+  },
+  "case": {
+    "orientation": "forward",
+    "pressure_angle_deg": 30.0,
+    "suction_angle_deg": 35.0,
+    "pressure_ratio": 1.15,
+    "temperature_ratio": 3.0
+  },
+  "method": "calibrated raster-plot digitization with visual overlay QA",
+  "uncertainty": {
+    "eta_absolute": 0.015,
+    "Z_over_D": 0.1,
+    "note": "Do not use these raster-derived values to claim agreement below the stated uncertainty."
+  },
+  "calibration": {
+    "render_zoom": 3.0,
+    "pressure": {
+      "pdf_page": 8,
+      "crop_box_px": [
+        170,
+        130,
+        650,
+        500
+      ],
+      "axis_origin_in_crop_px": [
+        272,
+        352
+      ],
+      "pixels_per_Z_over_D": 28.0,
+      "pixels_per_eta": 304.0,
+      "station_X_over_Cax": 0.31,
+      "alpha_deg": 30.0
+    },
+    "suction": {
+      "pdf_page": 9,
+      "crop_box_px": [
+        150,
+        130,
+        650,
+        510
+      ],
+      "axis_origin_in_crop_px": [
+        284,
+        354
+      ],
+      "pixels_per_Z_over_D": 28.0,
+      "pixels_per_eta": 305.0,
+      "station_X_over_Cax": 0.48,
+      "alpha_deg": 35.0
+    }
+  },
+  "outputs": [
+    "kumar_fig6_ps_forward_30deg.csv",
+    "kumar_fig7_ss_forward_35deg.csv"
+  ]
+}

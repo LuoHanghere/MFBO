@@ -1,0 +1,43 @@
+{
+  "name": "kumar_case1_paper",
+  "route": "workbench",
+  "tier": "paper",
+  "created_at": "2026-07-05T20:57:19",
+  "case_in": {
+    "path": "E:\\Work\\BOfm\\runs\\direct_cad\\paper\\kumar_case1_paper.msh.h5",
+    "exists": true,
+    "bytes": 354161875,
+    "mtime": "2026-07-05T19:55:19"
+  },
+  "layout": {
+    "path": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline_layout.json",
+    "exists": true,
+    "bytes": 49077,
+    "mtime": "2026-07-03T15:47:49"
+  },
+  "tier_config": {
+    "purpose": "Kumar-comparable working grid",
+    "expected_cells_M": [
+      3.0,
+      5.0
+    ],
+    "cells_across_hole_D": 25,
+    "surface": {
+      "MinSize": 0.04,
+      "MaxSize": 1.5,
+      "GrowthRate": 1.15
+    },
+    "prism_layers": 25,
+    "first_layer_mm": 0.00075,
+    "prism_growth": 1.16,
+    "nominal_total_prism_thickness_mm": 0.187,
+    "y_plus_design": 1,
+    "volume_fill": "polyhedra"
+  },
+  "actual": {
+    "cell_count": null,
+    "face_count": null,
+    "node_count": null,
+    "note": "Fill after Workbench/Fluent mesh count is recorded; setup/export still records case/data file sizes."
+  }
+}

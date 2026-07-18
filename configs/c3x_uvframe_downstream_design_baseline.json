@@ -1,0 +1,25 @@
+{
+  "p_over_D": 4.0,
+  "rows": {
+    "SS1": {
+      "surface": "suction",
+      "s_over_s0": 0.254,
+      "alpha_deg": 35.0
+    },
+    "SS2": {
+      "surface": "suction",
+      "s_over_s0": 0.276,
+      "alpha_deg": 35.0
+    },
+    "PS1": {
+      "surface": "pressure",
+      "s_over_s0": 0.197,
+      "alpha_deg": 20.0
+    },
+    "PS2": {
+      "surface": "pressure",
+      "s_over_s0": 0.225,
+      "alpha_deg": 20.0
+    }
+  }
+}

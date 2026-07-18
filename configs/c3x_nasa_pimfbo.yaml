@@ -1,0 +1,71 @@
+name: C3X NASA knowledge-informed MFBO
+
+objective:
+  name: protected_eta_bar
+  label: Protected-area eta_bar
+  maximize: true
+
+variables:
+  - {name: SS1_s, label: SS1 arc position, unit: s/s0, bounds: [0.226, 0.256], baseline: 0.241022565}
+  - {name: SS2_s, label: SS2 arc position, unit: s/s0, bounds: [0.248, 0.278], baseline: 0.262977435}
+  - {name: PS1_s, label: PS1 arc position, unit: s/s0, bounds: [0.196, 0.226], baseline: 0.210838936}
+  - {name: PS2_s, label: PS2 arc position, unit: s/s0, bounds: [0.224, 0.254], baseline: 0.239161064}
+  - {name: suction_angle_deg, label: Suction injection angle, unit: deg, bounds: [25.0, 45.0], baseline: 35.0}
+  - {name: pressure_angle_deg, label: Pressure injection angle, unit: deg, bounds: [15.0, 30.0], baseline: 20.0}
+
+fidelities:
+  - {name: L1, kind: knowledge, level: 0.00, relative_cost: 0.001, mesh_tier: knowledge_1d}
+  - {name: L2, kind: cfd, level: 0.50, relative_cost: 0.20, mesh_tier: coarse}
+  - {name: L3, kind: cfd, level: 1.00, relative_cost: 1.00, mesh_tier: paper}
+
+audit:
+  mesh_tier: fine
+  role: independent finalist verification; excluded from the optimization loop
+
+constraints:
+  - {name: coolant_mass_ratio, label: Coolant mass flow / target, upper: 1.001}
+
+physics_prior:
+  enabled: true
+  c0: 0.68
+  c1: 0.22
+  c2: 0.82
+  blowing_ratio: 1.0
+  angle_sigma_deg: 18.0
+  suction_weight: 0.56
+  periodic_span_mm: 14.85
+  suction_arc_mm: 177.82
+  pressure_arc_mm: 137.23
+  calibration:
+    mean_scale: 1.0
+    anchor: paired_L3_baseline
+  uncertainty:
+    baseline_sigma: 0.010
+    distance_sigma: 0.030
+    decay_power: 0.5
+  acquisition:
+    mode: pi_weight
+    initial_beta: 1.0
+    high_fidelity_decay: 0.35
+    minimum_weight: 0.20
+
+optimizer:
+  initial_designs: 5
+  candidate_pool: 512
+  seed: 20260715
+  equivalent_high_fidelity_budget: 6.0
+  geometry_gate: c3x_nasa44344
+
+storage:
+  database: runs/optimization/nasa_pimfbo/c3x_nasa_pimfbo.sqlite3
+  run_root: runs/optimization/nasa_pimfbo/trials
+
+evaluator:
+  type: command
+  resources:
+    coarse: {mesh_cores: 8, solve_cores: 8, post_cores: 4}
+    paper: {mesh_cores: 8, solve_cores: 8, post_cores: 4}
+  stages:
+    - name: nasa_cfd_pipeline
+      timeout_seconds: 172800
+      command: '"{python}" scripts/run_nasa_optimization_trial.py --design-json "{design_json}" --run-dir "{run_dir}" --result-json "{result_json}" --mesh-tier "{mesh_tier}" --mesh-cores {mesh_cores} --solve-cores {solve_cores} --post-cores {post_cores}'

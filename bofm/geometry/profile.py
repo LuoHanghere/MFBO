@@ -26,7 +26,7 @@ from __future__ import annotations
 import numpy as np
 from scipy.interpolate import PchipInterpolator
 
-from .parametrization import Surface, build_surfaces
+from .parametrization import Surface, build_surfaces, clean_profile
 
 
 def _clustered_spacing(n: int, strength: float) -> np.ndarray:
@@ -79,6 +79,7 @@ def densify_profile(profile: np.ndarray, n_per_surface: int = 220,
     all reuse :func:`bofm.geometry.parametrization.build_surfaces`, so the
     densified contour stays consistent with the validated geometry.
     """
+    profile = clean_profile(profile)
     surfaces = build_surfaces(profile)
     suc = _spline_surface(surfaces["suction"], n_per_surface, cluster)
     pre = _spline_surface(surfaces["pressure"], n_per_surface, cluster)

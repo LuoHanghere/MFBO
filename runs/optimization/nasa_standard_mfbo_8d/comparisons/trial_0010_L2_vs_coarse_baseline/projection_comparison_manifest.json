@@ -1,0 +1,36 @@
+{
+  "baseline_faces": "E:\\Work\\BOfm\\runs\\nasa_44344\\coarse\\post_mdot_iter1800\\eta_surface_faces.csv",
+  "optimized_faces": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2\\post_iter1800\\eta_surface_faces.csv",
+  "baseline_objective": 0.682210488894674,
+  "optimized_objective": 0.6055034944018036,
+  "figures": [
+    {
+      "field": "taw_k",
+      "output": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\comparisons\\trial_0010_L2_vs_coarse_baseline\\temperature_projection_comparison.png",
+      "value_limits": [
+        590.3618667517627,
+        700.8410914037798
+      ],
+      "delta_limits": [
+        -41.61214623181727,
+        41.61214623181727
+      ],
+      "coordinate": "surface_distance_pct versus z/periodic_span",
+      "projection": "linear face-center interpolation with nearest boundary fill"
+    },
+    {
+      "field": "eta",
+      "output": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\comparisons\\trial_0010_L2_vs_coarse_baseline\\cooling_effectiveness_projection_comparison.png",
+      "value_limits": [
+        0.0,
+        1.0
+      ],
+      "delta_limits": [
+        -0.38754510729344477,
+        0.38754510729344477
+      ],
+      "coordinate": "surface_distance_pct versus z/periodic_span",
+      "projection": "linear face-center interpolation with nearest boundary fill"
+    }
+  ]
+}

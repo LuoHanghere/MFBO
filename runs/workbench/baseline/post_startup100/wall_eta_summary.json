@@ -1,0 +1,14 @@
+{
+  "definition": "eta = (Tg_ref - Taw) / (Tg_ref - Tc_ref)",
+  "note": "eta_bar uses nodal wall-temperature mean unless Fluent area-weighted reports are added later",
+  "Tg_ref_K": 701.0,
+  "Tc_ref_K": 593.6263151083753,
+  "eta_bar": 0.5273822826891554,
+  "surfaces": [
+    {
+      "surface": "vane_wall",
+      "count": 34676,
+      "eta_mean_from_temperature_mean": 0.5273822826891554
+    }
+  ]
+}

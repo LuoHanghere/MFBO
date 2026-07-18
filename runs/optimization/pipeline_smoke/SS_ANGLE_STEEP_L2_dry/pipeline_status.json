@@ -1,0 +1,12 @@
+{
+  "status": "dry_run_ok",
+  "started_utc": "2026-07-15T15:12:38.574826+00:00",
+  "mesh_tier": "coarse",
+  "iterations": 1800,
+  "startup_iterations": 400,
+  "repair_passes": 0,
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_ranking_pilot\\designs\\SS_ANGLE_STEEP.json",
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\pipeline_smoke\\SS_ANGLE_STEEP_L2_dry\\result.json",
+  "dry_run": true,
+  "finished_utc": "2026-07-15T15:12:38.579216+00:00"
+}

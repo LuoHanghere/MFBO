@@ -1,0 +1,12 @@
+{
+  "trial_label": "paper iteration 2500",
+  "objective": 0.6658036945608767,
+  "eta_color_limits": [
+    0.0,
+    1.0
+  ],
+  "layout": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\visuals\\film_hole_layout.png",
+  "cooling_efficiency_map": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\visuals\\cooling_efficiency_map.png",
+  "overview": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\visuals\\iteration_overview.png",
+  "source_faces": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\post_iter2500\\eta_surface_faces.csv"
+}

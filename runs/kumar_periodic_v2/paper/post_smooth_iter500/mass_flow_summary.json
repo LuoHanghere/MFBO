@@ -1,0 +1,68 @@
+{
+  "available": true,
+  "zones": {
+    "inlet": {
+      "mass_flow_kg_s": 0.1261734813451767,
+      "raw": [
+        0.1261734813451767,
+        0
+      ]
+    },
+    "outlet": {
+      "mass_flow_kg_s": -0.1330261677503586,
+      "raw": [
+        -0.1330261677503586,
+        0
+      ]
+    },
+    "qian": {
+      "mass_flow_kg_s": 0.002125300467014313,
+      "raw": [
+        0.002125300467014313,
+        0
+      ]
+    },
+    "ss": {
+      "mass_flow_kg_s": 0.002705640159547329,
+      "raw": [
+        0.002705640159547329,
+        0
+      ]
+    },
+    "ps": {
+      "mass_flow_kg_s": 0.001996503910049796,
+      "raw": [
+        0.001996503910049796,
+        0
+      ]
+    }
+  },
+  "errors": [],
+  "reference_targets": {
+    "total_target_kg_s": 0.0,
+    "zones": {}
+  },
+  "constraints": {
+    "coolant_actual_kg_s": 0.006827444536611438,
+    "coolant_target_kg_s": 0.0,
+    "coolant_mass_flow_ratio": null,
+    "mass_imbalance_kg_s": -2.5241868570474724e-05,
+    "zones": {
+      "qian": {
+        "actual_kg_s": 0.002125300467014313,
+        "target_kg_s": null,
+        "actual_over_target": null
+      },
+      "ss": {
+        "actual_kg_s": 0.002705640159547329,
+        "target_kg_s": null,
+        "actual_over_target": null
+      },
+      "ps": {
+        "actual_kg_s": 0.001996503910049796,
+        "target_kg_s": null,
+        "actual_over_target": null
+      }
+    }
+  }
+}

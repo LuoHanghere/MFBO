@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo.yaml",
+  "experiment": "C3X NASA standard MFBO",
+  "trial_id": 8,
+  "fidelity": "L2",
+  "mesh_tier": "coarse",
+  "source": "standard_constrained_ei",
+  "design": {
+    "SS1_s": 0.2428718116078526,
+    "SS2_s": 0.26666514787077905,
+    "PS1_s": 0.19658955571614206,
+    "PS2_s": 0.2517801522705704,
+    "suction_angle_deg": 31.343974452465773,
+    "pressure_angle_deg": 25.249675805680454
+  },
+  "predicted": {
+    "mean": 0.6918776248629033,
+    "sigma": 0.00463177566696481,
+    "residual_sigma": 0.00463177566696481,
+    "prior_sigma": 0.0,
+    "prior_weight": 1.0,
+    "ei": 0.03439806633713786,
+    "p_feasible": 1.0,
+    "acquisition_per_cost": 0.17245350925238576,
+    "physics_prior": 0.0
+  },
+  "relative_cost": 0.2,
+  "cost_before": 3.0,
+  "run_dir": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0008_L2",
+  "error": "stage nasa_cfd_pipeline failed with exit code 1; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0008_L2\\nasa_cfd_pipeline.log",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Work\\BOfm\\scripts\\run_one_optimization_iteration.py\", line 75, in main\n    result = evaluator.evaluate(\n             ^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Work\\BOfm\\bofm\\optimization\\evaluator.py\", line 201, in evaluate\n    raise RuntimeError(\nRuntimeError: stage nasa_cfd_pipeline failed with exit code 1; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0008_L2\\nasa_cfd_pipeline.log\n"
+}

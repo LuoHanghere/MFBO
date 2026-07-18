@@ -1,0 +1,18 @@
+{
+  "objective": 0.6681706689015978,
+  "constraints": {
+    "coolant_mass_ratio": 1.0000002625772364,
+    "loss_ratio": 1.1822749285989729
+  },
+  "metrics": {
+    "whole_vane_eta_bar": 0.5658252468489682,
+    "protected_area_m2": 0.0012226274296491051,
+    "coolant_actual_kg_s": 0.005320279276929796,
+    "delta_total_pressure_Pa": 25145.186993690382,
+    "mass_imbalance_kg_s": 3.1158560886979103e-06,
+    "continuity_residual": 0.0037034,
+    "y_plus_p95": 8.516924858093262,
+    "y_plus_max": 11.625375747680664,
+    "converged_for_screening": true
+  }
+}

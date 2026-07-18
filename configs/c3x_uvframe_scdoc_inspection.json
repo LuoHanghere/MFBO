@@ -1,0 +1,148 @@
+{
+  "bodies": [
+    {
+      "size_mm": [
+        548.14100036716513, 
+        183.55159168197383, 
+        7.425
+      ], 
+      "index": 0, 
+      "tree_path": "root/B0", 
+      "role_guess": "mainflow", 
+      "bbox_mm": [
+        -104.79590728233279, 
+        -128.15820737088427, 
+        0.0, 
+        443.3450930848324, 
+        55.393384311089576, 
+        7.425
+      ], 
+      "faces": 924, 
+      "bbox_volume_mm3": 220246.68087446125, 
+      "center_mm": [
+        169.2745929012498, 
+        -36.382411529897347, 
+        3.7125
+      ], 
+      "name": "fluid"
+    }, 
+    {
+      "size_mm": [
+        16.818500806585611, 
+        9.158646096552047, 
+        7.4250000000000185
+      ], 
+      "index": 1, 
+      "tree_path": "root/B1", 
+      "role_guess": "SS_plenum", 
+      "bbox_mm": [
+        12.856068672546149, 
+        25.113153052575221, 
+        -1.3877787807814457e-14, 
+        29.674569479131762, 
+        34.271799149127268, 
+        7.425000000000004
+      ], 
+      "faces": 6, 
+      "bbox_volume_mm3": 831.60000000001344, 
+      "center_mm": [
+        21.265319075838956, 
+        29.692476100851245, 
+        3.712499999999995
+      ], 
+      "name": "SS_plenum"
+    }, 
+    {
+      "size_mm": [
+        17.309648625732144, 
+        11.139029564640245, 
+        7.425
+      ], 
+      "index": 2, 
+      "tree_path": "root/B2", 
+      "role_guess": "PS_plenum", 
+      "bbox_mm": [
+        27.852229529074556, 
+        6.220747536703824, 
+        0.0, 
+        45.1618781548067, 
+        17.359777101344068, 
+        7.425
+      ], 
+      "faces": 6, 
+      "bbox_volume_mm3": 831.60000000000468, 
+      "center_mm": [
+        36.507053841940632, 
+        11.790262319023945, 
+        3.7125
+      ], 
+      "name": "PS_plenum"
+    }, 
+    {
+      "size_mm": [
+        17.973653317529347, 
+        13.76927813584757, 
+        7.425000000000017
+      ], 
+      "index": 3, 
+      "tree_path": "root/B3", 
+      "role_guess": "LE_plenum", 
+      "bbox_mm": [
+        6.097373426141043, 
+        1.8703563854898202, 
+        -1.3877787807814457e-14, 
+        24.071026743670391, 
+        15.63963452133739, 
+        7.4250000000000025
+      ], 
+      "faces": 19, 
+      "bbox_volume_mm3": 1272.0833507072327, 
+      "center_mm": [
+        15.084200084905717, 
+        8.754995453413605, 
+        3.712499999999994
+      ], 
+      "name": "LE_plenum"
+    }
+  ], 
+  "groups": [
+    {
+      "index": 0, 
+      "name": "inlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 1, 
+      "name": "outlet", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 2, 
+      "name": "periodic_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 3, 
+      "name": "periodic_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 4, 
+      "name": "span_low", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 5, 
+      "name": "span_high", 
+      "collection": "Groups"
+    }, 
+    {
+      "index": 6, 
+      "name": "vane_wall", 
+      "collection": "Groups"
+    }
+  ], 
+  "source_scdoc": "E:\\Work\\BOfm\\runs\\fluid\\c3x_uvframe_external_flow.scdoc", 
+  "units": "mm", 
+  "body_count": 4
+}

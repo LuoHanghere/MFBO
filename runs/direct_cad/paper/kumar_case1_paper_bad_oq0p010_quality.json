@@ -1,0 +1,26 @@
+{
+  "mesh": "E:\\Work\\BOfm\\runs\\direct_cad\\paper\\kumar_case1_paper.msh.h5",
+  "cores": 8,
+  "precision": "single",
+  "cell_count": 3586885,
+  "face_count": 15243170,
+  "cell_quality": {
+    "Orthogonal Quality": [
+      3586885,
+      0.01010739050401543,
+      0.9999999771888767,
+      0.7984396971134171,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      3586885,
+      1.175355845983717e-08,
+      0.9898926094950413,
+      0.1996015766203801,
+      0.0,
+      0
+    ]
+  },
+  "status": "ok"
+}

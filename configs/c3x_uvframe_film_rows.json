@@ -1,0 +1,226 @@
+{
+  "source": "NASA CR-182133 Figure 8 direct U/V frame",
+  "units": "mm; raw film anchors are unshifted report V/U; blade/external geometry is shifted",
+  "model_origin": {
+    "description": "blade/external geometry is shifted so blade minimum V and U are zero; film anchors are not shifted",
+    "v_report_origin_mm": 7.5740815873255185,
+    "u_report_origin_mm": -2.1777068111968063
+  },
+  "profile_csv": "configs/c3x_uvframe_coordinates.csv",
+  "transform_note": "Blade/external domain transformed into U/V frame; film-row anchors use raw U/V directly.",
+  "fit_used_only_to_transform_existing_blade": {
+    "scale": 10.0,
+    "angle_deg": 33.0,
+    "reflection": -1.0,
+    "rms_camber_mm": 5.336889671845182
+  },
+  "rows": [
+    {
+      "nasa_hole": 12,
+      "group": "suction",
+      "uv_cm": [
+        3.556,
+        1.631
+      ],
+      "raw_report_uv_xy_mm": [
+        16.31,
+        35.56
+      ],
+      "raw_uv_anchor_xy_mm": [
+        16.31,
+        35.56
+      ],
+      "surface_projected_xy_mm": [
+        16.64301195476229,
+        35.76000973070993
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 45.35425674385334,
+      "raw_to_surface_distance_mm": 0.38845959171226674
+    },
+    {
+      "nasa_hole": 11,
+      "group": "suction",
+      "uv_cm": [
+        3.592,
+        2.024
+      ],
+      "raw_report_uv_xy_mm": [
+        20.240000000000002,
+        35.92
+      ],
+      "raw_uv_anchor_xy_mm": [
+        20.240000000000002,
+        35.92
+      ],
+      "surface_projected_xy_mm": [
+        20.359490092613285,
+        36.06212895809746
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 49.08408163231391,
+      "raw_to_surface_distance_mm": 0.18568393296836472
+    },
+    {
+      "nasa_hole": 18,
+      "group": "pressure",
+      "uv_cm": [
+        0.559,
+        3.505
+      ],
+      "raw_report_uv_xy_mm": [
+        35.05,
+        5.590000000000001
+      ],
+      "raw_uv_anchor_xy_mm": [
+        35.05,
+        5.590000000000001
+      ],
+      "surface_projected_xy_mm": [
+        34.74965431067873,
+        5.919326882338949
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -27.742090903719856,
+      "raw_to_surface_distance_mm": 0.44571709471923965
+    },
+    {
+      "nasa_hole": 19,
+      "group": "pressure",
+      "uv_cm": [
+        0.643,
+        3.891
+      ],
+      "raw_report_uv_xy_mm": [
+        38.91,
+        6.43
+      ],
+      "raw_uv_anchor_xy_mm": [
+        38.91,
+        6.43
+      ],
+      "surface_projected_xy_mm": [
+        38.80902081512341,
+        6.951347719047017
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -31.930759903290596,
+      "raw_to_surface_distance_mm": 0.5310369478048276
+    },
+    {
+      "nasa_hole": 13,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.498,
+        0.541
+      ],
+      "raw_report_uv_xy_mm": [
+        5.41,
+        4.98
+      ],
+      "raw_uv_anchor_xy_mm": [
+        5.41,
+        4.98
+      ],
+      "surface_projected_xy_mm": [
+        5.642750642565809,
+        5.099965334612385
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 4.019262939271153,
+      "raw_to_surface_distance_mm": 0.26184832083375725
+    },
+    {
+      "nasa_hole": 14,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.211,
+        0.828
+      ],
+      "raw_report_uv_xy_mm": [
+        8.28,
+        2.11
+      ],
+      "raw_uv_anchor_xy_mm": [
+        8.28,
+        2.11
+      ],
+      "surface_projected_xy_mm": [
+        8.42591841267448,
+        2.227706811196806
+      ],
+      "nearest_surface": "suction",
+      "signed_arc_from_le_mm": 0.0,
+      "raw_to_surface_distance_mm": 0.1874755358961825
+    },
+    {
+      "nasa_hole": 15,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.041,
+        1.196
+      ],
+      "raw_report_uv_xy_mm": [
+        11.959999999999999,
+        0.41000000000000003
+      ],
+      "raw_uv_anchor_xy_mm": [
+        11.959999999999999,
+        0.41000000000000003
+      ],
+      "surface_projected_xy_mm": [
+        12.022735591144798,
+        0.4664576470752064
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -4.024617915728216,
+      "raw_to_surface_distance_mm": 0.08439917244591874
+    },
+    {
+      "nasa_hole": 16,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.005,
+        1.6
+      ],
+      "raw_report_uv_xy_mm": [
+        16.0,
+        0.05
+      ],
+      "raw_uv_anchor_xy_mm": [
+        16.0,
+        0.05
+      ],
+      "surface_projected_xy_mm": [
+        15.921585186737172,
+        0.016075385658396613
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -7.967724193017414,
+      "raw_to_surface_distance_mm": 0.0854386469770603
+    },
+    {
+      "nasa_hole": 17,
+      "group": "leading_edge",
+      "uv_cm": [
+        0.109,
+        1.994
+      ],
+      "raw_report_uv_xy_mm": [
+        19.94,
+        1.09
+      ],
+      "raw_uv_anchor_xy_mm": [
+        19.94,
+        1.09
+      ],
+      "surface_projected_xy_mm": [
+        19.78904609604297,
+        0.8980410504096643
+      ],
+      "nearest_surface": "pressure",
+      "signed_arc_from_le_mm": -11.952115607277321,
+      "raw_to_surface_distance_mm": 0.24420343864838126
+    }
+  ]
+}

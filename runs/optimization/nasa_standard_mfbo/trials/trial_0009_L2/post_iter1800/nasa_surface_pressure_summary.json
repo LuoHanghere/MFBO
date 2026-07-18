@@ -1,0 +1,23 @@
+{
+  "reference": "NASA CR-182133 Table VII, Ma2=0.90 column",
+  "normalization": "CFD static pressure / inlet total pressure (285130 Pa)",
+  "span_averaging": "face-area weighted within +/-0.5% surface distance",
+  "point_count": 29,
+  "mae": 0.02235680734053181,
+  "rmse": 0.034995075523709986,
+  "max_abs_error": 0.11559505530283892,
+  "sides": {
+    "pressure": {
+      "point_count": 12,
+      "mae": 0.0055577171195111685,
+      "rmse": 0.007259529818257736,
+      "max_abs_error": 0.018425656276700453
+    },
+    "suction": {
+      "point_count": 17,
+      "mae": 0.03421498867301698,
+      "rmse": 0.04529809419326259,
+      "max_abs_error": 0.11559505530283892
+    }
+  }
+}

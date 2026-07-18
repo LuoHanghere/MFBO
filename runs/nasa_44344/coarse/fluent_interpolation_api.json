@@ -1,0 +1,4 @@
+{
+  "status": "error",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Work\\BOfm\\scripts\\probe_fluent_interpolation.py\", line 32, in main\n    interpolation = solver.settings.file.interpolate\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Work\\BOfm\\.venv\\Lib\\site-packages\\ansys\\fluent\\core\\solver\\flobject.py\", line 1036, in __getattribute__\n    attr = super().__getattribute__(name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'file' object has no attribute 'interpolate'.\nThe most similar names are: write_pdat.\n"
+}

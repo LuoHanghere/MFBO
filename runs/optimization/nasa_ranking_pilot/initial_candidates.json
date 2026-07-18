@@ -1,0 +1,75 @@
+{
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_ranking_pilot.yaml",
+  "seed": 20260715,
+  "base_design": "E:\\Work\\BOfm\\runs\\nasa_44344\\geometry\\c3x_nasa44344_periodic_v2_design.json",
+  "fixed": {
+    "diameter_mm": 0.99,
+    "span_count": 5
+  },
+  "candidates": [
+    {
+      "candidate_id": "DOE-01",
+      "design": {
+        "SS1_s": 0.2436241765445602,
+        "SS2_s": 0.27588599092776295,
+        "PS1_s": 0.2073283497899597,
+        "PS2_s": 0.24931721441420235,
+        "suction_angle_deg": 40.91818132663535,
+        "pressure_angle_deg": 24.50087689612895
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.339307517874759,
+      "physics_prior": 0.09732866390818748,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-02",
+      "design": {
+        "SS1_s": 0.25132425880518633,
+        "SS2_s": 0.2762834779036399,
+        "PS1_s": 0.2062801001888814,
+        "PS2_s": 0.24314866489931847,
+        "suction_angle_deg": 39.900525514380554,
+        "pressure_angle_deg": 29.032437763574954
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.3196906524201768,
+      "physics_prior": 0.1036984028802633,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-03",
+      "design": {
+        "SS1_s": 0.255329204084681,
+        "SS2_s": 0.27684090022535307,
+        "PS1_s": 0.2126529374003558,
+        "PS2_s": 0.23776962698842385,
+        "suction_angle_deg": 38.452797728663626,
+        "pressure_angle_deg": 25.055338365780166
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.1391921171087587,
+      "physics_prior": 0.10192088773589958,
+      "issues": []
+    },
+    {
+      "candidate_id": "DOE-04",
+      "design": {
+        "SS1_s": 0.24817760465683364,
+        "SS2_s": 0.2636037187126676,
+        "PS1_s": 0.21226662432252022,
+        "PS2_s": 0.22965586056445633,
+        "suction_angle_deg": 34.35686932662608,
+        "pressure_angle_deg": 29.504559323321793
+      },
+      "geometry_gate_ok": true,
+      "geometry_error_count": 0,
+      "cavity_clearance_min_mm": 1.075779464719903,
+      "physics_prior": 0.10669639779849859,
+      "issues": []
+    }
+  ]
+}

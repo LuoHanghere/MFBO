@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo_8d.yaml",
+  "experiment": "C3X NASA standard MFBO 8D",
+  "trial_id": 10,
+  "fidelity": "L2",
+  "mesh_tier": "coarse",
+  "source": "stratified_startup",
+  "design": {
+    "SS1_s": 0.24620539634350652,
+    "SS2_s": 0.2703502742861238,
+    "PS1_s": 0.21679966708671333,
+    "PS2_s": 0.23530846720552775,
+    "suction_angle_deg": 44.444587361899494,
+    "pressure_angle_deg": 22.33539432747098,
+    "diameter_mm": 0.8925388220760736,
+    "span_count": 4
+  },
+  "predicted": {},
+  "relative_cost": 0.2,
+  "cost_before": 4.2,
+  "run_dir": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2",
+  "error": "stage nasa_cfd_pipeline failed with exit code 1; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2\\nasa_cfd_pipeline.log",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\Work\\BOfm\\scripts\\run_one_optimization_iteration.py\", line 75, in main\n    result = evaluator.evaluate(\n             ^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Work\\BOfm\\bofm\\optimization\\evaluator.py\", line 201, in evaluate\n    raise RuntimeError(\nRuntimeError: stage nasa_cfd_pipeline failed with exit code 1; see E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2\\nasa_cfd_pipeline.log\n",
+  "objective": 0.6055034944018036,
+  "constraints": {
+    "coolant_mass_ratio": 1.000000547035909,
+    "loss_ratio": 1.1813779069136943
+  },
+  "metrics": {
+    "whole_vane_eta_bar": 0.5172599090362302,
+    "protected_area_m2": 0.001222805810619273,
+    "coolant_actual_kg_s": 0.0053202807903289795,
+    "delta_total_pressure_Pa": 25126.108708709362,
+    "mass_imbalance_kg_s": 3.278255462618512e-06,
+    "continuity_residual": 0.0037392,
+    "y_plus_p95": 8.634612083435059,
+    "y_plus_max": 12.256352424621582,
+    "converged_for_screening": true
+  },
+  "cost_after": 4.4,
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0010_L2\\result.json",
+  "recovered_from_infrastructure_failure": true
+}

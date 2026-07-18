@@ -1,0 +1,27 @@
+{
+  "route": "workbench",
+  "body_name": "fixed_fluid_domain",
+  "face_zones": [
+    "inlet",
+    "outlet",
+    "periodic_low",
+    "periodic_high",
+    "span_low",
+    "span_high",
+    "vane_wall",
+    "film_hole_wall",
+    "qian",
+    "ss",
+    "ps"
+  ],
+  "design_json": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a_design.json",
+  "layout_json": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a_layout.json",
+  "scdoc": "E:\\Work\\BOfm\\runs\\workbench\\variant_a\\c3x_wb_variant_a.scdoc",
+  "spaceclaim_ok": true,
+  "next_steps": [
+    "Open SCDOC in Discovery (Workbench Geometry) or re-link 1.wbpj",
+    "Fluent Meshing: Import Geometry, UseBodyLabels=Yes, LengthUnit=m",
+    "Update Boundaries: qian/ss/ps -> pressure-inlet",
+    "Run scripts/print_workbench_bc.py for NASA 44344 inlet/outlet values"
+  ]
+}

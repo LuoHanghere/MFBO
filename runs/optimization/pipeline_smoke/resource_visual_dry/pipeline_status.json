@@ -1,0 +1,12 @@
+{
+  "status": "dry_run_ok",
+  "started_utc": "2026-07-16T01:34:04.164582+00:00",
+  "mesh_tier": "coarse",
+  "iterations": 1800,
+  "startup_iterations": 400,
+  "repair_passes": 0,
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_pimfbo\\trials\\trial_0006_L2\\design.json",
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\pipeline_smoke\\resource_visual_dry\\result.json",
+  "dry_run": true,
+  "finished_utc": "2026-07-16T01:34:04.173576+00:00"
+}

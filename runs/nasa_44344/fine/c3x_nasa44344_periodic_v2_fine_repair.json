@@ -1,0 +1,48 @@
+{
+  "mesh_in": "E:\\Work\\BOfm\\runs\\nasa_44344\\fine\\c3x_nasa44344_periodic_v2_fine.msh.h5",
+  "mesh_out": "E:\\Work\\BOfm\\runs\\nasa_44344\\fine\\c3x_nasa44344_periodic_v2_fine_repaired.msh.h5",
+  "quality_limit": 0.03,
+  "cores": 8,
+  "precision": "double",
+  "cell_count": 6433128,
+  "before": {
+    "Orthogonal Quality": [
+      6433128,
+      0.0064109385662805,
+      0.99999999983748,
+      0.8218024191108402,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      6433128,
+      1.05281339202179e-11,
+      0.9935890614313881,
+      0.17659025790675,
+      0.0,
+      0
+    ]
+  },
+  "improve_return": true,
+  "after": {
+    "Orthogonal Quality": [
+      6433128,
+      0.009678529945692516,
+      0.99999999983748,
+      0.8217789870592841,
+      0.0,
+      0
+    ],
+    "Skewness": [
+      6433128,
+      1.05281339202179e-11,
+      0.9903214700543075,
+      0.1765804932972403,
+      0.0,
+      0
+    ]
+  },
+  "mesh_out_exists": true,
+  "mesh_out_bytes": 643231514,
+  "status": "ok"
+}

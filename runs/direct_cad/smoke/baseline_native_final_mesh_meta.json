@@ -1,0 +1,139 @@
+{
+  "status": "ok",
+  "route": "native_cad_to_fluent_meshing",
+  "cad": "E:\\Work\\BOfm\\runs\\workbench\\baseline\\c3x_wb_baseline.scdoc",
+  "tier": "smoke",
+  "cores": 8,
+  "surface_controls_m": {
+    "MinSize": 0.00011999999999999999,
+    "MaxSize": 0.004,
+    "GrowthRate": 1.2
+  },
+  "boundary_layer": {
+    "AddChild": "yes",
+    "BLControlName": "smooth-transition_1",
+    "OffsetMethodType": "smooth-transition",
+    "NumberOfLayers": 8,
+    "FirstHeight": 2e-05,
+    "Rate": 1.2,
+    "FaceScope": "only-walls",
+    "BLRegionList": [
+      "fluid-regions"
+    ],
+    "LocalPrismPreferences": {
+      "IgnoreBoundaryLayers": "no",
+      "Continuous": "Continuous",
+      "ShowLocalPrismPreferences": true
+    }
+  },
+  "volume_fill": "polyhedra",
+  "mesh": "E:\\Work\\BOfm\\runs\\direct_cad\\smoke\\baseline_native_final.msh.h5",
+  "steps": [
+    "removed stale output mesh before write",
+    "imported native CAD",
+    "generated surface mesh",
+    "described fluid-only geometry",
+    "updated boundaries and regions",
+    "created and generated boundary layers",
+    "generated volume mesh",
+    "normalized native-CAD boundary zones",
+    "wrote mesh"
+  ],
+  "replaced_existing_mesh_bytes": 110369501,
+  "fluent_version": "FluentVersion.v242",
+  "zones_after_import": [
+    "origin-qian",
+    "origin-ss",
+    "origin-ps",
+    "origin-film_hole_wall",
+    "origin-zone-7",
+    "origin-zone-4",
+    "origin-zone-3",
+    "origin-vane_wall:-7:fixed_fluid_domain",
+    "origin-span_high:-4:fixed_fluid_domain",
+    "origin-span_low:-3:fixed_fluid_domain",
+    "origin-periodic_high:-7:fixed_fluid_domain",
+    "origin-periodic_high:-6:fixed_fluid_domain",
+    "origin-periodic_low:-7:fixed_fluid_domain",
+    "origin-periodic_low:-5:fixed_fluid_domain",
+    "origin-outlet:-2:fixed_fluid_domain",
+    "origin-inlet:-1:fixed_fluid_domain"
+  ],
+  "zone_normalization": {
+    "inlet": [
+      "inlet--1-fixed_fluid_domain"
+    ],
+    "outlet": [
+      "outlet--2-fixed_fluid_domain"
+    ],
+    "periodic_low": [
+      "periodic_low--5-fixed_fluid_domain",
+      "periodic_low--7-fixed_fluid_domain"
+    ],
+    "periodic_high": [
+      "periodic_high--6-fixed_fluid_domain",
+      "periodic_high--7-fixed_fluid_domain"
+    ],
+    "span_low": [
+      "span_low--3-fixed_fluid_domain",
+      "zone-3"
+    ],
+    "span_high": [
+      "span_high--4-fixed_fluid_domain",
+      "zone-4"
+    ],
+    "vane_wall": [
+      "vane_wall--7-fixed_fluid_domain"
+    ],
+    "film_hole_wall": [
+      "film_hole_wall"
+    ],
+    "qian": [
+      "qian"
+    ],
+    "ss": [
+      "ss"
+    ],
+    "ps": [
+      "ps"
+    ],
+    "plenum_wall": [
+      "zone-7"
+    ]
+  },
+  "mesh_exists": true,
+  "mesh_bytes": 109338808,
+  "cell_count": 915204,
+  "face_count": 4219735,
+  "surface_maximum_skewness": 0.78401908,
+  "minimum_orthogonal_quality": 0.08331383,
+  "final_zone_names": [
+    "inlet",
+    "outlet",
+    "ps",
+    "ss",
+    "qian",
+    "periodic_high",
+    "periodic_low",
+    "vane_wall",
+    "span_high",
+    "span_low",
+    "plenum_wall",
+    "film_hole_wall",
+    "interior--fixed_fluid_domain"
+  ],
+  "expected_zone_face_counts": {
+    "inlet": 677,
+    "outlet": 679,
+    "periodic_low": 9749,
+    "periodic_high": 9858,
+    "span_low": 8740,
+    "span_high": 9002,
+    "vane_wall": 23374,
+    "film_hole_wall": 15631,
+    "qian": 363,
+    "ss": 623,
+    "ps": 568
+  },
+  "elapsed_seconds": 98.18558419984765
+}

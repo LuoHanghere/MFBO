@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "started_utc": "2026-07-17T21:34:27.194808+00:00",
+  "mesh_tier": "coarse",
+  "iterations": 1800,
+  "startup_iterations": 400,
+  "repair_passes": 0,
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0013_L2\\design.json",
+  "diameter_mm": 1.016863599403518,
+  "span_count": 7,
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo_8d\\trials\\trial_0013_L2\\result.json",
+  "dry_run": false,
+  "fluent_transcript_source": "E:\\Work\\BOfm\\fluent-20260718-053816-327660.trn",
+  "finished_utc": "2026-07-17T22:38:14.714646+00:00"
+}

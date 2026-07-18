@@ -1,0 +1,42 @@
+{
+  "definition": "eta = (Tg_ref - Taw) / (Tg_ref - Tc_ref)",
+  "averaging": "face-area weighted using the magnitude of Fluent face-area vectors",
+  "Tg_ref_K": 1773.0,
+  "Tc_ref_K": 591.0,
+  "face_count": 19146,
+  "area_m2": 0.001225826476354075,
+  "Taw_area_weighted_K": 1231.7285180812414,
+  "eta_bar": 0.45792849570115246,
+  "surfaces": [
+    {
+      "surface": "vane_wall",
+      "face_count": 19146,
+      "area_m2": 0.001225826476354075,
+      "Taw_area_weighted_K": 1231.7285180812414,
+      "eta_area_weighted": 0.45792849570115246
+    }
+  ],
+  "sides": [
+    {
+      "side": "pressure",
+      "face_count": 9510,
+      "area_m2": 0.0005480001979032191,
+      "Taw_area_weighted_K": 1234.6220569413042,
+      "eta_area_weighted": 0.45548049328147444
+    },
+    {
+      "side": "suction",
+      "face_count": 9636,
+      "area_m2": 0.0006778262784508584,
+      "Taw_area_weighted_K": 1229.3891873141044,
+      "eta_area_weighted": 0.4599076249457641
+    }
+  ],
+  "region": "fixed downstream controllable area",
+  "mask": {
+    "pressure": "X/Cax >= 0.26530",
+    "suction": "X/Cax >= 0.37638"
+  },
+  "fixed_across_designs": true,
+  "note": "Thresholds are frozen at baseline first-variable-row axial stations."
+}

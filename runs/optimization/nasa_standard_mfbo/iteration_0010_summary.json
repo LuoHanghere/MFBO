@@ -1,0 +1,63 @@
+{
+  "status": "completed",
+  "config": "E:\\Work\\BOfm\\configs\\c3x_nasa_standard_mfbo.yaml",
+  "experiment": "C3X NASA standard MFBO",
+  "trial_id": 10,
+  "fidelity": "L3",
+  "mesh_tier": "paper",
+  "source": "paired_validation",
+  "paired_l2_trial_id": 9,
+  "design": {
+    "SS1_s": 0.24166763021051885,
+    "SS2_s": 0.2713517213910818,
+    "PS1_s": 0.21064888978749513,
+    "PS2_s": 0.25063435127586126,
+    "suction_angle_deg": 30.77472446486354,
+    "pressure_angle_deg": 26.400274001061916
+  },
+  "relative_cost": 1.0,
+  "cost_before": 3.2,
+  "cost_after": 4.2,
+  "run_dir": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3",
+  "objective": 0.6658036945608767,
+  "paper_baseline_objective": 0.6489496053020241,
+  "previous_l3_best_objective": 0.6574795585257655,
+  "improvement_vs_baseline_absolute": 0.016854089258852678,
+  "improvement_vs_baseline_percent": 2.5971337560192653,
+  "improvement_vs_previous_l3_best_percent": 1.2660676559703488,
+  "paired_l2_improvement_vs_baseline_percent": 2.9558316913471216,
+  "cross_fidelity_gain_retention_ratio": 0.8786473748224922,
+  "paired_ranking": {
+    "paired_design_count": 3,
+    "pearson_r": 0.9998337393790453,
+    "spearman_rho": 1.0,
+    "note": "Promising ranking evidence only; three pairs are not a final statistical validation."
+  },
+  "mesh": {
+    "cell_count": 3675520,
+    "orthogonal_quality_min_before": 0.01205328512990123,
+    "orthogonal_quality_min_after": 0.02117292063951348,
+    "skewness_max_before": 0.9879467148712242,
+    "skewness_max_after": 0.9788270793604865,
+    "invalid_cell_count": 0
+  },
+  "constraints": {
+    "coolant_mass_ratio": 0.9999995623712538,
+    "loss_ratio": 0.9902589428588173
+  },
+  "metrics": {
+    "whole_vane_eta_bar": 0.5651882632913132,
+    "protected_area_m2": 0.0012252361313792144,
+    "coolant_actual_kg_s": 0.005320275318808854,
+    "delta_total_pressure_Pa": 82682.2973753975,
+    "mass_imbalance_kg_s": 7.246853783453473e-07,
+    "continuity_residual": 0.0012714,
+    "y_plus_p95": 2.4076292514801025,
+    "y_plus_max": 3.4386801719665527,
+    "converged_for_screening": true,
+    "solver_warning_count": 0
+  },
+  "pipeline_elapsed_hours": 3.4974,
+  "result_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0010_L3\\result.json",
+  "comparison_manifest": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\comparisons\\trial_0010_L3_vs_paper_baseline\\projection_comparison_manifest.json"
+}

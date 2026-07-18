@@ -1,0 +1,12 @@
+{
+  "trial_label": "PI trial 6 L2",
+  "objective": 0.6686129064442368,
+  "eta_color_limits": [
+    0.0,
+    1.0
+  ],
+  "layout": "E:\\Work\\BOfm\\runs\\optimization\\nasa_pimfbo\\trials\\trial_0006_L2\\visuals\\film_hole_layout.png",
+  "cooling_efficiency_map": "E:\\Work\\BOfm\\runs\\optimization\\nasa_pimfbo\\trials\\trial_0006_L2\\visuals\\cooling_efficiency_map.png",
+  "overview": "E:\\Work\\BOfm\\runs\\optimization\\nasa_pimfbo\\trials\\trial_0006_L2\\visuals\\iteration_overview.png",
+  "source_faces": "E:\\Work\\BOfm\\runs\\optimization\\nasa_pimfbo\\trials\\trial_0006_L2\\post_iter1800\\eta_surface_faces.csv"
+}

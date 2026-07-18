@@ -1,0 +1,94 @@
+{
+  "ok": false,
+  "error_count": 5,
+  "warning_count": 0,
+  "marker_count": 20,
+  "cavity_checked_markers": 20,
+  "cavity_failed_markers": 5,
+  "cavity_clearance_min_mm": 0.8856720763006337,
+  "cavity_clearance_required_mm": 0.7424999999999999,
+  "rows": [
+    {
+      "row_id": "SS1",
+      "surface": "suction",
+      "s_over_s0": 0.2428718116078526,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000001,
+      "marker_length_max_mm": 9.290000000000001
+    },
+    {
+      "row_id": "SS2",
+      "surface": "suction",
+      "s_over_s0": 0.26666514787077905,
+      "marker_count": 5,
+      "marker_length_min_mm": 9.290000000000008,
+      "marker_length_max_mm": 9.290000000000008
+    },
+    {
+      "row_id": "PS1",
+      "surface": "pressure",
+      "s_over_s0": 0.19658955571614206,
+      "marker_count": 5,
+      "marker_length_min_mm": 10.775,
+      "marker_length_max_mm": 10.775
+    },
+    {
+      "row_id": "PS2",
+      "surface": "pressure",
+      "s_over_s0": 0.2517801522705704,
+      "marker_count": 5,
+      "marker_length_min_mm": 10.775,
+      "marker_length_max_mm": 10.775
+    }
+  ],
+  "issues": [
+    {
+      "level": "error",
+      "kind": "cavity_miss",
+      "row_id": "PS1",
+      "marker": "PS1_z01",
+      "cavity": "PS_plenum",
+      "message": "marker end [16.581296905237807, 97.88490120863713] is outside PS_plenum"
+    },
+    {
+      "level": "error",
+      "kind": "cavity_miss",
+      "row_id": "PS1",
+      "marker": "PS1_z02",
+      "cavity": "PS_plenum",
+      "message": "marker end [16.581296905237807, 97.88490120863713] is outside PS_plenum"
+    },
+    {
+      "level": "error",
+      "kind": "cavity_miss",
+      "row_id": "PS1",
+      "marker": "PS1_z03",
+      "cavity": "PS_plenum",
+      "message": "marker end [16.581296905237807, 97.88490120863713] is outside PS_plenum"
+    },
+    {
+      "level": "error",
+      "kind": "cavity_miss",
+      "row_id": "PS1",
+      "marker": "PS1_z04",
+      "cavity": "PS_plenum",
+      "message": "marker end [16.581296905237807, 97.88490120863713] is outside PS_plenum"
+    },
+    {
+      "level": "error",
+      "kind": "cavity_miss",
+      "row_id": "PS1",
+      "marker": "PS1_z05",
+      "cavity": "PS_plenum",
+      "message": "marker end [16.581296905237807, 97.88490120863713] is outside PS_plenum"
+    }
+  ],
+  "notes": [
+    "This is a pre-CAD gate; it cannot replace a final Discovery/Fluent boundary-zone check.",
+    "Cavity checks are only run when --cavities provides profile_xy_mm polygons."
+  ],
+  "design_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0008_L2\\c3x_design.json",
+  "layout_json": "E:\\Work\\BOfm\\runs\\optimization\\nasa_standard_mfbo\\trials\\trial_0008_L2\\c3x_layout.json",
+  "cavities_json": "E:\\Work\\BOfm\\configs\\c3x_fixed_downstream_plenums.json",
+  "min_cavity_margin_d": 0.25
+}

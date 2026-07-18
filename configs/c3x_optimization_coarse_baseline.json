@@ -1,0 +1,11 @@
+{
+  "source": "runs/kumar_periodic_v2/coarse/post_iter1000",
+  "simulation_case": "kumar_case1_tr3",
+  "protected_mask": {
+    "pressure_xmin": 0.26530,
+    "suction_xmin": 0.37638
+  },
+  "coolant_actual_kg_s": 0.0071142788510769606,
+  "delta_total_pressure_Pa": 7759.527051122568,
+  "note": "Frozen coarse baseline for screening ratios; replace only through a versioned baseline acceptance run."
+}

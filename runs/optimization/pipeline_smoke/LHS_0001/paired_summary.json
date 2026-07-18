@@ -1,0 +1,43 @@
+{
+  "design_id": "LHS_0001",
+  "design_json": "runs/optimization/pipeline_smoke/LHS_0001/design.json",
+  "coarse": {
+    "cells": 1877557,
+    "minimum_orthogonal_quality": 0.0329825491514244,
+    "objective_baseline": 0.682210488894674,
+    "objective_candidate": 0.6920976477798865,
+    "absolute_change": 0.009887158885212521,
+    "relative_change_percent": 1.4492827428132626,
+    "coolant_mass_ratio": 0.9999996936598914,
+    "continuity_residual": 0.0036629,
+    "y_plus_p95": 8.50146198272705,
+    "loss_ratio_diagnostic": 1.1917871022809754
+  },
+  "paper": {
+    "cells": 3555118,
+    "minimum_orthogonal_quality_before_repair": 0.01542887734429699,
+    "minimum_orthogonal_quality_after_repair": 0.02136102471352708,
+    "objective_baseline": 0.6489496053020241,
+    "objective_candidate": 0.6574795585257655,
+    "absolute_change": 0.008529953223741393,
+    "relative_change_percent": 1.3144245953846445,
+    "coolant_mass_ratio": 0.9999994092011926,
+    "continuity_residual": 0.0011984,
+    "y_plus_p95": 2.43637752532959,
+    "loss_ratio_diagnostic": 0.9924191790096308
+  },
+  "paired_interpretation": {
+    "improvement_direction_preserved": true,
+    "baseline_coarse_minus_paper": 0.03326088359264989,
+    "candidate_coarse_minus_paper": 0.03461808925412102,
+    "fidelity_gap_change": 0.001357205661471128,
+    "ranking_claim": "One pair establishes a consistent direction only; it is insufficient for a rank-correlation claim."
+  },
+  "observed_cost": {
+    "coarse_pipeline_wall_minutes": 78.7,
+    "paper_pipeline_wall_minutes_excluding_prebuilt_mesh": 194.0,
+    "paper_mesh_and_repair_wall_minutes_approx": 7.0,
+    "observed_coarse_to_paper_wall_ratio_approx": 0.39,
+    "decision": "Keep configured relative cost provisional until at least three common designs provide median wall-clock and core-hour costs."
+  }
+}
