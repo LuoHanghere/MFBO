@@ -1,5 +1,7 @@
 numpy
 scipy
+pandas
 matplotlib
 pyyaml
+h5py
 pytest
